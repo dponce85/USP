@@ -1,0 +1,21 @@
+Library,Cell,View Found,View To Use,Inherited View List
+tsmc18,mimcap_2p0_sin,spectre,null,spectre cmos_sch cmos.sch schematic veriloga ahdl pspice
+tsmc18,nmos2v,spectre,null,spectre cmos_sch cmos.sch schematic veriloga ahdl pspice
+tsmc18,pmos2v,spectre,null,spectre cmos_sch cmos.sch schematic veriloga ahdl pspice
+tsmc18,rphripoly,spectre,null,spectre cmos_sch cmos.sch schematic veriloga ahdl pspice
+uwb_system,uwb_biasgen,schematic,null,spectre cmos_sch cmos.sch schematic veriloga ahdl pspice
+uwb_system,uwb_buff_x32,schematic,null,spectre cmos_sch cmos.sch schematic veriloga ahdl pspice
+uwb_system,uwb_count4b,schematic,null,spectre cmos_sch cmos.sch schematic veriloga ahdl pspice
+uwb_system,uwb_cp_diff,schematic,null,spectre cmos_sch cmos.sch schematic veriloga ahdl pspice
+uwb_system,uwb_dff,schematic,null,spectre cmos_sch cmos.sch schematic veriloga ahdl pspice
+uwb_system,uwb_dff_diff,schematic,null,spectre cmos_sch cmos.sch schematic veriloga ahdl pspice
+uwb_system,uwb_fdiv64,schematic,null,spectre cmos_sch cmos.sch schematic veriloga ahdl pspice
+uwb_system,uwb_inv_buffer,schematic,null,spectre cmos_sch cmos.sch schematic veriloga ahdl pspice
+uwb_system,uwb_inversor,schematic,null,spectre cmos_sch cmos.sch schematic veriloga ahdl pspice
+uwb_system,uwb_inversor_diff5,schematic,null,spectre cmos_sch cmos.sch schematic veriloga ahdl pspice
+uwb_system,uwb_mux16_diff,schematic,null,spectre cmos_sch cmos.sch schematic veriloga ahdl pspice
+uwb_system,uwb_mux2_diff,schematic,null,spectre cmos_sch cmos.sch schematic veriloga ahdl pspice
+uwb_system,uwb_nand2,schematic,null,spectre cmos_sch cmos.sch schematic veriloga ahdl pspice
+uwb_system,uwb_passgate,schematic,null,spectre cmos_sch cmos.sch schematic veriloga ahdl pspice
+uwb_system,uwb_pfd,schematic,null,spectre cmos_sch cmos.sch schematic veriloga ahdl pspice
+uwb_system,uwb_pll_nointerp,schematic,null,spectre cmos_sch cmos.sch schematic veriloga ahdl pspice
