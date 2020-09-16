@@ -1,0 +1,8 @@
+,Parameter,Nominal,,,,,,C0_copy_0_0,C0_copy_0_1,C0_copy_0_2,C0_copy_0_3,C0_copy_0_4,C0_copy_0_5,C0_copy_0_6,C0_copy_0_7
+,temperature,27,,,,,,25,25,25,25,25,25,25,25
+,vcontrol,1,,,,,,400e-3,600e-3,800e-3,1,1.2,1.4,1.6,1.8
+,vdd,1.8,,,,,,1.8,1.8,1.8,1.8,1.8,1.8,1.8,1.8
+
+Test,Output,Nominal,Spec,Weight,Pass/Fail,Min,Max,C0_copy_0_0,C0_copy_0_1,C0_copy_0_2,C0_copy_0_3,C0_copy_0_4,C0_copy_0_5,C0_copy_0_6,C0_copy_0_7
+uwb_system:uwb_osc_ring_top_tb:1,Frequency,1.223e9,,,,593.7e6,2.323e9,2.323e9,593.7e6,904.7e6,1.225e9,1.357e9,1.45e9,1.515e9,1.558e9
+
