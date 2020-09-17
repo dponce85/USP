@@ -1,0 +1,16 @@
+//Revision 10
+//NOTE
+//VXL Configuration
+//END_NOTE
+
+config uwb_passgate;
+design uwb_system.uwb_passgate:schematic;
+liblist uwb_system;
+
+viewlist physConfig, schematic, symbol;
+
+constraintviewlist constraint;
+stoplist calibre, layout, abstract;
+
+
+endconfig
