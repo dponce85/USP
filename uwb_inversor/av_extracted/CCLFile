@@ -1,0 +1,61 @@
+#
+# OPTION COMMAND FILE created by Cadence Quantus QRC Extraction Version 15.2.6-s603 from CCL
+#
+capacitance \
+	 -decoupling_factor 1.0 \
+	 -ground_net "GND"
+extract \
+	 -extract_gate_diffusion_fringing_cap false \
+	 -selection "all" \
+	 -type "rc_coupled"
+extraction_setup \
+	 -array_vias_spacing auto \
+	 -macro_cells_type "default" \
+	 -max_fracture_length infinite \
+	 -max_fracture_length_unit "MICRONS" \
+	 -max_via_array_size \
+		"auto" \
+	 -net_name_space "LAYOUT"
+filter_coupling_cap \
+	 -coupling_cap_threshold_absolute 0.01 \
+	 -coupling_cap_threshold_relative 0.001
+filter_res \
+	 -merge_parallel_res false \
+	 -min_res 0.001
+global_nets \
+	 -import_from_lvs true
+input_db -type assura \
+	 -design_cell_name "uwb_inversor layout uwb_system" \
+	 -directory_name "/local/users/dponce/cadence_wd/616/tsmc18_miniasic17_wd" \
+	 -format "DFII" \
+	 -run_name "test"
+log_file \
+	 -file_name "/local/users/dponce/cadence_wd/616/tsmc18_miniasic17_wd/qrc.test.log"
+mos_diffusion_parameter_extraction \
+	 -add_lvs_extracted_res true \
+	 -res "fast"
+output_db -type extracted_view \
+	 -add_explicit_vias true \
+	 -cap_component "pcapacitor" \
+	 -cap_property_name "c" \
+	 -enable_cellview_check false \
+	 -include_cap_model "comment" \
+	 -include_parasitic_cap_model "comment" \
+	 -include_parasitic_res_length true \
+	 -include_parasitic_res_model "comment" \
+	 -include_parasitic_res_model_by_sub_conductor true \
+	 -include_parasitic_res_temp_coeff "true" \
+	 -include_parasitic_res_width true \
+	 -res_component "presistor" \
+	 -res_property_name "r" \
+	 -view_name "av_extracted"
+output_setup \
+	 -directory_name "/local/users/dponce/cadence_wd/616/tsmc18_miniasic17_wd" \
+	 -temporary_directory_name "test"
+process_technology \
+	 -technology_corner \
+		"default" \
+	 -technology_library_file "/local/users/dponce/cadence_wd/616/tsmc18_miniasic17_wd/assura_tech.lib" \
+	 -technology_name "tsmc18"
+
+

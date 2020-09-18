@@ -1,0 +1,19 @@
+$FILE_FORMAT_VERSION
+	Version 1.1;
+$END
+$VECTOR_PREFERENCE
+	descending;
+$END
+$TIMESTAMP
+	1277969434=6-tsmc186-nmos2v;
+	1277969434=6-tsmc186-nmos2v6-symbol;
+	1277969424=6-tsmc186-pmos2v;
+	1277969424=6-tsmc186-pmos2v6-symbol;
+	-1=5-basic5-iopin;
+	1273039898=5-basic5-iopin7-symbolr;
+	1600399383=verilog.vams;
+$END
+$PRIMITIVE_TERM_MAP
+	tsmc18:nmos2v:symbol:*:1-B1-b1-D1-d1-G1-g1-S1-s;
+	tsmc18:pmos2v:symbol:*:1-B1-b1-D1-d1-G1-g1-S1-s;
+$END

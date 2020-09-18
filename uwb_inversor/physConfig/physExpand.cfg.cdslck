@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      dponce
+HostName                       sampasim1
+ProcessIdentifier              84307
+ProcessCreationTime_UTC        1600387058
+ProcessCreationTime_Readable   Thu Sep 17 20:57:38 2020 BRT
+AppIdentifier                  /local/tools/IC616110/tools/dfII/bin/64bit/virtuoso
+OSType                         lnx86
+ReasonForPlacingEditLock       
+FilePathUsedToEditLock         /local/users/dponce/cadence_wd/616/tsmc18_miniasic17_wd/uwb_system/uwb_inversor/physConfig/physExpand.cfg
+TimeEditLocked                 Thu Sep 17 22:15:39 2020 BRT
