@@ -1,0 +1,3 @@
+projectDir = '"~/simulation"
+designInfo = '("uwb_system" "uwb_pll_topo_tb" "schematic" "spectre")
+descriptionText = "None"

@@ -1,0 +1,28 @@
+$FILE_FORMAT_VERSION
+	Version 1.1;
+$END
+$VECTOR_PREFERENCE
+	descending;
+$END
+$TIMESTAMP
+	-1=7-tpb018v12-PAD50LAR_TRL;
+	1605512684=7-tpb018v12-PAD50LAR_TRL6-symbol;
+	1277969434=6-tsmc186-dioden;
+	1277969434=6-tsmc186-dioden6-symbol;
+	1598427551=10-uwb_system10-uwb_fdiv64;
+	1598427671=10-uwb_system10-uwb_fdiv646-symbol;
+	1605144338=10-uwb_system18-uwb_osc_ring_diff7;
+	1605460266=10-uwb_system18-uwb_osc_ring_diff76-symbol;
+	1604521578=10-uwb_system15-uwb_loop_filter;
+	1604521580=10-uwb_system15-uwb_loop_filter6-symbol;
+	1604507330=10-uwb_system7-uwb_cpF;
+	1604507569=10-uwb_system7-uwb_cpF6-symbol;
+	1599616710=10-uwb_system7-uwb_pfd;
+	1599616710=10-uwb_system7-uwb_pfd6-symbol;
+	-1=5-basic5-iopin;
+	1273039898=5-basic5-iopin7-symbolr;
+	1605536042=verilog.vams;
+$END
+$PRIMITIVE_TERM_MAP
+	tsmc18:dioden:symbol:*:4-PLUS1-15-MINUS1-2;
+$END

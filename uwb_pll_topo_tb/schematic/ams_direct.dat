@@ -1,0 +1,37 @@
+$FILE_FORMAT_VERSION
+	Version 1.1;
+$END
+$VECTOR_PREFERENCE
+	descending;
+$END
+$GLOBAL_SIGNALS
+	gnd!:::;
+$END
+$VERILOG_NAME_MAP_LIST
+	net:gnd!:cds_globals.\\gnd! ;
+$END
+$TIMESTAMP
+	1605202896=10-uwb_system12-uwb_pll_topo;
+	1605520443=10-uwb_system12-uwb_pll_topo6-symbol;
+	1426804375=9-analogLib3-ind;
+	1236576109=9-analogLib3-ind6-symbol;
+	1426804375=9-analogLib3-vdc;
+	1236576109=9-analogLib3-vdc6-symbol;
+	1426804375=9-analogLib3-idc;
+	1236576108=9-analogLib3-idc6-symbol;
+	1426804375=9-analogLib6-vpulse;
+	1236576103=9-analogLib6-vpulse6-symbol;
+	1426804375=9-analogLib3-cap;
+	1236576105=9-analogLib3-cap6-symbol;
+	1605520574=verilog.vams;
+$END
+$DESIGN_VARIABLES
+	tdelay:;
+$END
+$PRIMITIVE_TERM_MAP
+	analogLib:ind:symbol:*:4-PLUS1-p5-MINUS30-(FUNCTION minus(root("PLUS")));
+	analogLib:vdc:symbol:*:4-PLUS1-p5-MINUS30-(FUNCTION minus(root("PLUS")));
+	analogLib:idc:symbol:*:4-PLUS4-sink5-MINUS30-(FUNCTION minus(root("PLUS")));
+	analogLib:vpulse:symbol:*:4-PLUS1-p5-MINUS30-(FUNCTION minus(root("PLUS")));
+	analogLib:cap:symbol:*:4-PLUS1-p5-MINUS30-(FUNCTION minus(root("PLUS")));
+$END
