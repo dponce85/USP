@@ -6,11 +6,11 @@
 LockStakeVersion               1.1
 LoginName                      dponce
 HostName                       sampasim1.localdomain
-ProcessIdentifier              84307
-ProcessCreationTime_UTC        1600387060
-ProcessCreationTime_Readable   Thu Sep 17 20:57:40 2020 BRT
+ProcessIdentifier              128461
+ProcessCreationTime_UTC        1606926270
+ProcessCreationTime_Readable   Wed Dec  2 14:24:30 2020 BRST
 AppIdentifier                  OA File System Design Manager
 OSType                         unix
 ReasonForPlacingEditLock       OpenAccess edit lock
-FilePathUsedToEditLock         /local/users/dponce/cadence_wd/616/tsmc18_miniasic17_wd/uwb_system/uwb_inversor/constraint/hierDesign.oa.cdslck
-TimeEditLocked                 Thu Sep 17 22:15:37 2020 BRT
+FilePathUsedToEditLock         /local/users/dponce/cadence_wd/616/tsmc18_miniasic17_wd/uwb_system/uwb_pll_topo_layout/layout/layout.oa.cdslck
+TimeEditLocked                 Wed Dec  2 21:53:09 2020 BRST

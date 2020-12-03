@@ -1,0 +1,50 @@
+
+; ***************************************************
+; *   0.18um NOTCH REPAIR DRC COMMAND FILE          *
+; *   FOR TSMC LOGIC 0.18um SPTM SALICIDE PROCESS   *
+; *   (DESIGN RULE DOCUMENT: TA-10A5-4003 Rev1.1)   *
+; ***************************************************
+
+*DESCRIPTION 
+     PRIMARY          =  TOPCELLNAME
+     INDISK           =  GDSFILENAME
+     OUTDISK          =  TOPCELLNAME.OUT
+     SYSTEM           =  GDS2     
+     REV-SCALE        =  200   MIC      
+     RESOLUTION       =  0.005 MIC      
+     KEEPDATA         =  SMART
+     FLAG-NON45       =  YES      
+     FLAG-OFFGRID     =  YES      
+     FLAG-ACUTEANGLE  =  YES     
+     PRINTFILE        =  drac  
+*END     
+;        
+*INPUT-LAYER 
+     M1i       =   16
+     M2i       =   18
+     M3i       =   28
+     EXCL      =   55       
+     SUBSTRATE =   BULK 99       
+*END     
+;        
+
+*OPERATION 
+
+    NOT     M1i EXCL M1
+    NOT     M2i EXCL M2
+    NOT     M3i EXCL M3
+
+    EXT[HR] M1 LT 0.23 M1NEAR
+    SELECT  M1NEAR TOUCH[1:1] M1 M1NTCH
+    AND     M1NTCH BULK M1MRGE OUTPUT M1MRGE 16
+
+    EXT[HR] M2 LT 0.28 M2NEAR
+    SELECT  M2NEAR TOUCH[1:1] M2 M2NTCH
+    AND     M2NTCH BULK M2MRGE OUTPUT M2MRGE 18
+
+    EXT[HR] M3 LT 0.46 M3NEAR
+    SELECT  M3NEAR TOUCH[1:1] M3 M3NTCH
+    AND     M3NTCH BULK M3MRGE OUTPUT M3MRGE 28
+
+*END
+

@@ -1,0 +1,60 @@
+#
+# OPTION COMMAND FILE created by Cadence Quantus QRC Extraction Version 15.2.6-s603 from CCL
+#
+capacitance \
+	 -decoupling_factor 1.0 \
+	 -ground_net "GND_1"
+extract \
+	 -selection "all" \
+	 -type "rc_coupled"
+extraction_setup \
+	 -array_vias_spacing auto \
+	 -macro_cells_type "default" \
+	 -max_fracture_length infinite \
+	 -max_fracture_length_unit "MICRONS" \
+	 -max_via_array_size \
+		"auto" \
+	 -net_name_space "SCHEMATIC"
+filter_cap \
+	 -exclude_floating_nets true \
+	 -exclude_floating_nets_limit 2000 \
+	 -exclude_self_cap true
+filter_coupling_cap \
+	 -coupling_cap_threshold_absolute 0.01 \
+	 -coupling_cap_threshold_relative 0.001
+filter_res \
+	 -merge_parallel_res false \
+	 -min_res 0.1 \
+	 -remove_dangling_res true
+global_nets \
+	 -nets_file "/local/users/fsola/cadence_wd/616/tsmc18_miniasic17_wd/lvs/qrc.GLOBAL.nets"
+input_db -type assura \
+	 -design_cell_name "uwb_pll_topo layout uwb_system" \
+	 -directory_name "/local/users/fsola/cadence_wd/616/tsmc18_miniasic17_wd/lvs" \
+	 -format "DFII" \
+	 -run_name "uwb_pll_topo"
+log_file \
+	 -file_name "/local/users/fsola/cadence_wd/616/tsmc18_miniasic17_wd/lvs/qrc.uwb_pll_topo.log"
+output_db -type extracted_view \
+	 -cap_component "pcapacitor" \
+	 -cap_property_name "c" \
+	 -enable_cellview_check true \
+	 -include_cap_model "false" \
+	 -include_parasitic_cap_model "false" \
+	 -include_parasitic_res_model "comment" \
+	 -include_res_model "false" \
+	 -res_component "presistor" \
+	 -res_property_name "r" \
+	 -view_name "av_extracted_27C"
+output_setup \
+	 -directory_name "/local/users/fsola/cadence_wd/616/tsmc18_miniasic17_wd/lvs" \
+	 -temporary_directory_name "uwb_pll_topo"
+process_technology \
+	 -technology_corner \
+		"default" \
+	 -technology_library_file "/local/users/fsola/cadence_wd/616/tsmc18_miniasic17_wd/assura_tech.lib" \
+	 -technology_name "tsmc18" \
+	 -temperature \
+		27.0
+
+

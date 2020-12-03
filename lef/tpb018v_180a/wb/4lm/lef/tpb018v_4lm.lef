@@ -1,0 +1,401 @@
+###############################################################################
+#TSMC Library/IP Product
+#Filename: tpb018v_4lm.lef
+#Technology: 018
+#Product Type: I/O PAD
+#Product Name: tpb018v
+#Version: 180a
+###############################################################################
+# 
+#STATEMENT OF USE
+#
+#This information contains confidential and proprietary information of TSMC.
+#No part of this information may be reproduced, transmitted, transcribed,
+#stored in a retrieval system, or translated into any human or computer
+#language, in any form or by any means, electronic, mechanical, magnetic,
+#optical, chemical, manual, or otherwise, without the prior written permission
+#of TSMC. This information was prepared for informational purpose and is for
+#use by TSMC's customers only. TSMC reserves the right to make changes in the
+#information at any time and without notice.
+# 
+###############################################################################
+
+MACRO PAD50LA
+    CLASS BLOCK ;
+    FOREIGN PAD50LA 0.000 -84.000  ;
+    ORIGIN 0.000 84.000 ;
+    SIZE 50.000 BY 84.000 ;
+    SYMMETRY X Y R90 ;
+    OBS
+        LAYER METAL1 ;
+        RECT  0.000 -84.000 50.000 0.000 ;
+        LAYER METAL2 ;
+        RECT  0.000 -84.000 50.000 0.000 ;
+        LAYER METAL3 ;
+        RECT  0.000 -84.000 50.000 0.000 ;
+        LAYER METAL4 ;
+        RECT  0.000 -84.000 50.000 0.000 ;
+    END
+END PAD50LA
+
+MACRO PAD50LA_OBV
+    CLASS BLOCK ;
+    FOREIGN PAD50LA_OBV 0.000 -88.580  ;
+    ORIGIN 0.000 88.580 ;
+    SIZE 50.000 BY 88.580 ;
+    SYMMETRY X Y R90 ;
+    OBS
+        LAYER METAL1 ;
+        RECT  0.000 -88.580 50.000 0.000 ;
+        LAYER METAL2 ;
+        RECT  0.000 -88.580 50.000 0.000 ;
+        LAYER METAL3 ;
+        RECT  0.000 -88.580 50.000 0.000 ;
+        LAYER METAL4 ;
+        RECT  0.000 -88.580 50.000 0.000 ;
+    END
+END PAD50LA_OBV
+
+MACRO PAD50LAR_OBV
+    CLASS BLOCK ;
+    FOREIGN PAD50LAR_OBV 0.000 -88.500  ;
+    ORIGIN 0.000 88.500 ;
+    SIZE 50.000 BY 88.500 ;
+    SYMMETRY X Y R90 ;
+    OBS
+        LAYER METAL1 ;
+        RECT  0.000 -88.500 50.000 0.000 ;
+        LAYER METAL2 ;
+        RECT  0.000 -88.500 50.000 0.000 ;
+        LAYER METAL3 ;
+        RECT  0.000 -88.500 50.000 0.000 ;
+        LAYER METAL4 ;
+        RECT  0.000 -88.500 50.000 0.000 ;
+    END
+END PAD50LAR_OBV
+
+MACRO PAD50LAR_SM
+    CLASS BLOCK ;
+    FOREIGN PAD50LAR_SM 0.000 -84.000  ;
+    ORIGIN 0.000 84.000 ;
+    SIZE 50.000 BY 84.000 ;
+    SYMMETRY X Y R90 ;
+    OBS
+        LAYER METAL1 ;
+        RECT  0.000 -84.000 50.000 0.000 ;
+        LAYER METAL2 ;
+        RECT  0.000 -84.000 50.000 0.000 ;
+        LAYER METAL3 ;
+        RECT  0.000 -84.000 50.000 0.000 ;
+        LAYER METAL4 ;
+        RECT  0.000 -84.000 50.000 0.000 ;
+    END
+END PAD50LAR_SM
+
+MACRO PAD50LAR_TRL
+    CLASS BLOCK ;
+    FOREIGN PAD50LAR_TRL 0.000 -84.000  ;
+    ORIGIN 0.000 84.000 ;
+    SIZE 50.000 BY 84.000 ;
+    SYMMETRY X Y R90 ;
+    OBS
+        LAYER METAL1 ;
+        RECT  0.000 -84.000 50.000 0.000 ;
+        LAYER METAL2 ;
+        RECT  0.000 -84.000 50.000 0.000 ;
+        LAYER METAL3 ;
+        RECT  0.000 -84.000 50.000 0.000 ;
+        LAYER METAL4 ;
+        RECT  0.000 -84.000 50.000 0.000 ;
+    END
+END PAD50LAR_TRL
+
+MACRO PAD50LA_TRL
+    CLASS BLOCK ;
+    FOREIGN PAD50LA_TRL 0.000 -84.000  ;
+    ORIGIN 0.000 84.000 ;
+    SIZE 50.000 BY 84.000 ;
+    SYMMETRY X Y R90 ;
+    OBS
+        LAYER METAL1 ;
+        RECT  0.000 -84.000 50.000 0.000 ;
+        LAYER METAL2 ;
+        RECT  0.000 -84.000 50.000 0.000 ;
+        LAYER METAL3 ;
+        RECT  0.000 -84.000 50.000 0.000 ;
+        LAYER METAL4 ;
+        RECT  0.000 -84.000 50.000 0.000 ;
+    END
+END PAD50LA_TRL
+
+MACRO PAD60L
+    CLASS BLOCK ;
+    FOREIGN PAD60L 0.000 -102.400  ;
+    ORIGIN 0.000 102.400 ;
+    SIZE 50.000 BY 102.400 ;
+    SYMMETRY X Y R90 ;
+    OBS
+        LAYER METAL1 ;
+        RECT  0.000 -102.400 50.000 0.000 ;
+        LAYER METAL2 ;
+        RECT  0.000 -102.400 50.000 0.000 ;
+        LAYER METAL3 ;
+        RECT  0.000 -102.400 50.000 0.000 ;
+        LAYER METAL4 ;
+        RECT  0.000 -102.400 50.000 0.000 ;
+    END
+END PAD60L
+
+MACRO PAD60LA
+    CLASS BLOCK ;
+    FOREIGN PAD60LA 0.000 -99.240  ;
+    ORIGIN 0.000 99.240 ;
+    SIZE 50.000 BY 99.240 ;
+    SYMMETRY X Y R90 ;
+    OBS
+        LAYER METAL1 ;
+        RECT  0.000 -99.240 50.000 0.000 ;
+        LAYER METAL2 ;
+        RECT  0.000 -99.240 50.000 0.000 ;
+        LAYER METAL3 ;
+        RECT  0.000 -99.240 50.000 0.000 ;
+        LAYER METAL4 ;
+        RECT  0.000 -99.240 50.000 0.000 ;
+    END
+END PAD60LA
+
+MACRO PAD60LA_OBV
+    CLASS BLOCK ;
+    FOREIGN PAD60LA_OBV 0.000 -74.580  ;
+    ORIGIN 0.000 74.580 ;
+    SIZE 50.000 BY 74.580 ;
+    SYMMETRY X Y R90 ;
+    OBS
+        LAYER METAL1 ;
+        RECT  0.000 -74.580 50.000 0.000 ;
+        LAYER METAL2 ;
+        RECT  0.000 -74.580 50.000 0.000 ;
+        LAYER METAL3 ;
+        RECT  0.000 -74.580 50.000 0.000 ;
+        LAYER METAL4 ;
+        RECT  0.000 -74.580 50.000 0.000 ;
+    END
+END PAD60LA_OBV
+
+MACRO PAD60LAR_OBV
+    CLASS BLOCK ;
+    FOREIGN PAD60LAR_OBV 0.000 -74.580  ;
+    ORIGIN 0.000 74.580 ;
+    SIZE 50.000 BY 74.580 ;
+    SYMMETRY X Y R90 ;
+    OBS
+        LAYER METAL1 ;
+        RECT  0.000 -74.580 50.000 0.000 ;
+        LAYER METAL2 ;
+        RECT  0.000 -74.580 50.000 0.000 ;
+        LAYER METAL3 ;
+        RECT  0.000 -74.580 50.000 0.000 ;
+        LAYER METAL4 ;
+        RECT  0.000 -74.580 50.000 0.000 ;
+    END
+END PAD60LAR_OBV
+
+MACRO PAD60LAR_SM
+    CLASS BLOCK ;
+    FOREIGN PAD60LAR_SM 0.000 -99.240  ;
+    ORIGIN 0.000 99.240 ;
+    SIZE 50.000 BY 99.240 ;
+    SYMMETRY X Y R90 ;
+    OBS
+        LAYER METAL1 ;
+        RECT  0.000 -99.240 50.000 0.000 ;
+        LAYER METAL2 ;
+        RECT  0.000 -99.240 50.000 0.000 ;
+        LAYER METAL3 ;
+        RECT  0.000 -99.240 50.000 0.000 ;
+        LAYER METAL4 ;
+        RECT  0.000 -99.240 50.000 0.000 ;
+    END
+END PAD60LAR_SM
+
+MACRO PAD60LAR_TRL
+    CLASS BLOCK ;
+    FOREIGN PAD60LAR_TRL 0.000 -99.240  ;
+    ORIGIN 0.000 99.240 ;
+    SIZE 50.000 BY 99.240 ;
+    SYMMETRY X Y R90 ;
+    OBS
+        LAYER METAL1 ;
+        RECT  0.000 -99.240 50.000 0.000 ;
+        LAYER METAL2 ;
+        RECT  0.000 -99.240 50.000 0.000 ;
+        LAYER METAL3 ;
+        RECT  0.000 -99.240 50.000 0.000 ;
+        LAYER METAL4 ;
+        RECT  0.000 -99.240 50.000 0.000 ;
+    END
+END PAD60LAR_TRL
+
+MACRO PAD60LA_TRL
+    CLASS BLOCK ;
+    FOREIGN PAD60LA_TRL 0.000 -99.240  ;
+    ORIGIN 0.000 99.240 ;
+    SIZE 50.000 BY 99.240 ;
+    SYMMETRY X Y R90 ;
+    OBS
+        LAYER METAL1 ;
+        RECT  0.000 -99.240 50.000 0.000 ;
+        LAYER METAL2 ;
+        RECT  0.000 -99.240 50.000 0.000 ;
+        LAYER METAL3 ;
+        RECT  0.000 -99.240 50.000 0.000 ;
+        LAYER METAL4 ;
+        RECT  0.000 -99.240 50.000 0.000 ;
+    END
+END PAD60LA_TRL
+
+MACRO PAD60L_OBV
+    CLASS BLOCK ;
+    FOREIGN PAD60L_OBV 0.000 -74.580  ;
+    ORIGIN 0.000 74.580 ;
+    SIZE 60.000 BY 74.580 ;
+    SYMMETRY X Y R90 ;
+    OBS
+        LAYER METAL1 ;
+        RECT  0.000 -74.580 60.000 0.000 ;
+        LAYER METAL2 ;
+        RECT  0.000 -74.580 60.000 0.000 ;
+        LAYER METAL3 ;
+        RECT  0.000 -74.580 60.000 0.000 ;
+        LAYER METAL4 ;
+        RECT  0.000 -74.580 60.000 0.000 ;
+    END
+END PAD60L_OBV
+
+MACRO PAD60L_TRL
+    CLASS BLOCK ;
+    FOREIGN PAD60L_TRL 0.000 -102.400  ;
+    ORIGIN 0.000 102.400 ;
+    SIZE 60.000 BY 102.400 ;
+    SYMMETRY X Y R90 ;
+    OBS
+        LAYER METAL1 ;
+        RECT  0.000 -102.400 60.000 0.000 ;
+        LAYER METAL2 ;
+        RECT  0.000 -102.400 60.000 0.000 ;
+        LAYER METAL3 ;
+        RECT  0.000 -102.400 60.000 0.000 ;
+        LAYER METAL4 ;
+        RECT  0.000 -102.400 60.000 0.000 ;
+    END
+END PAD60L_TRL
+
+MACRO PAD70L
+    CLASS BLOCK ;
+    FOREIGN PAD70L 0.000 -72.500  ;
+    ORIGIN 0.000 72.500 ;
+    SIZE 70.000 BY 72.500 ;
+    SYMMETRY X Y R90 ;
+    OBS
+        LAYER METAL1 ;
+        RECT  0.000 -72.500 70.000 0.000 ;
+        LAYER METAL2 ;
+        RECT  0.000 -72.500 70.000 0.000 ;
+        LAYER METAL3 ;
+        RECT  0.000 -72.500 70.000 0.000 ;
+        LAYER METAL4 ;
+        RECT  0.000 -72.500 70.000 0.000 ;
+    END
+END PAD70L
+
+MACRO PAD70L_OBV
+    CLASS BLOCK ;
+    FOREIGN PAD70L_OBV 0.000 -74.580  ;
+    ORIGIN 0.000 74.580 ;
+    SIZE 70.000 BY 74.580 ;
+    SYMMETRY X Y R90 ;
+    OBS
+        LAYER METAL1 ;
+        RECT  0.000 -74.580 70.000 0.000 ;
+        LAYER METAL2 ;
+        RECT  0.000 -74.580 70.000 0.000 ;
+        LAYER METAL3 ;
+        RECT  0.000 -74.580 70.000 0.000 ;
+        LAYER METAL4 ;
+        RECT  0.000 -74.580 70.000 0.000 ;
+    END
+END PAD70L_OBV
+
+MACRO PAD70L_TRL
+    CLASS BLOCK ;
+    FOREIGN PAD70L_TRL 0.000 -72.500  ;
+    ORIGIN 0.000 72.500 ;
+    SIZE 70.000 BY 72.500 ;
+    SYMMETRY X Y R90 ;
+    OBS
+        LAYER METAL1 ;
+        RECT  0.000 -72.500 70.000 0.000 ;
+        LAYER METAL2 ;
+        RECT  0.000 -72.500 70.000 0.000 ;
+        LAYER METAL3 ;
+        RECT  0.000 -72.500 70.000 0.000 ;
+        LAYER METAL4 ;
+        RECT  0.000 -72.500 70.000 0.000 ;
+    END
+END PAD70L_TRL
+
+MACRO PAD80L
+    CLASS BLOCK ;
+    FOREIGN PAD80L 0.000 -72.500  ;
+    ORIGIN 0.000 72.500 ;
+    SIZE 80.000 BY 72.500 ;
+    SYMMETRY X Y R90 ;
+    OBS
+        LAYER METAL1 ;
+        RECT  0.000 -72.500 80.000 0.000 ;
+        LAYER METAL2 ;
+        RECT  0.000 -72.500 80.000 0.000 ;
+        LAYER METAL3 ;
+        RECT  0.000 -72.500 80.000 0.000 ;
+        LAYER METAL4 ;
+        RECT  0.000 -72.500 80.000 0.000 ;
+    END
+END PAD80L
+
+MACRO PAD80L_OBV
+    CLASS BLOCK ;
+    FOREIGN PAD80L_OBV 0.000 -74.580  ;
+    ORIGIN 0.000 74.580 ;
+    SIZE 80.000 BY 74.580 ;
+    SYMMETRY X Y R90 ;
+    OBS
+        LAYER METAL1 ;
+        RECT  0.000 -74.580 80.000 0.000 ;
+        LAYER METAL2 ;
+        RECT  0.000 -74.580 80.000 0.000 ;
+        LAYER METAL3 ;
+        RECT  0.000 -74.580 80.000 0.000 ;
+        LAYER METAL4 ;
+        RECT  0.000 -74.580 80.000 0.000 ;
+    END
+END PAD80L_OBV
+
+MACRO PAD80L_TRL
+    CLASS BLOCK ;
+    FOREIGN PAD80L_TRL 0.000 -72.500  ;
+    ORIGIN 0.000 72.500 ;
+    SIZE 80.000 BY 72.500 ;
+    SYMMETRY X Y R90 ;
+    OBS
+        LAYER METAL1 ;
+        RECT  0.000 -72.500 80.000 0.000 ;
+        LAYER METAL2 ;
+        RECT  0.000 -72.500 80.000 0.000 ;
+        LAYER METAL3 ;
+        RECT  0.000 -72.500 80.000 0.000 ;
+        LAYER METAL4 ;
+        RECT  0.000 -72.500 80.000 0.000 ;
+    END
+END PAD80L_TRL
+
+END LIBRARY

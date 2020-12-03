@@ -1,0 +1,24 @@
+//Revision 21
+//NOTE
+// Default template for spectre
+// Note:
+//      Please remember to replace Top Cell Library, Cell, and View
+//      fields with the actual names used by your design.
+//END_NOTE
+
+config uwb_pll_topo_tb;
+design uwb_system.uwb_pll_topo_tb:schematic;
+liblist myLib;
+
+viewlist spectre, cmos_sch, \cmos.sch , schematic, veriloga, ahdl, pspice;
+stoplist spectre;
+
+
+cell uwb_system.uwb_pfd binding :schematic;
+cell uwb_system.uwb_loop_filter binding :schematic;
+cell uwb_system.uwb_cpF binding :schematic;
+cell uwb_system.uwb_pll_topo binding :schematic;
+cell uwb_system.uwb_pll_topo_PFD_CP binding :av_extracted_27C;
+
+
+endconfig

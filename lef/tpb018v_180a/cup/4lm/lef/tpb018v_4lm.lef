@@ -1,0 +1,109 @@
+###############################################################################
+#TSMC Library/IP Product
+#Filename: tpb018v_4lm.lef
+#Technology: 018
+#Product Type: I/O PAD
+#Product Name: tpb018v
+#Version: 180a
+###############################################################################
+# 
+#STATEMENT OF USE
+#
+#This information contains confidential and proprietary information of TSMC.
+#No part of this information may be reproduced, transmitted, transcribed,
+#stored in a retrieval system, or translated into any human or computer
+#language, in any form or by any means, electronic, mechanical, magnetic,
+#optical, chemical, manual, or otherwise, without the prior written permission
+#of TSMC. This information was prepared for informational purpose and is for
+#use by TSMC's customers only. TSMC reserves the right to make changes in the
+#information at any time and without notice.
+# 
+###############################################################################
+
+MACRO PAD50LAU_SM
+    CLASS BLOCK ;
+    FOREIGN PAD50LAU_SM 0.000 0.000  ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 50.000 BY 87.160 ;
+    SYMMETRY X Y R90 ;
+    OBS
+        LAYER METAL4 ;
+        RECT  0.000 0.000 50.000 87.160 ;
+    END
+END PAD50LAU_SM
+
+MACRO PAD60LAU_SL_SM
+    CLASS BLOCK ;
+    FOREIGN PAD60LAU_SL_SM 0.000 0.000  ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 60.000 BY 102.400 ;
+    SYMMETRY X Y R90 ;
+    OBS
+        LAYER METAL4 ;
+        RECT  0.000 0.000 60.000 102.400 ;
+    END
+END PAD60LAU_SL_SM
+
+MACRO PAD60LAU_SM
+    CLASS BLOCK ;
+    FOREIGN PAD60LAU_SM 0.000 0.000  ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 50.000 BY 102.400 ;
+    SYMMETRY X Y R90 ;
+    OBS
+        LAYER METAL4 ;
+        RECT  50.000 3.160 53.500 102.400 ;
+        RECT  0.000 0.000 50.000 102.400 ;
+        RECT  -3.500 3.160 0.000 102.400 ;
+    END
+END PAD60LAU_SM
+
+MACRO PAD60LU_SL_SM
+    CLASS BLOCK ;
+    FOREIGN PAD60LU_SL_SM 0.000 0.000  ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 60.000 BY 102.400 ;
+    SYMMETRY X Y R90 ;
+    OBS
+        LAYER METAL4 ;
+        RECT  0.000 0.000 60.000 102.400 ;
+    END
+END PAD60LU_SL_SM
+
+MACRO PAD60LU_SM
+    CLASS BLOCK ;
+    FOREIGN PAD60LU_SM 0.000 0.000  ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 60.000 BY 102.400 ;
+    SYMMETRY X Y R90 ;
+    OBS
+        LAYER METAL4 ;
+        RECT  0.000 0.000 60.000 102.400 ;
+    END
+END PAD60LU_SM
+
+MACRO PAD70LU_SM
+    CLASS BLOCK ;
+    FOREIGN PAD70LU_SM 0.000 0.000  ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 70.000 BY 81.000 ;
+    SYMMETRY X Y R90 ;
+    OBS
+        LAYER METAL4 ;
+        RECT  0.000 0.000 70.000 81.000 ;
+    END
+END PAD70LU_SM
+
+MACRO PAD80LU_SM
+    CLASS BLOCK ;
+    FOREIGN PAD80LU_SM 0.000 0.000  ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 80.000 BY 81.000 ;
+    SYMMETRY X Y R90 ;
+    OBS
+        LAYER METAL4 ;
+        RECT  0.000 0.000 80.000 81.000 ;
+    END
+END PAD80LU_SM
+
+END LIBRARY

@@ -1,0 +1,1007 @@
+DESIGN KIT INFORMATION 
+======================
+
+1) Design Kit Information
+
+   Design Kit Name    : tpb018v_180a_sef 
+   Applicable EDA Tool: Silicon Ensemble
+   Library Name       : tpb018v
+   Library Version    : 180
+   Design Kit Version : a
+   Library Type       : io
+   Cell Number        : 3
+
+
+
+2) Tools used for generation of this design-kit 
+
+   Tool Name            Version 
+   ---------            -------
+   Calibre              v9.3_6.5
+   Opus                 4.4.5      
+
+
+3) Design Kit Contents
+
+   a) Silicon Ensemble library
+
+         tpb018v_?lm.lef : for ?-layer metal design
+
+   b) Antenna effect technology file
+ 
+      for 0.25 and above:
+        antenna.lef : Silicon Ensemble 5.1 or above
+
+      for 0.18 and below:
+        antenna.lef : Silicon Ensemble 5.2.137 or above for ?-layer metal
+
+   All technologies files below are under "techfiles" directory.
+ 
+   c) OPUS technology files
+
+         tsmc18_6lm.tf : opus 4.4 technology file
+
+      
+         display.drf   : Virtuoso 4.4 display resource file 
+         opus.map      : stream in/stream out layer mapping file
+         font.map      : font mapping file
+
+   d) Silicon Ensemble initial file : se.ini
+
+         Only provide in core cell libraries.
+  
+   e) Silicon Ensemble Stream layer table script : gds2map.sh
+
+   f) Dracula DRC notch command file :
+
+         drac018sNT?M.drc : for ?-layer metal
+
+
+
+4) Special Notes
+
+   *) Antenna effect issues
+ 
+      To solve antenna effect, the suggestion is to input antenna technolgy
+
+      file - antenna.lef to router.
+ 
+      Adding antenna diodes, otherwise, might cause die size larger and is 
+
+      NOT recommended.
+ 
+      ---
+      For Silicon Ensemble version 5.0, users may only need antenna.dat
+
+      in FROUTE for routing and verifying antenna.
+ 
+      For Silicon Ensemble version 5.0 hotfix, add
+ 
+         inputLefName2 antenna.lef
+ 
+      in wroute.cfg file for WARP routing.
+ 
+        For Silicon Ensemble 5.1 version or above, import antenna.lef as  
+
+      core/IO LEF.
+
+        However, please move the ANTENNAAREAFACTOR line of every metal layer to
+
+      its correspondent metal layer definition portion in core cell LEF file.
+
+        If users import more than one antenna.lef, please keep only one definition
+
+      of INPUTPINANTENNASIZE, OUTPUTPINANTENNASIZE, INOUTPINANTENNASIZE default
+
+      value.
+ 
+        If using "Verify Antenna", please use antenna.dat.
+
+      In the future, Cadence will adopt antenna.lef format for both routing and
+
+      verify antenna.
+ 
+      ---
+        As for deriving ANTENNAAREAFACTOR coefficient, we have to consider
+
+      the difference between TSMC model and Silicon Ensemble model for antenna
+
+      effect.
+ 
+        In TSMC 0.25um/0.35um Process Design Rule Document-Antenna Effect Prevention 
+
+      Design Rules section, there are rules as below for every metal layer.
+ 
+      Maximum drawn ratio of metal perimeter area to the active Poly
+
+      gate area connected to it should be 400.
+ 
+        Silicon Ensemble, however, defines antenna area as metal wire area.
+ 
+      Suppose K is the ANTENNAAREAFACTOR of metal1, for a fixed gate area and
+
+      a metal1 wire of length L, width W, and thickness T.
+ 
+        For both models, the built-up charge in this metal wire should be
+
+      the same.
+
+        TSMC model             -> perimeter area = (L+W)*T*2
+
+        Silicon Ensemble model -> K * metal wire area = K*(W*L)
+ 
+        K*(W*L) = (L+W)*T*2
+
+        K = 2*(T/W)*((L+W)/*L)
+ 
+        For a long wire, (L+W)/L is approximately to 1. Therefore,
+ 
+        K = 2*T/W
+ 
+        Therefore, for a 5-layer metal process,
+ 
+        metal1 ANTENNAAREAFACTOR 3.7
+        metal2 ANTENNAAREAFACTOR 3
+        metal3 ANTENNAAREAFACTOR 3
+        metal4 ANTENNAAREAFACTOR 3
+        metal5 ANTENNAAREAFACTOR 0.0 ( top level routing metal )
+
+      ---
+        As for ANTENNASIZE of each input pin in a cell, we derive the gate area
+
+      from its SPICE file, then multiply it by 400 to get how much charge this
+
+      pin can tolerate before damaging.
+ 
+      ---
+        According to Cadence's application note of process antenna effect,
+
+      there are some limitations
+
+      1) There may be some area penalties when trying to reduce antenna effect,
+
+         i.e., the die size may be larger.
+
+      2) If the routing is congested, there may still be antenna violations,
+
+         i.e., NOT 100% antenna effect free after routing.
+
+      3) FROUTE and WROUTE will not produce identical results. Froute uses
+
+         Verify Antenna command to detect antenna and do repairs. Wroute has its
+
+         own built-in verify antenna and its own repair mechanism.
+
+
+
+   *) routing layer offset in the chip
+ 
+      When staring a project, please check if the Silicon Ensemble variables
+ 
+      plan.rgrid.M1offset           
+      plan.rgrid.M2offset   
+      plan.rgrid.M3offset  
+      plan.rgrid.M4offset 
+      plan.rgrid.M5offset
+ 
+      are correct in the initial file "se.ini" on the working directory.
+
+      Otherwise, users might see warnings about many off-grid pins .
+ 
+      In general, METAL2 routing track is 1/2 routing pitch offset from cell
+  
+      boundary, and that can be done by set "plan.rgrid.M2offset" as -1.
+
+
+   *) Merge cell layout for final GDS file 
+ 
+      The 0.35um/0.5um core cells' abstract view is generated by Cadence
+
+      autoAbgen utility.
+ 
+      There are two methods for creating final GDS in Silicon Ensemble flow.
+ 
+      1) Output GDS file directly from SE environment
+ 
+        A "gds2map.sh" script is provided for creating TSMC GDSII layer mapping.
+
+        Run it in UNIX environment, for instance,
+ 
+        .sh -layer 5
+ 
+        will create a "gds2.map" for 5-layer metal design.
+ 
+        Use Silicon Ensemble command
+ 
+        OUTPUT GDSII MAPFILE gds2.map LIBNAME DESIGNLIB STRUCTURENAME final FILE final.gds REPORTFILE gds2out.jnl UNITS Thousands ;
+ 
+        to output GDS file.
+ 
+          Notice that this GDS file containts only the top routing layers and
+
+        cell references. Please stream it in a library with references to
+
+        the original standard cell/IO/macro libraries.
+ 
+          Users had better use Cadence Virtuoso 4.4.X version or above since it needs
+
+        a cell called "ruleVia" in OPUS library when STREAM IN or DEF IN.
+
+        That cell defined in OPUS 4.4.X technology file is used for the via array generation.
+
+ 
+      2) Output GDS by Cadence Opus library(Design Framework II).
+ 
+        Use Silicon Ensemble command
+ 
+        OUTPUT DEF FILE "final.def" ;
+ 
+        to output DEF file.
+ 
+          Then, import this DEF file to Preview(icca) to create a autoLayout view.
+
+        Note we have to add the abstract library as reference libraries.
+
+        After that, replace all the abstract views with layout.AP views which are
+
+        with net information.
+
+        Save the whole as "layout" view. Finally, stream it out to a GDS file.
+ 
+          Users have to import SITE information in LEF to the reference libraries
+
+        or there will be warning messages saying "cannot find SITE(core/pad/..)"
+
+        when importing DEF file.
+
+        This method is NOT recommended to use becuase it's kind of complicated. 
+
+
+
+   *) How to remove NOTCH error after Silion Ensemble P&R?
+ 
+        Since LEF file doesn't contain the real metal shapes in the original cells,
+
+      it's very difficult to remove all the NOTCH gap with the information in SE. 
+
+      Users can remove such error by Dracula DRC notch command file(provided in
+ 
+      this design kit) that can create this kind of errors as a NOTCH cell, 
+
+      then fill it in the original layout database.
+
+      For 0.35um technology, the METAL DRC rule  for both silicide/polycide 
+   
+      processes are the same.
+
+ 
+   *) Wide metal spacing rules
+ 
+      According to TSMC design rule document, metal wire width larger than 10um
+
+      should follow wide metal spacing rules.
+ 
+         Specify these wide nets in specialnets section of DEF if users would use
+
+      such wide metal.
+ 
+         There is an example DEF file for TSMC 0.25um process as follows.
+
+         #-----------------------------------------
+          UNITS DISTANCE MICRONS 1000 ;
+ 
+          SPECIALNETS 2 ;
+           
+          - VSS ( * VSS ) + USE GROUND
+            + SPACING METAL1 600 RANGE 10000 100000
+            + SPACING METAL2 600 RANGE 10000 100000
+            + SPACING METAL3 600 RANGE 10000 100000
+            + SPACING METAL4 600 RANGE 10000 100000
+            + SPACING METAL5 800 RANGE 10000 100000 ;
+          - VDD ( * VDD ) + USE POWER
+            + SPACING METAL1 600 RANGE 10000 100000
+            + SPACING METAL2 600 RANGE 10000 100000
+            + SPACING METAL3 600 RANGE 10000 100000
+            + SPACING METAL4 600 RANGE 10000 100000
+            + SPACING METAL5 800 RANGE 10000 100000 ;
+          END SPECIALNETS
+           
+          END DESIGN
+         #-----------------------------------------
+ 
+         In this DEF file, if metal wire width of VDD/VSS nets are ranged from 10um
+
+      to 100um, then these wires should follow spacing rules 0.6um for METAL1, METAL2,
+
+      METAL3, METAL4 and 0.8um for METAL5, where the width of the widest metal wire
+
+      are 100um.
+ 
+         Users could modify this DEF for 3-layer metal design, 4-layer metal design
+
+      according to TSMC Design Rule Document.
+
+      As for wide metal spacing value, please referecne TSMC Design Rule Document.
+
+
+   *) LEF version 5.1 issues
+ 
+      When users do timing-driven placement & routing in SE 5.1, they have to add
+ 
+        VERSION 5.1 ;
+ 
+        BUSBITCHARS "[]" ;
+ 
+      in the header of first imported library LEF.
+ 
+      Otherwise, the timing-driven placement & routing will not be allowed.
+
+ 
+   *) Output I/O port as top level texts in GDS for running LVS
+ 
+        After P&R, we usually need to add top level texts on IO pad location
+
+      for running LVS.
+ 
+        In Silicon Ensemble 5.1, we can automatically finish this job by
+
+      adding one line in gds2.map like
+ 
+         7               NAME            PIN;
+ 
+      which means output all external pins' names on stream layer number 7.
+
+      Then, users have to read pin layer number 7 in LVS command file.
+ 
+        When output P&R gds by this gds2.map file, all top level I/O ports
+
+      names in the netlist will be put on IO cell pin PAD location.
+
+      Special nets like power/ground nets will be on power/ground cell pin
+
+      VDD/VSS location.
+
+
+
+   *) IO Corner pad cells & IO power/ground cells for pad ring
+ 
+      IO Corner pad cell is with the name pattern "CORNER".
+ 
+      IO Power/ground cell for pad ring are with the prefix "PVDD2" or "PVSS2".
+ 
+      The corner pad is connected with other IO pads by abutting IO pads or adding
+ 
+      pad fillers so pins/ports of corner pads are unnecessary in such a methodology.
+ 
+        Since there are devices in corner pads' SPICE file in 0.35um/0.25um or above
+ 
+      I/O libraries, users have to include corner pads in the top module of the
+ 
+      netlist for passing LVS check.
+ 
+        When adding the instances of corner cell in the netlist, there is no need to
+ 
+      connect VDD/VSS net to corner cell because there are no pins/ports of corner
+ 
+      pads defined in this P&R Design Kit.
+ 
+      Take a Verilog netlist as an example,
+ 
+      module topcell (...) ;
+      ...
+ 
+         supply1 VDD ;
+         supply0 VSS ;
+ 
+         // Inserted power/ground related IO instances
+         PCORNERDG corner1 ( ) ;
+         PCORNERDG corner2 ( ) ;
+         PCORNERDG corner3 ( ) ;
+         PCORNERDG corner4 ( ) ;
+         PVSS2DG u1 ( ) ;
+         PVDD2DG u2 ( ) ;
+         PVSS1DG u3 ( VSS ) ;
+         PVDD1DG u4 ( VDD ) ;
+      ...
+      endmodule
+ 
+      Notice that corner pads are still with pins/ports in Synopsys Design Kit &
+ 
+      Verilog Design Kit.
+
+      The same methodology also applies to power/ground cell for IO ring.
+ 
+      As for Edif In flow, users can use Synopsys dc_shell to translate
+ 
+      the above Verilog netlist to Edif format.
+ 
+      In the net section of Edif contents,
+ 
+      ....
+      (net VSS
+      (joined (portRef VSS (instanceRef u3))
+      )
+      (property global (string "VSS"))
+      )
+      (net VDD
+      (joined (portRef VDD (instanceRef u4))
+      (property global (string "VDD"))
+      )
+      ...
+ 
+      users can see that PVDD2, PVSS2 instances are not connected by VDD,VSS.
+
+   *) Wide wire signal routing
+
+        Some of the analog macro pins or clock tree wires needs wide wire routing, 
+      so user can define some nondefault rules in LEF like the following example.
+ 
+      Notice:
+ 
+       a. For each nondefault rule, rule name should be unique.
+       b. Via name in each nondefault rule should be unique.
+       c. The latter nondefault rule wire width should be be larger than the
+          previous one.
+       d. User has to specify every via rectangle in the nondefault via rule.
+          It's very troublesome.
+  
+         Silicon Ensemble command to change wire width of "inout10000" 
+       for Wroute, Groute/Froute: 
+      
+         INPUT LEF FILE wide_metal.lef ;
+         CHANGE NET inout10000 RULE.NAME RULE10000 ;
+         
+         WROUTE FILENAME wroute.cfg ;  ### for routing "inout10000" 
+
+      Example: for 3-layer metal nondefault rule
+
+NONDEFAULTRULE RULE10000
+
+   LAYER METAL1
+      WIDTH 10.000 ;
+      SPACING 0.600 ;
+   END METAL1
+
+   LAYER METAL2
+      WIDTH 10.000 ;
+      SPACING 0.600 ;
+   END METAL2
+
+   LAYER METAL3
+      WIDTH 10.000 ;
+      SPACING 0.800 ;
+   END METAL3
+
+   VIA FATVIA1000012
+      RESISTANCE 4.0000000000 ;
+      LAYER METAL1 ;
+          RECT -5.000 -5.000 5.000 5.000 ;
+      LAYER VIA12 ;
+          RECT -4.440 -4.440 -4.080 -4.080 ;
+          RECT -4.440 -3.730 -4.080 -3.370 ;
+          RECT -4.440 -3.020 -4.080 -2.660 ;
+          RECT -4.440 -2.310 -4.080 -1.950 ;
+          RECT -4.440 -1.600 -4.080 -1.240 ;
+          RECT -4.440 -0.890 -4.080 -0.530 ;
+          RECT -4.440 -0.180 -4.080 0.180 ;
+          RECT -4.440 0.530 -4.080 0.890 ;
+          RECT -4.440 1.240 -4.080 1.600 ;
+          RECT -4.440 1.950 -4.080 2.310 ;
+          RECT -4.440 2.660 -4.080 3.020 ;
+          RECT -4.440 3.370 -4.080 3.730 ;
+          RECT -4.440 4.080 -4.080 4.440 ;
+          RECT -3.730 -4.440 -3.370 -4.080 ;
+          RECT -3.730 -3.730 -3.370 -3.370 ;
+          RECT -3.730 -3.020 -3.370 -2.660 ;
+          RECT -3.730 -2.310 -3.370 -1.950 ;
+          RECT -3.730 -1.600 -3.370 -1.240 ;
+          RECT -3.730 -0.890 -3.370 -0.530 ;
+          RECT -3.730 -0.180 -3.370 0.180 ;
+          RECT -3.730 0.530 -3.370 0.890 ;
+          RECT -3.730 1.240 -3.370 1.600 ;
+          RECT -3.730 1.950 -3.370 2.310 ;
+          RECT -3.730 2.660 -3.370 3.020 ;
+          RECT -3.730 3.370 -3.370 3.730 ;
+          RECT -3.730 4.080 -3.370 4.440 ;
+          RECT -3.020 -4.440 -2.660 -4.080 ;
+          RECT -3.020 -3.730 -2.660 -3.370 ;
+          RECT -3.020 -3.020 -2.660 -2.660 ;
+          RECT -3.020 -2.310 -2.660 -1.950 ;
+          RECT -3.020 -1.600 -2.660 -1.240 ;
+          RECT -3.020 -0.890 -2.660 -0.530 ;
+          RECT -3.020 -0.180 -2.660 0.180 ;
+          RECT -3.020 0.530 -2.660 0.890 ;
+          RECT -3.020 1.240 -2.660 1.600 ;
+          RECT -3.020 1.950 -2.660 2.310 ;
+          RECT -3.020 2.660 -2.660 3.020 ;
+          RECT -3.020 3.370 -2.660 3.730 ;
+          RECT -3.020 4.080 -2.660 4.440 ;
+          RECT -2.310 -4.440 -1.950 -4.080 ;
+          RECT -2.310 -3.730 -1.950 -3.370 ;
+          RECT -2.310 -3.020 -1.950 -2.660 ;
+          RECT -2.310 -2.310 -1.950 -1.950 ;
+          RECT -2.310 -1.600 -1.950 -1.240 ;
+          RECT -2.310 -0.890 -1.950 -0.530 ;
+          RECT -2.310 -0.180 -1.950 0.180 ;
+          RECT -2.310 0.530 -1.950 0.890 ;
+          RECT -2.310 1.240 -1.950 1.600 ;
+          RECT -2.310 1.950 -1.950 2.310 ;
+          RECT -2.310 2.660 -1.950 3.020 ;
+          RECT -2.310 3.370 -1.950 3.730 ;
+          RECT -2.310 4.080 -1.950 4.440 ;
+          RECT -1.600 -4.440 -1.240 -4.080 ;
+          RECT -1.600 -3.730 -1.240 -3.370 ;
+          RECT -1.600 -3.020 -1.240 -2.660 ;
+          RECT -1.600 -2.310 -1.240 -1.950 ;
+          RECT -1.600 -1.600 -1.240 -1.240 ;
+          RECT -1.600 -0.890 -1.240 -0.530 ;
+          RECT -1.600 -0.180 -1.240 0.180 ;
+          RECT -1.600 0.530 -1.240 0.890 ;
+          RECT -1.600 1.240 -1.240 1.600 ;
+          RECT -1.600 1.950 -1.240 2.310 ;
+          RECT -1.600 2.660 -1.240 3.020 ;
+          RECT -1.600 3.370 -1.240 3.730 ;
+          RECT -1.600 4.080 -1.240 4.440 ;
+          RECT -0.890 -4.440 -0.530 -4.080 ;
+          RECT -0.890 -3.730 -0.530 -3.370 ;
+          RECT -0.890 -3.020 -0.530 -2.660 ;
+          RECT -0.890 -2.310 -0.530 -1.950 ;
+          RECT -0.890 -1.600 -0.530 -1.240 ;
+          RECT -0.890 -0.890 -0.530 -0.530 ;
+          RECT -0.890 -0.180 -0.530 0.180 ;
+          RECT -0.890 0.530 -0.530 0.890 ;
+          RECT -0.890 1.240 -0.530 1.600 ;
+          RECT -0.890 1.950 -0.530 2.310 ;
+          RECT -0.890 2.660 -0.530 3.020 ;
+          RECT -0.890 3.370 -0.530 3.730 ;
+          RECT -0.890 4.080 -0.530 4.440 ;
+          RECT -0.180 -4.440 0.180 -4.080 ;
+          RECT -0.180 -3.730 0.180 -3.370 ;
+          RECT -0.180 -3.020 0.180 -2.660 ;
+          RECT -0.180 -2.310 0.180 -1.950 ;
+          RECT -0.180 -1.600 0.180 -1.240 ;
+          RECT -0.180 -0.890 0.180 -0.530 ;
+          RECT -0.180 -0.180 0.180 0.180 ;
+          RECT -0.180 0.530 0.180 0.890 ;
+          RECT -0.180 1.240 0.180 1.600 ;
+          RECT -0.180 1.950 0.180 2.310 ;
+          RECT -0.180 2.660 0.180 3.020 ;
+          RECT -0.180 3.370 0.180 3.730 ;
+          RECT -0.180 4.080 0.180 4.440 ;
+          RECT 0.530 -4.440 0.890 -4.080 ;
+          RECT 0.530 -3.730 0.890 -3.370 ;
+          RECT 0.530 -3.020 0.890 -2.660 ;
+          RECT 0.530 -2.310 0.890 -1.950 ;
+          RECT 0.530 -1.600 0.890 -1.240 ;
+          RECT 0.530 -0.890 0.890 -0.530 ;
+          RECT 0.530 -0.180 0.890 0.180 ;
+          RECT 0.530 0.530 0.890 0.890 ;
+          RECT 0.530 1.240 0.890 1.600 ;
+          RECT 0.530 1.950 0.890 2.310 ;
+          RECT 0.530 2.660 0.890 3.020 ;
+          RECT 0.530 3.370 0.890 3.730 ;
+          RECT 0.530 4.080 0.890 4.440 ;
+          RECT 1.240 -4.440 1.600 -4.080 ;
+          RECT 1.240 -3.730 1.600 -3.370 ;
+          RECT 1.240 -3.020 1.600 -2.660 ;
+          RECT 1.240 -2.310 1.600 -1.950 ;
+          RECT 1.240 -1.600 1.600 -1.240 ;
+          RECT 1.240 -0.890 1.600 -0.530 ;
+          RECT 1.240 -0.180 1.600 0.180 ;
+          RECT 1.240 0.530 1.600 0.890 ;
+          RECT 1.240 1.240 1.600 1.600 ;
+          RECT 1.240 1.950 1.600 2.310 ;
+          RECT 1.240 2.660 1.600 3.020 ;
+          RECT 1.240 3.370 1.600 3.730 ;
+          RECT 1.240 4.080 1.600 4.440 ;
+          RECT 1.950 -4.440 2.310 -4.080 ;
+          RECT 1.950 -3.730 2.310 -3.370 ;
+          RECT 1.950 -3.020 2.310 -2.660 ;
+          RECT 1.950 -2.310 2.310 -1.950 ;
+          RECT 1.950 -1.600 2.310 -1.240 ;
+          RECT 1.950 -0.890 2.310 -0.530 ;
+          RECT 1.950 -0.180 2.310 0.180 ;
+          RECT 1.950 0.530 2.310 0.890 ;
+          RECT 1.950 1.240 2.310 1.600 ;
+          RECT 1.950 1.950 2.310 2.310 ;
+          RECT 1.950 2.660 2.310 3.020 ;
+          RECT 1.950 3.370 2.310 3.730 ;
+          RECT 1.950 4.080 2.310 4.440 ;
+          RECT 2.660 -4.440 3.020 -4.080 ;
+          RECT 2.660 -3.730 3.020 -3.370 ;
+          RECT 2.660 -3.020 3.020 -2.660 ;
+          RECT 2.660 -2.310 3.020 -1.950 ;
+          RECT 2.660 -1.600 3.020 -1.240 ;
+          RECT 2.660 -0.890 3.020 -0.530 ;
+          RECT 2.660 -0.180 3.020 0.180 ;
+          RECT 2.660 0.530 3.020 0.890 ;
+          RECT 2.660 1.240 3.020 1.600 ;
+          RECT 2.660 1.950 3.020 2.310 ;
+          RECT 2.660 2.660 3.020 3.020 ;
+          RECT 2.660 3.370 3.020 3.730 ;
+          RECT 2.660 4.080 3.020 4.440 ;
+          RECT 3.370 -4.440 3.730 -4.080 ;
+          RECT 3.370 -3.730 3.730 -3.370 ;
+          RECT 3.370 -3.020 3.730 -2.660 ;
+          RECT 3.370 -2.310 3.730 -1.950 ;
+          RECT 3.370 -1.600 3.730 -1.240 ;
+          RECT 3.370 -0.890 3.730 -0.530 ;
+          RECT 3.370 -0.180 3.730 0.180 ;
+          RECT 3.370 0.530 3.730 0.890 ;
+          RECT 3.370 1.240 3.730 1.600 ;
+          RECT 3.370 1.950 3.730 2.310 ;
+          RECT 3.370 2.660 3.730 3.020 ;
+          RECT 3.370 3.370 3.730 3.730 ;
+          RECT 3.370 4.080 3.730 4.440 ;
+          RECT 4.080 -4.440 4.440 -4.080 ;
+          RECT 4.080 -3.730 4.440 -3.370 ;
+          RECT 4.080 -3.020 4.440 -2.660 ;
+          RECT 4.080 -2.310 4.440 -1.950 ;
+          RECT 4.080 -1.600 4.440 -1.240 ;
+          RECT 4.080 -0.890 4.440 -0.530 ;
+          RECT 4.080 -0.180 4.440 0.180 ;
+          RECT 4.080 0.530 4.440 0.890 ;
+          RECT 4.080 1.240 4.440 1.600 ;
+          RECT 4.080 1.950 4.440 2.310 ;
+          RECT 4.080 2.660 4.440 3.020 ;
+          RECT 4.080 3.370 4.440 3.730 ;
+          RECT 4.080 4.080 4.440 4.440 ;
+      LAYER METAL2 ;
+          RECT -5.000 -5.000 5.000 5.000 ;
+   END FATVIA1000012
+
+   VIA FATVIA1000023
+      RESISTANCE 4.0000000000 ;
+      LAYER METAL2 ;
+          RECT -5.000 -5.000 5.000 5.000 ;
+      LAYER VIA23 ;
+          RECT -4.440 -4.440 -4.080 -4.080 ;
+          RECT -4.440 -3.730 -4.080 -3.370 ;
+          RECT -4.440 -3.020 -4.080 -2.660 ;
+          RECT -4.440 -2.310 -4.080 -1.950 ;
+          RECT -4.440 -1.600 -4.080 -1.240 ;
+          RECT -4.440 -0.890 -4.080 -0.530 ;
+          RECT -4.440 -0.180 -4.080 0.180 ;
+          RECT -4.440 0.530 -4.080 0.890 ;
+          RECT -4.440 1.240 -4.080 1.600 ;
+          RECT -4.440 1.950 -4.080 2.310 ;
+          RECT -4.440 2.660 -4.080 3.020 ;
+          RECT -4.440 3.370 -4.080 3.730 ;
+          RECT -4.440 4.080 -4.080 4.440 ;
+          RECT -3.730 -4.440 -3.370 -4.080 ;
+          RECT -3.730 -3.730 -3.370 -3.370 ;
+          RECT -3.730 -3.020 -3.370 -2.660 ;
+          RECT -3.730 -2.310 -3.370 -1.950 ;
+          RECT -3.730 -1.600 -3.370 -1.240 ;
+          RECT -3.730 -0.890 -3.370 -0.530 ;
+          RECT -3.730 -0.180 -3.370 0.180 ;
+          RECT -3.730 0.530 -3.370 0.890 ;
+          RECT -3.730 1.240 -3.370 1.600 ;
+          RECT -3.730 1.950 -3.370 2.310 ;
+          RECT -3.730 2.660 -3.370 3.020 ;
+          RECT -3.730 3.370 -3.370 3.730 ;
+          RECT -3.730 4.080 -3.370 4.440 ;
+          RECT -3.020 -4.440 -2.660 -4.080 ;
+          RECT -3.020 -3.730 -2.660 -3.370 ;
+          RECT -3.020 -3.020 -2.660 -2.660 ;
+          RECT -3.020 -2.310 -2.660 -1.950 ;
+          RECT -3.020 -1.600 -2.660 -1.240 ;
+          RECT -3.020 -0.890 -2.660 -0.530 ;
+          RECT -3.020 -0.180 -2.660 0.180 ;
+          RECT -3.020 0.530 -2.660 0.890 ;
+          RECT -3.020 1.240 -2.660 1.600 ;
+          RECT -3.020 1.950 -2.660 2.310 ;
+          RECT -3.020 2.660 -2.660 3.020 ;
+          RECT -3.020 3.370 -2.660 3.730 ;
+          RECT -3.020 4.080 -2.660 4.440 ;
+          RECT -2.310 -4.440 -1.950 -4.080 ;
+          RECT -2.310 -3.730 -1.950 -3.370 ;
+          RECT -2.310 -3.020 -1.950 -2.660 ;
+          RECT -2.310 -2.310 -1.950 -1.950 ;
+          RECT -2.310 -1.600 -1.950 -1.240 ;
+          RECT -2.310 -0.890 -1.950 -0.530 ;
+          RECT -2.310 -0.180 -1.950 0.180 ;
+          RECT -2.310 0.530 -1.950 0.890 ;
+          RECT -2.310 1.240 -1.950 1.600 ;
+          RECT -2.310 1.950 -1.950 2.310 ;
+          RECT -2.310 2.660 -1.950 3.020 ;
+          RECT -2.310 3.370 -1.950 3.730 ;
+          RECT -2.310 4.080 -1.950 4.440 ;
+          RECT -1.600 -4.440 -1.240 -4.080 ;
+          RECT -1.600 -3.730 -1.240 -3.370 ;
+          RECT -1.600 -3.020 -1.240 -2.660 ;
+          RECT -1.600 -2.310 -1.240 -1.950 ;
+          RECT -1.600 -1.600 -1.240 -1.240 ;
+          RECT -1.600 -0.890 -1.240 -0.530 ;
+          RECT -1.600 -0.180 -1.240 0.180 ;
+          RECT -1.600 0.530 -1.240 0.890 ;
+          RECT -1.600 1.240 -1.240 1.600 ;
+          RECT -1.600 1.950 -1.240 2.310 ;
+          RECT -1.600 2.660 -1.240 3.020 ;
+          RECT -1.600 3.370 -1.240 3.730 ;
+          RECT -1.600 4.080 -1.240 4.440 ;
+          RECT -0.890 -4.440 -0.530 -4.080 ;
+          RECT -0.890 -3.730 -0.530 -3.370 ;
+          RECT -0.890 -3.020 -0.530 -2.660 ;
+          RECT -0.890 -2.310 -0.530 -1.950 ;
+          RECT -0.890 -1.600 -0.530 -1.240 ;
+          RECT -0.890 -0.890 -0.530 -0.530 ;
+          RECT -0.890 -0.180 -0.530 0.180 ;
+          RECT -0.890 0.530 -0.530 0.890 ;
+          RECT -0.890 1.240 -0.530 1.600 ;
+          RECT -0.890 1.950 -0.530 2.310 ;
+          RECT -0.890 2.660 -0.530 3.020 ;
+          RECT -0.890 3.370 -0.530 3.730 ;
+          RECT -0.890 4.080 -0.530 4.440 ;
+          RECT -0.180 -4.440 0.180 -4.080 ;
+          RECT -0.180 -3.730 0.180 -3.370 ;
+          RECT -0.180 -3.020 0.180 -2.660 ;
+          RECT -0.180 -2.310 0.180 -1.950 ;
+          RECT -0.180 -1.600 0.180 -1.240 ;
+          RECT -0.180 -0.890 0.180 -0.530 ;
+          RECT -0.180 -0.180 0.180 0.180 ;
+          RECT -0.180 0.530 0.180 0.890 ;
+          RECT -0.180 1.240 0.180 1.600 ;
+          RECT -0.180 1.950 0.180 2.310 ;
+          RECT -0.180 2.660 0.180 3.020 ;
+          RECT -0.180 3.370 0.180 3.730 ;
+          RECT -0.180 4.080 0.180 4.440 ;
+          RECT 0.530 -4.440 0.890 -4.080 ;
+          RECT 0.530 -3.730 0.890 -3.370 ;
+          RECT 0.530 -3.020 0.890 -2.660 ;
+          RECT 0.530 -2.310 0.890 -1.950 ;
+          RECT 0.530 -1.600 0.890 -1.240 ;
+          RECT 0.530 -0.890 0.890 -0.530 ;
+          RECT 0.530 -0.180 0.890 0.180 ;
+          RECT 0.530 0.530 0.890 0.890 ;
+          RECT 0.530 1.240 0.890 1.600 ;
+          RECT 0.530 1.950 0.890 2.310 ;
+          RECT 0.530 2.660 0.890 3.020 ;
+          RECT 0.530 3.370 0.890 3.730 ;
+          RECT 0.530 4.080 0.890 4.440 ;
+          RECT 1.240 -4.440 1.600 -4.080 ;
+          RECT 1.240 -3.730 1.600 -3.370 ;
+          RECT 1.240 -3.020 1.600 -2.660 ;
+          RECT 1.240 -2.310 1.600 -1.950 ;
+          RECT 1.240 -1.600 1.600 -1.240 ;
+          RECT 1.240 -0.890 1.600 -0.530 ;
+          RECT 1.240 -0.180 1.600 0.180 ;
+          RECT 1.240 0.530 1.600 0.890 ;
+          RECT 1.240 1.240 1.600 1.600 ;
+          RECT 1.240 1.950 1.600 2.310 ;
+          RECT 1.240 2.660 1.600 3.020 ;
+          RECT 1.240 3.370 1.600 3.730 ;
+          RECT 1.240 4.080 1.600 4.440 ;
+          RECT 1.950 -4.440 2.310 -4.080 ;
+          RECT 1.950 -3.730 2.310 -3.370 ;
+          RECT 1.950 -3.020 2.310 -2.660 ;
+          RECT 1.950 -2.310 2.310 -1.950 ;
+          RECT 1.950 -1.600 2.310 -1.240 ;
+          RECT 1.950 -0.890 2.310 -0.530 ;
+          RECT 1.950 -0.180 2.310 0.180 ;
+          RECT 1.950 0.530 2.310 0.890 ;
+          RECT 1.950 1.240 2.310 1.600 ;
+          RECT 1.950 1.950 2.310 2.310 ;
+          RECT 1.950 2.660 2.310 3.020 ;
+          RECT 1.950 3.370 2.310 3.730 ;
+          RECT 1.950 4.080 2.310 4.440 ;
+          RECT 2.660 -4.440 3.020 -4.080 ;
+          RECT 2.660 -3.730 3.020 -3.370 ;
+          RECT 2.660 -3.020 3.020 -2.660 ;
+          RECT 2.660 -2.310 3.020 -1.950 ;
+          RECT 2.660 -1.600 3.020 -1.240 ;
+          RECT 2.660 -0.890 3.020 -0.530 ;
+          RECT 2.660 -0.180 3.020 0.180 ;
+          RECT 2.660 0.530 3.020 0.890 ;
+          RECT 2.660 1.240 3.020 1.600 ;
+          RECT 2.660 1.950 3.020 2.310 ;
+          RECT 2.660 2.660 3.020 3.020 ;
+          RECT 2.660 3.370 3.020 3.730 ;
+          RECT 2.660 4.080 3.020 4.440 ;
+          RECT 3.370 -4.440 3.730 -4.080 ;
+          RECT 3.370 -3.730 3.730 -3.370 ;
+          RECT 3.370 -3.020 3.730 -2.660 ;
+          RECT 3.370 -2.310 3.730 -1.950 ;
+          RECT 3.370 -1.600 3.730 -1.240 ;
+          RECT 3.370 -0.890 3.730 -0.530 ;
+          RECT 3.370 -0.180 3.730 0.180 ;
+          RECT 3.370 0.530 3.730 0.890 ;
+          RECT 3.370 1.240 3.730 1.600 ;
+          RECT 3.370 1.950 3.730 2.310 ;
+          RECT 3.370 2.660 3.730 3.020 ;
+          RECT 3.370 3.370 3.730 3.730 ;
+          RECT 3.370 4.080 3.730 4.440 ;
+          RECT 4.080 -4.440 4.440 -4.080 ;
+          RECT 4.080 -3.730 4.440 -3.370 ;
+          RECT 4.080 -3.020 4.440 -2.660 ;
+          RECT 4.080 -2.310 4.440 -1.950 ;
+          RECT 4.080 -1.600 4.440 -1.240 ;
+          RECT 4.080 -0.890 4.440 -0.530 ;
+          RECT 4.080 -0.180 4.440 0.180 ;
+          RECT 4.080 0.530 4.440 0.890 ;
+          RECT 4.080 1.240 4.440 1.600 ;
+          RECT 4.080 1.950 4.440 2.310 ;
+          RECT 4.080 2.660 4.440 3.020 ;
+          RECT 4.080 3.370 4.440 3.730 ;
+          RECT 4.080 4.080 4.440 4.440 ;
+      LAYER METAL3 ;
+          RECT -5.000 -5.000 5.000 5.000 ;
+   END FATVIA1000023
+
+   SPACING
+      SAMENET METAL1 METAL1 0.6 ;
+      SAMENET METAL2 METAL2 0.6 ;
+      SAMENET METAL3 METAL3 0.8 ;
+   END SPACING
+
+END RULE10000
+
+END LIBRARY
+
+       
+
+
+
+5) Known Problems and Limitations
+
+
+   *) 2.5D capacitance extraction issues
+ 
+      The tsmc??_?lm.cap.data is generated by Cadence Coefficient Generator 1.1
+
+      which can accept only one dielectric constant for all dieletrics.
+ 
+        Actually, in TSMC process, the dieletric layers are with different
+
+      dielectric constants. For example, the dieletric constants of passivation
+
+      layers and dieletric between metal1 and poly are different from the ones of
+
+      dieletric between metal layers.
+ 
+        We are doing some modification in Coefficient Generator to simulate the 
+
+      effect of different material dielectrics.
+
+      
+        For the technology 0.18um and below, TSMC suggest customers to use
+      
+      HyperExtract( built-in in Silicon Ensemble 5.2 ) for RC extraction,
+ 
+      which is more accurate and fast than SE 2.5D extraction.
+ 
+
+      Please set the SE variable for using HyperExtract as below
+
+      set v timing.capacitance.model "HYPEREXTRACT" ;
+      set v hyperextract.rules.file "hyper.rules" ;
+
+      Customers also need HyperExtract technology file "hyper.rules" from 
+      TSMC OTIS site.
+
+ 
+
+   *) Routing layer capacitance definition in LEF
+ 
+        In LEF file, two keywords are used by Silicon Ensemble to calculate
+    
+      routing capacitance, i.e., CAPACITANCE CPRESQDIST and EDGECAPACITANCE,
+    
+      where CAPACITANCE CPRESQDIST and EDGECAPACITANCE are used to calculate
+    
+      area and fringe capacitance of each routing segment, respectively.
+    
+    
+         For deep sub-micron process, coupling capacitance plays a major role
+    
+      in determining a net's total capacitance. For TSMC 0.35um 1P4M process,
+    
+      a minimum width metal 4 wire with two other metal 4 wires run in
+    
+      parallel with minimum spacing, its coupling capacitance is greater 80%
+    
+      of the total capacitance. This percentage will drop to ~ 30 0f the
+    
+      other two parallel metal 4 wires are 5 times minimum spacing away.
+    
+      (Please refer to TSMC 0.35um 1P4M SPICE Documents.) It is clear that
+    
+      routing wire's capacitance greatly depends on its neighboring wires.
+    
+      Unfortunately, there is no parameter in LEF to describe this effect.
+    
+    
+         To compensate coupling effect in LEF, as suggested in Cadence 
+    
+      'Timing-Driven Design Flow Guide'( (Product version 5.1, page 3-11, May
+    
+      29,1998), coupling values should be added to EDGECAPACITANCE. However,
+    
+      only one value can be used. If the coupling capacitance with minimum
+    
+      spacing is used, the extracted capacitance will be too larger for
+    
+      non-minimum spacing wires. If another value is selected, it will also
+    
+      make other patterns capacitance in-accurate.
+   
+    
+         For TSMC released LEF files, several test cases are used to calibrate
+    
+      EDGECAPACITANCE values in LEF, where EDGECAPACITANCE is defined as the
+    
+      sum of fringe capacitance and coupling capacitance of a metal wire with
+    
+      two parallel wires at 2*minimum spacing away. For our test cases, the
+    
+      mean difference of the extracted capacitance by using LEF file and using
+    
+      Coeffgen (SE build-in field solver) is about 15%.~20% . Please note
+    
+      that, as mentioned earlier, the capacitance compensation for LEF is
+    
+      allowed for only one patterns. Usually, the majority one is used and it
+    
+      is case dependent. Therefore, our result may be different case by case.
+    
+      However, user can easily adjust the value of EDGECAPACITANCE for his
+    
+      specific design by using the method described in Cadence 'Timing-Driven
+    
+      Design Flow Guide' or using our method described above.
+    
+         In Silicon Ensemble, capacitance data defined in LEF files are used
+    
+      to speed up routing process. More accurate RC extractors should be used
+    
+      for final verification.
+
+
+   *) Top layer routing pitch issues in 0.35um tcb773s,tcb773p libraries 
+     for 3-layer metal design
+  
+  
+      According to TSMC Design Rules, for 3 metal layer process, top metal
+
+      width and spacing are wider than that of other metal layers.
+    
+      For TSMC 0.35um process, if minimum rules are used to define METAL1
+   
+      and METAL3 layer pitches, their pitches are 1.25 and 1.3, respectively.
+   
+      Thus, most of time, METAL1 and METAL3 pitches will not be perfectly
+   
+      aligned.
+
+    
+      This METAL1, METAL3 pitches mismatch problem will result in VIA12
+   
+      running away from some METAL1 pins when routing by Silicon Ensemble.
+   
+      That is, router will put some VIA12 on METAL3 track and add a small
+
+      wire from this VIA12 to the target METAL1 pin.
+
+      The VIA12 runaway problem always cause real DRC spacing violation since
+
+      there are other METAL1 shapes around the target pin.
+
+    
+        One work-around is to enlarge the METAL3 picth to 2.5 and let
+
+      all METAL3 tracks align with METAL1 tracks. This will solve the VIA12
+
+      runaway DRC error at the penality of METAL3 routing resource. 
+
+      To avoid VIA12 runaway phenomenon in 0.35um 3-layer metal design,
+
+      please use Silicon Ensemble 5.1.125 or above and add the following option
+    
+        frouteCheckLandable TRUE
+    
+      in WARP router configuration file.
+   
+
+
+
+====================================================================

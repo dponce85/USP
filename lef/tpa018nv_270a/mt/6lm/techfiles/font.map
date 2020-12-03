@@ -1,0 +1,17 @@
+
+#################################
+#                               #
+#          OPUS-STREAM          # 
+#     TEXT FONT MAP TABLE       #
+#                               #
+#################################
+#
+#OPUS    STREAM     Font
+#Font     Font     Height     
+#------------------------------
+ stick     0        0.5
+ roman     1        0.5
+ gothic    2        0.5
+ script    3        0.5
+#
+
