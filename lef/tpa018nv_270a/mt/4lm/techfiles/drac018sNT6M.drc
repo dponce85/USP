@@ -1,0 +1,68 @@
+
+; ***************************************************
+; *   0.18um NOTCH REPAIR DRC COMMAND FILE          *
+; *   FOR TSMC LOGIC 0.18um SP6M SALICIDE PROCESS   *
+; *   (DESIGN RULE DOCUMENT: TA-10A5-4001 Rev1.1)   *
+; ***************************************************
+
+*DESCRIPTION 
+     PRIMARY          =  TOPCELLNAME
+     INDISK           =  GDSFILENAME
+     OUTDISK          =  TOPCELLNAME.OUT
+     SYSTEM           =  GDS2     
+     REV-SCALE        =  200  MIC      
+     RESOLUTION       =  0.005 MIC      
+     KEEPDATA         =  SMART
+     FLAG-NON45       =  YES      
+     FLAG-OFFGRID     =  YES      
+     FLAG-ACUTEANGLE  =  YES     
+     PRINTFILE        =  drac  
+*END     
+;        
+*INPUT-LAYER 
+     M1i       =   16
+     M2i       =   18
+     M3i       =   28
+     M4i       =   31
+     M5i       =   33
+     M6i       =   38
+     EXCL      =   55       
+     SUBSTRATE =   BULK 99       
+*END     
+;        
+
+*OPERATION 
+
+    NOT     M1i EXCL M1
+    NOT     M2i EXCL M2
+    NOT     M3i EXCL M3
+    NOT     M4i EXCL M4
+    NOT     M5i EXCL M5
+    NOT     M6i EXCL M6
+
+    EXT[HR] M1 LT 0.23 M1NEAR
+    SELECT  M1NEAR TOUCH[1:1] M1 M1NTCH
+    AND     M1NTCH BULK M1MRGE OUTPUT M1MRGE 16
+
+    EXT[HR] M2 LT 0.28 M2NEAR
+    SELECT  M2NEAR TOUCH[1:1] M2 M2NTCH
+    AND     M2NTCH BULK M2MRGE OUTPUT M2MRGE 18
+
+    EXT[HR] M3 LT 0.28 M3NEAR
+    SELECT  M3NEAR TOUCH[1:1] M3 M3NTCH
+    AND     M3NTCH BULK M3MRGE OUTPUT M3MRGE 28
+
+    EXT[HR] M4 LT 0.28 M4NEAR
+    SELECT  M4NEAR TOUCH[1:1] M4 M4NTCH
+    AND     M4NTCH BULK M4MRGE OUTPUT M4MRGE 31
+
+    EXT[HR] M5 LT 0.28 M5NEAR
+    SELECT  M5NEAR TOUCH[1:1] M5 M5NTCH
+    AND     M5NTCH BULK M5MRGE OUTPUT M5MRGE 33
+
+    EXT[HR] M6 LT 0.46 M6NEAR
+    SELECT  M6NEAR TOUCH[1:1] M6 M6NTCH
+    AND     M6NTCH BULK M6MRGE OUTPUT M6MRGE 38
+
+*END
+

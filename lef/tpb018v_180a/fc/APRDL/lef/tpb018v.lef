@@ -1,0 +1,91 @@
+###############################################################################
+#TSMC Library/IP Product
+#Filename: tpb018v.lef
+#Technology: 018
+#Product Type: I/O PAD
+#Product Name: tpb018v
+#Version: 180a
+###############################################################################
+# 
+#STATEMENT OF USE
+#
+#This information contains confidential and proprietary information of TSMC.
+#No part of this information may be reproduced, transmitted, transcribed,
+#stored in a retrieval system, or translated into any human or computer
+#language, in any form or by any means, electronic, mechanical, magnetic,
+#optical, chemical, manual, or otherwise, without the prior written permission
+#of TSMC. This information was prepared for informational purpose and is for
+#use by TSMC's customers only. TSMC reserves the right to make changes in the
+#information at any time and without notice.
+# 
+###############################################################################
+
+MACRO PAD100APB
+    CLASS COVER BUMP ;
+    FOREIGN PAD100APB 0.000 0.000  ;
+
+    SIZE 104.000 BY 104.000 ;
+    SYMMETRY X Y R90 ;
+    PIN BUMP
+     DIRECTION INOUT ;
+     USE SIGNAL ;
+      PORT
+       CLASS CORE ;
+       LAYER PPI ;
+       POLYGON 30.445 0 0 30.445 0 73.53 30.47 104 73.53 104 104 73.53 104 30.47 73.53 0 ;
+      END
+     END BUMP
+END PAD100APB
+
+MACRO PAD80APB
+    CLASS COVER BUMP ;
+    FOREIGN PAD80APB 0.000 0.000  ;
+
+    SIZE 84.000 BY 84.000 ;
+    SYMMETRY X Y R90 ;
+    PIN BUMP
+     DIRECTION INOUT ;
+     USE SIGNAL ;
+      PORT
+       CLASS CORE ;
+       LAYER PPI ;
+       POLYGON 24.6 0 0 24.6 0 59.39 24.61 84 59.39 84 84 59.39 84 24.61 59.39 0 ;
+      END
+     END BUMP
+END PAD80APB
+
+MACRO PAD85APB
+    CLASS COVER BUMP ;
+    FOREIGN PAD85APB 0.000 0.000  ;
+
+    SIZE 89.000 BY 89.000 ;
+    SYMMETRY X Y R90 ;
+    PIN BUMP
+     DIRECTION INOUT ;
+     USE SIGNAL ;
+      PORT
+       CLASS CORE ;
+       LAYER PPI ;
+       POLYGON 26.06 0 0 26.06 0 62.925 26.075 89 62.925 89 89 62.925 89 26.075 62.925 0 ;
+      END
+     END BUMP
+END PAD85APB
+
+MACRO PAD90APB
+    CLASS COVER BUMP ;
+    FOREIGN PAD90APB 0.000 0.000  ;
+
+    SIZE 94.000 BY 94.000 ;
+    SYMMETRY X Y R90 ;
+    PIN BUMP
+     DIRECTION INOUT ;
+     USE SIGNAL ;
+      PORT
+       CLASS CORE ;
+       LAYER PPI ;
+       POLYGON 27.52 0 0 27.52 0 66.46 27.54 94 66.46 94 94 66.46 94 27.54 66.46 0 ;
+      END
+     END BUMP
+END PAD90APB
+
+END LIBRARY

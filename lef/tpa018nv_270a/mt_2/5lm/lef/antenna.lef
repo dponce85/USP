@@ -1,0 +1,59 @@
+###############################################################################
+#TSMC Library/IP Product
+#Filename: antenna.lef
+#Technology: log018
+#Product Type: Standard I/O
+#Product Name: tpa018nv
+#Version: 270a
+###############################################################################
+# 
+#STATEMENT OF USE
+#
+#This information contains confidential and proprietary information of TSMC.
+#No part of this information may be reproduced, transmitted, transcribed,
+#stored in a retrieval system, or translated into any human or computer
+#language, in any form or by any means, electronic, mechanical, magnetic,
+#optical, chemical, manual, or otherwise, without the prior written permission
+#of TSMC. This information was prepared for informational purpose and is for
+#use by TSMC's customers only. TSMC reserves the right to make changes in the
+#information at any time and without notice.
+# 
+###############################################################################
+
+MACRO PDB1A
+    PIN AIO
+        AntennaDiffArea 32.000000 ;
+    END AIO
+END PDB1A
+
+MACRO PDB1AC
+    PIN AIO
+        AntennaDiffArea 32.000000 ;
+    END AIO
+END PDB1AC
+
+MACRO PDB2A
+    PIN AIO
+        AntennaDiffArea 96.000000 ;
+    END AIO
+END PDB2A
+
+MACRO PDB2AC
+    PIN AIO
+        AntennaDiffArea 96.000000 ;
+    END AIO
+END PDB2AC
+
+MACRO PDB3A
+    PIN AIO
+        AntennaDiffArea 192.000000 ;
+    END AIO
+END PDB3A
+
+MACRO PDB3AC
+    PIN AIO
+        AntennaDiffArea 192.000000 ;
+    END AIO
+END PDB3AC
+
+END LIBRARY

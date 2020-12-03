@@ -1,0 +1,837 @@
+###############################################################################
+#TSMC Library/IP Product
+#Filename: tpa018nv_6lm.lef
+#Technology: log018
+#Product Type: Standard I/O
+#Product Name: tpa018nv
+#Version: 270a
+###############################################################################
+# 
+#STATEMENT OF USE
+#
+#This information contains confidential and proprietary information of TSMC.
+#No part of this information may be reproduced, transmitted, transcribed,
+#stored in a retrieval system, or translated into any human or computer
+#language, in any form or by any means, electronic, mechanical, magnetic,
+#optical, chemical, manual, or otherwise, without the prior written permission
+#of TSMC. This information was prepared for informational purpose and is for
+#use by TSMC's customers only. TSMC reserves the right to make changes in the
+#information at any time and without notice.
+# 
+###############################################################################
+
+SITE pad
+    SYMMETRY x y r90 ;
+    CLASS pad ;
+    SIZE 0.005 BY 115.000 ;
+END pad 
+
+SITE corner
+    SYMMETRY x y r90 ;
+    CLASS pad ;
+    SIZE 115.000 BY 115.000 ;
+END corner
+
+MACRO PCLAMP
+    CLASS BLOCK ;
+    FOREIGN PCLAMP 0.000 0.000  ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 115.000 BY 56.000 ;
+    SYMMETRY x y r90 ;
+    PIN VSSESD
+        DIRECTION INOUT ;
+        PORT
+        LAYER METAL3 ;
+        RECT  28.055 0.000 57.945 2.000 ;
+        RECT  28.055 54.000 57.945 56.000 ;
+        RECT  2.055 0.000 25.055 2.000 ;
+        RECT  2.055 54.000 25.055 56.000 ;
+        END
+    END VSSESD
+    PIN VDDESD
+        DIRECTION INOUT ;
+        PORT
+        LAYER METAL3 ;
+        RECT  86.945 0.000 108.505 2.000 ;
+        RECT  86.945 54.000 108.505 56.000 ;
+        RECT  60.945 0.000 83.945 2.000 ;
+        RECT  60.945 54.000 83.945 56.000 ;
+        END
+    END VDDESD
+    OBS
+        LAYER METAL1 ;
+        RECT  0.000 0.000 115.000 56.000 ;
+        LAYER METAL2 ;
+        RECT  0.000 0.000 115.000 56.000 ;
+        LAYER METAL3 ;
+        RECT  108.785 0.000 115.000 56.000 ;
+        RECT  86.665 2.280 108.785 53.720 ;
+        RECT  84.225 0.000 86.665 56.000 ;
+        RECT  60.665 2.280 84.225 53.720 ;
+        RECT  58.225 0.000 60.665 56.000 ;
+        RECT  27.775 2.280 58.225 53.720 ;
+        RECT  25.335 0.000 27.775 56.000 ;
+        RECT  1.775 2.280 25.335 53.720 ;
+        RECT  0.000 0.000 1.775 56.000 ;
+        LAYER METAL4 ;
+        RECT  0.000 0.000 115.000 56.000 ;
+    END
+END PCLAMP
+
+MACRO PCORNERA
+    CLASS ENDCAP BOTTOMLEFT ;
+    FOREIGN PCORNERA 0.000 0.000  ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 115.000 BY 115.000 ;
+    SYMMETRY x y r90 ;
+    SITE corner ;
+    OBS
+        LAYER METAL1 ;
+        RECT  0.000 0.000 115.000 115.000 ;
+        LAYER METAL2 ;
+        RECT  0.000 0.000 115.000 115.000 ;
+        LAYER METAL3 ;
+        RECT  0.000 0.000 115.000 115.000 ;
+        LAYER METAL4 ;
+        RECT  0.000 0.000 115.000 115.000 ;
+    END
+END PCORNERA
+
+MACRO PDB1A
+    CLASS PAD ;
+    FOREIGN PDB1A 0.000 0.000  ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 50.000 BY 115.000 ;
+    SYMMETRY x y r90 ;
+    SITE pad ;
+    PIN AIO
+        DIRECTION INOUT ;
+        PORT
+        LAYER METAL2 ;
+        RECT  20.000 111.840 30.000 115.000 ;
+        RECT  20.000 0.000 30.000 3.160 ;
+        LAYER METAL3 ;
+        RECT  20.000 0.000 30.000 3.160 ;
+        LAYER METAL4 ;
+        RECT  20.000 0.000 30.000 3.160 ;
+        END
+    END AIO
+    OBS
+        LAYER METAL1 ;
+        RECT  0.000 0.000 50.000 115.000 ;
+        LAYER METAL2 ;
+        RECT  30.280 0.000 50.000 115.000 ;
+        RECT  19.720 3.440 30.280 111.560 ;
+        RECT  0.000 0.000 19.720 115.000 ;
+        LAYER VIA23 ;
+        RECT  20.415 0.160 29.515 3.020 ;
+        LAYER METAL3 ;
+        RECT  30.280 0.000 50.000 115.000 ;
+        RECT  19.720 3.440 30.280 115.000 ;
+        RECT  0.000 0.000 19.720 115.000 ;
+        LAYER VIA34 ;
+        RECT  20.415 0.160 29.515 3.020 ;
+        LAYER METAL4 ;
+        RECT  30.280 0.000 50.000 115.000 ;
+        RECT  19.720 3.440 30.280 115.000 ;
+        RECT  0.000 0.000 19.720 115.000 ;
+    END
+END PDB1A
+
+MACRO PDB1AC
+    CLASS PAD ;
+    FOREIGN PDB1AC 0.000 0.000  ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 50.000 BY 115.000 ;
+    SYMMETRY x y r90 ;
+    SITE pad ;
+    PIN AIO
+        DIRECTION INOUT ;
+        PORT
+        LAYER METAL2 ;
+        RECT  20.000 111.840 30.000 115.000 ;
+        RECT  20.000 0.000 30.000 3.160 ;
+        LAYER METAL3 ;
+        RECT  20.000 0.000 30.000 3.160 ;
+        LAYER METAL4 ;
+        RECT  20.000 0.000 30.000 3.160 ;
+        END
+    END AIO
+    OBS
+        LAYER METAL1 ;
+        RECT  0.000 0.000 50.000 115.000 ;
+        LAYER METAL2 ;
+        RECT  30.280 0.000 50.000 115.000 ;
+        RECT  19.720 3.440 30.280 111.560 ;
+        RECT  0.000 0.000 19.720 115.000 ;
+        LAYER VIA23 ;
+        RECT  20.415 0.160 29.515 3.020 ;
+        LAYER METAL3 ;
+        RECT  30.280 0.000 50.000 115.000 ;
+        RECT  19.720 3.440 30.280 115.000 ;
+        RECT  0.000 0.000 19.720 115.000 ;
+        LAYER VIA34 ;
+        RECT  20.415 0.160 29.515 3.020 ;
+        LAYER METAL4 ;
+        RECT  30.280 0.000 50.000 115.000 ;
+        RECT  19.720 3.440 30.280 115.000 ;
+        RECT  0.000 0.000 19.720 115.000 ;
+    END
+END PDB1AC
+
+MACRO PDB2A
+    CLASS PAD ;
+    FOREIGN PDB2A 0.000 0.000  ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 50.000 BY 115.000 ;
+    SYMMETRY x y r90 ;
+    SITE pad ;
+    PIN AIO
+        DIRECTION INOUT ;
+        PORT
+        LAYER METAL2 ;
+        RECT  20.000 111.840 30.000 115.000 ;
+        RECT  20.000 0.000 30.000 3.160 ;
+        LAYER METAL3 ;
+        RECT  20.000 0.000 30.000 3.160 ;
+        LAYER METAL4 ;
+        RECT  20.000 0.000 30.000 3.160 ;
+        END
+    END AIO
+    OBS
+        LAYER METAL1 ;
+        RECT  0.000 0.000 50.000 115.000 ;
+        LAYER METAL2 ;
+        RECT  30.280 0.000 50.000 115.000 ;
+        RECT  19.720 3.440 30.280 111.560 ;
+        RECT  0.000 0.000 19.720 115.000 ;
+        LAYER VIA23 ;
+        RECT  20.415 0.160 29.515 3.020 ;
+        LAYER METAL3 ;
+        RECT  30.280 0.000 50.000 115.000 ;
+        RECT  19.720 3.440 30.280 115.000 ;
+        RECT  0.000 0.000 19.720 115.000 ;
+        LAYER VIA34 ;
+        RECT  20.415 0.160 29.515 3.020 ;
+        LAYER METAL4 ;
+        RECT  30.280 0.000 50.000 115.000 ;
+        RECT  19.720 3.440 30.280 115.000 ;
+        RECT  0.000 0.000 19.720 115.000 ;
+    END
+END PDB2A
+
+MACRO PDB2AC
+    CLASS PAD ;
+    FOREIGN PDB2AC 0.000 0.000  ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 50.000 BY 115.000 ;
+    SYMMETRY x y r90 ;
+    SITE pad ;
+    PIN AIO
+        DIRECTION INOUT ;
+        PORT
+        LAYER METAL2 ;
+        RECT  20.000 111.840 30.000 115.000 ;
+        RECT  20.000 0.000 30.000 3.160 ;
+        LAYER METAL3 ;
+        RECT  20.000 0.000 30.000 3.160 ;
+        LAYER METAL4 ;
+        RECT  20.000 0.000 30.000 3.160 ;
+        END
+    END AIO
+    OBS
+        LAYER METAL1 ;
+        RECT  0.000 0.000 50.000 115.000 ;
+        LAYER METAL2 ;
+        RECT  30.280 0.000 50.000 115.000 ;
+        RECT  19.720 3.440 30.280 111.560 ;
+        RECT  0.000 0.000 19.720 115.000 ;
+        LAYER VIA23 ;
+        RECT  20.415 0.160 29.515 3.020 ;
+        LAYER METAL3 ;
+        RECT  30.280 0.000 50.000 115.000 ;
+        RECT  19.720 3.440 30.280 115.000 ;
+        RECT  0.000 0.000 19.720 115.000 ;
+        LAYER VIA34 ;
+        RECT  20.415 0.160 29.515 3.020 ;
+        LAYER METAL4 ;
+        RECT  30.280 0.000 50.000 115.000 ;
+        RECT  19.720 3.440 30.280 115.000 ;
+        RECT  0.000 0.000 19.720 115.000 ;
+    END
+END PDB2AC
+
+MACRO PDB3A
+    CLASS PAD ;
+    FOREIGN PDB3A 0.000 0.000  ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 50.000 BY 115.000 ;
+    SYMMETRY x y r90 ;
+    SITE pad ;
+    PIN AIO
+        DIRECTION INOUT ;
+        PORT
+        LAYER METAL2 ;
+        RECT  25.945 111.840 39.945 115.000 ;
+        RECT  10.055 111.840 24.055 115.000 ;
+        LAYER METAL4 ;
+        RECT  25.945 0.000 39.945 3.160 ;
+        LAYER METAL3 ;
+        RECT  25.945 0.000 39.945 3.160 ;
+        LAYER METAL2 ;
+        RECT  25.945 0.000 39.945 3.160 ;
+        RECT  10.055 0.000 24.055 3.160 ;
+        LAYER METAL3 ;
+        RECT  10.055 0.000 24.055 3.160 ;
+        LAYER METAL4 ;
+        RECT  10.055 0.000 24.055 3.160 ;
+        END
+    END AIO
+    OBS
+        LAYER METAL1 ;
+        RECT  0.000 0.000 50.000 115.000 ;
+        LAYER METAL2 ;
+        RECT  40.225 0.000 50.000 115.000 ;
+        RECT  25.665 3.440 40.225 111.560 ;
+        RECT  24.335 0.000 25.665 115.000 ;
+        RECT  9.775 3.440 24.335 111.560 ;
+        RECT  0.000 0.000 9.775 115.000 ;
+        LAYER VIA23 ;
+        RECT  26.170 0.150 39.430 3.010 ;
+        RECT  10.570 0.150 23.830 3.010 ;
+        LAYER METAL3 ;
+        RECT  40.225 0.000 50.000 115.000 ;
+        RECT  25.665 3.440 40.225 115.000 ;
+        RECT  24.335 0.000 25.665 115.000 ;
+        RECT  9.775 3.440 24.335 115.000 ;
+        RECT  0.000 0.000 9.775 115.000 ;
+        LAYER VIA34 ;
+        RECT  26.170 0.150 39.430 3.010 ;
+        RECT  10.570 0.150 23.830 3.010 ;
+        LAYER METAL4 ;
+        RECT  40.225 0.000 50.000 115.000 ;
+        RECT  25.665 3.440 40.225 115.000 ;
+        RECT  24.335 0.000 25.665 115.000 ;
+        RECT  9.775 3.440 24.335 115.000 ;
+        RECT  0.000 0.000 9.775 115.000 ;
+    END
+END PDB3A
+
+MACRO PDB3AC
+    CLASS PAD ;
+    FOREIGN PDB3AC 0.000 0.000  ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 50.000 BY 115.000 ;
+    SYMMETRY x y r90 ;
+    SITE pad ;
+    PIN AIO
+        DIRECTION INOUT ;
+        PORT
+        LAYER METAL2 ;
+        RECT  25.945 111.840 39.945 115.000 ;
+        RECT  10.055 111.840 24.055 115.000 ;
+        LAYER METAL3 ;
+        RECT  25.945 0.000 39.945 3.160 ;
+        LAYER METAL2 ;
+        RECT  25.945 0.000 39.945 3.160 ;
+        RECT  10.055 0.000 24.055 3.160 ;
+        LAYER METAL3 ;
+        RECT  10.055 0.000 24.055 3.160 ;
+        END
+    END AIO
+    OBS
+        LAYER METAL1 ;
+        RECT  0.000 0.000 50.000 115.000 ;
+        LAYER METAL2 ;
+        RECT  40.225 0.000 50.000 115.000 ;
+        RECT  25.665 3.440 40.225 111.560 ;
+        RECT  24.335 0.000 25.665 115.000 ;
+        RECT  9.775 3.440 24.335 111.560 ;
+        RECT  0.000 0.000 9.775 115.000 ;
+        LAYER VIA23 ;
+        RECT  26.170 0.150 39.430 3.010 ;
+        RECT  10.570 0.150 23.830 3.010 ;
+        LAYER METAL3 ;
+        RECT  40.225 0.000 50.000 115.000 ;
+        RECT  25.665 3.440 40.225 115.000 ;
+        RECT  24.335 0.000 25.665 115.000 ;
+        RECT  9.775 3.440 24.335 115.000 ;
+        RECT  0.000 0.000 9.775 115.000 ;
+        LAYER VIA34 ;
+        RECT  26.170 0.150 39.430 3.010 ;
+        RECT  10.570 0.150 23.830 3.010 ;
+        LAYER METAL4 ;
+        RECT  0.000 0.000 50.000 115.000 ;
+    END
+END PDB3AC
+
+MACRO PFILLER0005A
+    CLASS PAD ;
+    FOREIGN PFILLER0005A 0.000 0.000  ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 0.005 BY 115.000 ;
+    SYMMETRY x y r90 ;
+    SITE pad ;
+    OBS
+        LAYER METAL1 ;
+        RECT  0.000 0.000 0.005 115.000 ;
+        LAYER METAL2 ;
+        RECT  0.000 0.000 0.005 115.000 ;
+        LAYER METAL3 ;
+        RECT  0.000 0.000 0.005 115.000 ;
+        LAYER METAL4 ;
+        RECT  0.000 0.000 0.005 115.000 ;
+    END
+END PFILLER0005A
+
+MACRO PFILLER05A
+    CLASS PAD ;
+    FOREIGN PFILLER05A 0.000 0.000  ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 0.500 BY 115.000 ;
+    SYMMETRY x y r90 ;
+    SITE pad ;
+    OBS
+        LAYER METAL1 ;
+        RECT  0.000 0.000 0.500 115.000 ;
+        LAYER METAL2 ;
+        RECT  0.000 0.000 0.500 115.000 ;
+        LAYER METAL3 ;
+        RECT  0.000 0.000 0.500 115.000 ;
+        LAYER METAL4 ;
+        RECT  0.000 0.000 0.500 115.000 ;
+    END
+END PFILLER05A
+
+MACRO PFILLER10A
+    CLASS PAD ;
+    FOREIGN PFILLER10A 0.000 0.000  ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 10.000 BY 115.000 ;
+    SYMMETRY x y r90 ;
+    SITE pad ;
+    OBS
+        LAYER METAL1 ;
+        RECT  0.000 0.000 10.000 115.000 ;
+        LAYER METAL2 ;
+        RECT  0.000 0.000 10.000 115.000 ;
+        LAYER METAL3 ;
+        RECT  0.000 0.000 10.000 115.000 ;
+        LAYER METAL4 ;
+        RECT  0.000 0.000 10.000 115.000 ;
+    END
+END PFILLER10A
+
+MACRO PFILLER1A
+    CLASS PAD ;
+    FOREIGN PFILLER1A 0.000 0.000  ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 1.000 BY 115.000 ;
+    SYMMETRY x y r90 ;
+    SITE pad ;
+    OBS
+        LAYER METAL1 ;
+        RECT  0.000 0.000 1.000 115.000 ;
+        LAYER METAL2 ;
+        RECT  0.000 0.000 1.000 115.000 ;
+        LAYER METAL3 ;
+        RECT  0.000 0.000 1.000 115.000 ;
+        LAYER METAL4 ;
+        RECT  0.000 0.000 1.000 115.000 ;
+    END
+END PFILLER1A
+
+MACRO PFILLER20A
+    CLASS PAD ;
+    FOREIGN PFILLER20A 0.000 0.000  ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 20.000 BY 115.000 ;
+    SYMMETRY x y r90 ;
+    SITE pad ;
+    OBS
+        LAYER METAL1 ;
+        RECT  0.000 0.000 20.000 115.000 ;
+        LAYER METAL2 ;
+        RECT  0.000 0.000 20.000 115.000 ;
+        LAYER METAL3 ;
+        RECT  0.000 0.000 20.000 115.000 ;
+        LAYER METAL4 ;
+        RECT  0.000 0.000 20.000 115.000 ;
+    END
+END PFILLER20A
+
+MACRO PFILLER5A
+    CLASS PAD ;
+    FOREIGN PFILLER5A 0.000 0.000  ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 5.000 BY 115.000 ;
+    SYMMETRY x y r90 ;
+    SITE pad ;
+    OBS
+        LAYER METAL1 ;
+        RECT  0.000 0.000 5.000 115.000 ;
+        LAYER METAL2 ;
+        RECT  0.000 0.000 5.000 115.000 ;
+        LAYER METAL3 ;
+        RECT  0.000 0.000 5.000 115.000 ;
+        LAYER METAL4 ;
+        RECT  0.000 0.000 5.000 115.000 ;
+    END
+END PFILLER5A
+
+MACRO PRCUTA
+    CLASS PAD ;
+    FOREIGN PRCUTA 0.000 0.000  ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 25.000 BY 115.000 ;
+    SYMMETRY x y r90 ;
+    SITE pad ;
+    OBS
+        LAYER METAL1 ;
+        RECT  0.000 0.000 25.000 115.000 ;
+        LAYER METAL2 ;
+        RECT  0.000 0.000 25.000 115.000 ;
+        LAYER METAL3 ;
+        RECT  0.000 0.000 25.000 115.000 ;
+        LAYER METAL4 ;
+        RECT  0.000 0.000 25.000 115.000 ;
+    END
+END PRCUTA
+
+MACRO PVDD3A
+    CLASS PAD ;
+    FOREIGN PVDD3A 0.000 0.000  ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 50.000 BY 115.000 ;
+    SYMMETRY x y r90 ;
+    SITE pad ;
+    PIN TAVDD
+        DIRECTION INOUT ;
+        PORT
+        LAYER METAL4 ;
+        RECT  27.740 0.000 47.740 3.160 ;
+        LAYER METAL3 ;
+        RECT  27.740 0.000 47.740 3.160 ;
+        LAYER METAL2 ;
+        RECT  27.740 0.000 47.740 3.160 ;
+        LAYER METAL1 ;
+        RECT  27.740 0.000 47.740 3.160 ;
+        RECT  2.260 0.000 22.260 3.160 ;
+        LAYER METAL2 ;
+        RECT  2.260 0.000 22.260 3.160 ;
+        LAYER METAL3 ;
+        RECT  2.260 0.000 22.260 3.160 ;
+        LAYER METAL4 ;
+        RECT  2.260 0.000 22.260 3.160 ;
+        END
+    END TAVDD
+    PIN AVDD
+        DIRECTION INOUT ;
+        PORT
+        LAYER METAL2 ;
+        RECT  26.520 114.000 46.520 115.000 ;
+        LAYER METAL1 ;
+        RECT  26.520 114.000 46.520 115.000 ;
+        RECT  3.480 114.000 23.480 115.000 ;
+        LAYER METAL2 ;
+        RECT  3.480 114.000 23.480 115.000 ;
+        END
+    END AVDD
+    OBS
+        LAYER METAL1 ;
+        RECT  47.970 0.000 50.000 115.000 ;
+        RECT  46.750 3.390 47.970 115.000 ;
+        RECT  27.510 3.390 46.750 113.770 ;
+        RECT  26.290 0.000 27.510 113.770 ;
+        RECT  23.710 0.000 26.290 115.000 ;
+        RECT  22.490 0.000 23.710 113.770 ;
+        RECT  3.250 3.390 22.490 113.770 ;
+        RECT  2.030 3.390 3.250 115.000 ;
+        RECT  0.000 0.000 2.030 115.000 ;
+        LAYER VIA12 ;
+        RECT  27.740 0.150 47.230 3.010 ;
+        RECT  26.520 114.050 46.450 114.830 ;
+        RECT  3.550 114.050 23.480 114.830 ;
+        RECT  2.770 0.150 22.260 3.010 ;
+        LAYER METAL2 ;
+        RECT  48.020 0.000 50.000 115.000 ;
+        RECT  46.800 3.440 48.020 115.000 ;
+        RECT  27.460 3.440 46.800 113.720 ;
+        RECT  26.240 0.000 27.460 113.720 ;
+        RECT  23.760 0.000 26.240 115.000 ;
+        RECT  22.540 0.000 23.760 113.720 ;
+        RECT  3.200 3.440 22.540 113.720 ;
+        RECT  1.980 3.440 3.200 115.000 ;
+        RECT  0.000 0.000 1.980 115.000 ;
+        LAYER VIA23 ;
+        RECT  27.740 0.150 47.230 3.010 ;
+        RECT  2.770 0.150 22.260 3.010 ;
+        LAYER METAL3 ;
+        RECT  48.020 0.000 50.000 115.000 ;
+        RECT  27.460 3.440 48.020 115.000 ;
+        RECT  22.540 0.000 27.460 115.000 ;
+        RECT  1.980 3.440 22.540 115.000 ;
+        RECT  0.000 0.000 1.980 115.000 ;
+        LAYER VIA34 ;
+        RECT  27.740 0.150 47.230 3.010 ;
+        RECT  2.770 0.150 22.260 3.010 ;
+        LAYER METAL4 ;
+        RECT  48.020 0.000 50.000 115.000 ;
+        RECT  27.460 3.440 48.020 115.000 ;
+        RECT  22.540 0.000 27.460 115.000 ;
+        RECT  1.980 3.440 22.540 115.000 ;
+        RECT  0.000 0.000 1.980 115.000 ;
+    END
+END PVDD3A
+
+MACRO PVDD3AC
+    CLASS PAD ;
+    FOREIGN PVDD3AC 0.000 0.000  ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 50.000 BY 115.000 ;
+    SYMMETRY x y r90 ;
+    SITE pad ;
+    PIN TACVDD
+        DIRECTION INOUT ;
+        PORT
+        LAYER METAL4 ;
+        RECT  27.740 0.000 47.740 3.160 ;
+        LAYER METAL3 ;
+        RECT  27.740 0.000 47.740 3.160 ;
+        LAYER METAL2 ;
+        RECT  27.740 0.000 47.740 3.160 ;
+        LAYER METAL1 ;
+        RECT  27.740 0.000 47.740 3.160 ;
+        RECT  2.260 0.000 22.260 3.160 ;
+        LAYER METAL2 ;
+        RECT  2.260 0.000 22.260 3.160 ;
+        LAYER METAL3 ;
+        RECT  2.260 0.000 22.260 3.160 ;
+        LAYER METAL4 ;
+        RECT  2.260 0.000 22.260 3.160 ;
+        END
+    END TACVDD
+    PIN AVDD
+        DIRECTION INOUT ;
+        PORT
+        LAYER METAL2 ;
+        RECT  26.660 114.000 46.660 115.000 ;
+        LAYER METAL1 ;
+        RECT  26.660 114.000 46.660 115.000 ;
+        RECT  3.340 114.000 23.340 115.000 ;
+        LAYER METAL2 ;
+        RECT  3.340 114.000 23.340 115.000 ;
+        END
+    END AVDD
+    OBS
+        LAYER METAL1 ;
+        RECT  47.970 0.000 50.000 115.000 ;
+        RECT  46.890 3.390 47.970 115.000 ;
+        RECT  27.510 3.390 46.890 113.770 ;
+        RECT  26.430 0.000 27.510 113.770 ;
+        RECT  23.570 0.000 26.430 115.000 ;
+        RECT  22.490 0.000 23.570 113.770 ;
+        RECT  3.110 3.390 22.490 113.770 ;
+        RECT  2.030 3.390 3.110 115.000 ;
+        RECT  0.000 0.000 2.030 115.000 ;
+        LAYER VIA12 ;
+        RECT  27.740 0.150 47.230 3.010 ;
+        RECT  26.660 114.050 46.450 114.830 ;
+        RECT  3.550 114.050 23.340 114.830 ;
+        RECT  2.770 0.150 22.260 3.010 ;
+        LAYER METAL2 ;
+        RECT  48.020 0.000 50.000 115.000 ;
+        RECT  46.940 3.440 48.020 115.000 ;
+        RECT  27.460 3.440 46.940 113.720 ;
+        RECT  26.380 0.000 27.460 113.720 ;
+        RECT  23.620 0.000 26.380 115.000 ;
+        RECT  22.540 0.000 23.620 113.720 ;
+        RECT  3.060 3.440 22.540 113.720 ;
+        RECT  1.980 3.440 3.060 115.000 ;
+        RECT  0.000 0.000 1.980 115.000 ;
+        LAYER VIA23 ;
+        RECT  27.740 0.150 47.230 3.010 ;
+        RECT  2.770 0.150 22.260 3.010 ;
+        LAYER METAL3 ;
+        RECT  48.020 0.000 50.000 115.000 ;
+        RECT  27.460 3.440 48.020 115.000 ;
+        RECT  22.540 0.000 27.460 115.000 ;
+        RECT  1.980 3.440 22.540 115.000 ;
+        RECT  0.000 0.000 1.980 115.000 ;
+        LAYER VIA34 ;
+        RECT  27.740 0.150 47.230 3.010 ;
+        RECT  2.770 0.150 22.260 3.010 ;
+        LAYER METAL4 ;
+        RECT  48.020 0.000 50.000 115.000 ;
+        RECT  27.460 3.440 48.020 115.000 ;
+        RECT  22.540 0.000 27.460 115.000 ;
+        RECT  1.980 3.440 22.540 115.000 ;
+        RECT  0.000 0.000 1.980 115.000 ;
+    END
+END PVDD3AC
+
+MACRO PVSS3A
+    CLASS PAD ;
+    FOREIGN PVSS3A 0.000 0.000  ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 50.000 BY 115.000 ;
+    SYMMETRY x y r90 ;
+    SITE pad ;
+    PIN AVSS
+        DIRECTION INOUT ;
+        PORT
+        LAYER METAL4 ;
+        RECT  27.740 0.000 47.740 3.160 ;
+        LAYER METAL3 ;
+        RECT  27.740 0.000 47.740 3.160 ;
+        LAYER METAL2 ;
+        RECT  27.740 0.000 47.740 3.160 ;
+        LAYER METAL1 ;
+        RECT  27.740 0.000 47.740 3.160 ;
+        LAYER METAL2 ;
+        RECT  26.470 114.000 46.470 115.000 ;
+        LAYER METAL1 ;
+        RECT  26.470 114.000 46.470 115.000 ;
+        LAYER METAL2 ;
+        RECT  3.530 114.000 23.530 115.000 ;
+        LAYER METAL1 ;
+        RECT  3.530 114.000 23.530 115.000 ;
+        RECT  2.260 0.000 22.260 3.160 ;
+        LAYER METAL2 ;
+        RECT  2.260 0.000 22.260 3.160 ;
+        LAYER METAL3 ;
+        RECT  2.260 0.000 22.260 3.160 ;
+        LAYER METAL4 ;
+        RECT  2.260 0.000 22.260 3.160 ;
+        END
+    END AVSS
+    OBS
+        LAYER METAL1 ;
+        RECT  47.970 0.000 50.000 115.000 ;
+        RECT  46.700 3.390 47.970 115.000 ;
+        RECT  27.510 3.390 46.700 113.770 ;
+        RECT  26.240 0.000 27.510 113.770 ;
+        RECT  23.760 0.000 26.240 115.000 ;
+        RECT  22.490 0.000 23.760 113.770 ;
+        RECT  3.300 3.390 22.490 113.770 ;
+        RECT  2.030 3.390 3.300 115.000 ;
+        RECT  0.000 0.000 2.030 115.000 ;
+        LAYER VIA12 ;
+        RECT  27.740 0.150 47.230 3.010 ;
+        RECT  26.690 114.050 46.190 114.830 ;
+        RECT  3.810 114.050 23.310 114.830 ;
+        RECT  2.770 0.150 22.260 3.010 ;
+        LAYER METAL2 ;
+        RECT  48.020 0.000 50.000 115.000 ;
+        RECT  46.750 3.440 48.020 115.000 ;
+        RECT  27.460 3.440 46.750 113.720 ;
+        RECT  26.190 0.000 27.460 113.720 ;
+        RECT  23.810 0.000 26.190 115.000 ;
+        RECT  22.540 0.000 23.810 113.720 ;
+        RECT  3.250 3.440 22.540 113.720 ;
+        RECT  1.980 3.440 3.250 115.000 ;
+        RECT  0.000 0.000 1.980 115.000 ;
+        LAYER VIA23 ;
+        RECT  27.740 0.150 47.230 3.010 ;
+        RECT  2.770 0.150 22.260 3.010 ;
+        LAYER METAL3 ;
+        RECT  48.020 0.000 50.000 115.000 ;
+        RECT  27.460 3.440 48.020 115.000 ;
+        RECT  22.540 0.000 27.460 115.000 ;
+        RECT  1.980 3.440 22.540 115.000 ;
+        RECT  0.000 0.000 1.980 115.000 ;
+        LAYER VIA34 ;
+        RECT  27.740 0.150 47.230 3.010 ;
+        RECT  2.770 0.150 22.260 3.010 ;
+        LAYER METAL4 ;
+        RECT  48.020 0.000 50.000 115.000 ;
+        RECT  27.460 3.440 48.020 115.000 ;
+        RECT  22.540 0.000 27.460 115.000 ;
+        RECT  1.980 3.440 22.540 115.000 ;
+        RECT  0.000 0.000 1.980 115.000 ;
+    END
+END PVSS3A
+
+MACRO PVSS3AC
+    CLASS PAD ;
+    FOREIGN PVSS3AC 0.000 0.000  ;
+    ORIGIN 0.000 0.000 ;
+    SIZE 50.000 BY 115.000 ;
+    SYMMETRY x y r90 ;
+    SITE pad ;
+    PIN AVSS
+        DIRECTION INOUT ;
+        PORT
+        LAYER METAL4 ;
+        RECT  27.740 0.000 47.740 3.160 ;
+        LAYER METAL3 ;
+        RECT  27.740 0.000 47.740 3.160 ;
+        LAYER METAL2 ;
+        RECT  27.740 0.000 47.740 3.160 ;
+        LAYER METAL1 ;
+        RECT  27.740 0.000 47.740 3.160 ;
+        LAYER METAL2 ;
+        RECT  26.470 114.000 46.470 115.000 ;
+        LAYER METAL1 ;
+        RECT  26.470 114.000 46.470 115.000 ;
+        LAYER METAL2 ;
+        RECT  3.530 114.000 23.530 115.000 ;
+        LAYER METAL1 ;
+        RECT  3.530 114.000 23.530 115.000 ;
+        RECT  2.260 0.000 22.260 3.160 ;
+        LAYER METAL2 ;
+        RECT  2.260 0.000 22.260 3.160 ;
+        LAYER METAL3 ;
+        RECT  2.260 0.000 22.260 3.160 ;
+        LAYER METAL4 ;
+        RECT  2.260 0.000 22.260 3.160 ;
+        END
+    END AVSS
+    OBS
+        LAYER METAL1 ;
+        RECT  47.970 0.000 50.000 115.000 ;
+        RECT  46.700 3.390 47.970 115.000 ;
+        RECT  27.510 3.390 46.700 113.770 ;
+        RECT  26.240 0.000 27.510 113.770 ;
+        RECT  23.760 0.000 26.240 115.000 ;
+        RECT  22.490 0.000 23.760 113.770 ;
+        RECT  3.300 3.390 22.490 113.770 ;
+        RECT  2.030 3.390 3.300 115.000 ;
+        RECT  0.000 0.000 2.030 115.000 ;
+        LAYER VIA12 ;
+        RECT  27.740 0.150 47.230 3.010 ;
+        RECT  26.690 114.050 46.190 114.830 ;
+        RECT  3.810 114.050 23.310 114.830 ;
+        RECT  2.770 0.150 22.260 3.010 ;
+        LAYER METAL2 ;
+        RECT  48.020 0.000 50.000 115.000 ;
+        RECT  46.750 3.440 48.020 115.000 ;
+        RECT  27.460 3.440 46.750 113.720 ;
+        RECT  26.190 0.000 27.460 113.720 ;
+        RECT  23.810 0.000 26.190 115.000 ;
+        RECT  22.540 0.000 23.810 113.720 ;
+        RECT  3.250 3.440 22.540 113.720 ;
+        RECT  1.980 3.440 3.250 115.000 ;
+        RECT  0.000 0.000 1.980 115.000 ;
+        LAYER VIA23 ;
+        RECT  27.740 0.150 47.230 3.010 ;
+        RECT  2.770 0.150 22.260 3.010 ;
+        LAYER METAL3 ;
+        RECT  48.020 0.000 50.000 115.000 ;
+        RECT  27.460 3.440 48.020 115.000 ;
+        RECT  22.540 0.000 27.460 115.000 ;
+        RECT  1.980 3.440 22.540 115.000 ;
+        RECT  0.000 0.000 1.980 115.000 ;
+        LAYER VIA34 ;
+        RECT  27.740 0.150 47.230 3.010 ;
+        RECT  2.770 0.150 22.260 3.010 ;
+        LAYER METAL4 ;
+        RECT  48.020 0.000 50.000 115.000 ;
+        RECT  27.460 3.440 48.020 115.000 ;
+        RECT  22.540 0.000 27.460 115.000 ;
+        RECT  1.980 3.440 22.540 115.000 ;
+        RECT  0.000 0.000 1.980 115.000 ;
+    END
+END PVSS3AC
+
+END LIBRARY
