@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      dponce
+HostName                       sampasim1.localdomain
+ProcessIdentifier              101897
+ProcessCreationTime_UTC        1607106811
+ProcessCreationTime_Readable   Fri Dec  4 16:33:31 2020 BRST
+AppIdentifier                  OA File System Design Manager
+OSType                         unix
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         /local/users/dponce/cadence_wd/616/tsmc18_miniasic17_wd/uwb_system/PLL_USP2020/layout/layout.oa.cdslck
+TimeEditLocked                 Fri Dec  4 21:36:47 2020 BRST
