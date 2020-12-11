@@ -1,0 +1,956 @@
+*****************************************************************************************
+*** Verification report for gds-file PLL-USP2020.gds
+*****************************************************************************************
+
+Foundry : TSMC
+Node    : 0.18um
+Tech    : 0.18um_LOGIC-MS-RF
+
+ant_logic -> metals : 6M
+ant_logic -> MIM_value : 2fF
+ant_logic -> TOP_METAL : 20KA
+drc_logic -> metals : 6M
+drc_logic -> Check_SRAM : No
+drc_logic -> Check_ALRDL : No
+drc_logic -> Check_Dummy_ODPO : Yes
+drc_logic -> Check_Recom : No
+drc_logic -> MixedSignal : Yes
+drc_logic -> TOP_METAL : 20KA
+drc_logic -> IO_Voltage : 3.3V
+drc_logic -> Core_Voltage : 1.8V
+drc_logic -> Full_Chip : Yes
+drc_logic -> BigSealringCorner : No
+drc_logic -> SmallSealringCorner : Yes
+drc_logic -> WITH_SEALRING : No
+ant_imd -> metals : 6M
+drc_imd -> metals : 6M
+drc_imd -> Check_SRAM : No
+drc_imd -> Check_ALRDL : No
+drc_imd -> Check_Dummy_ODPO : Yes
+drc_imd -> Check_Recom : No
+drc_imd -> MixedSignal : Yes
+drc_imd -> TOP_METAL : 20KA
+drc_imd -> IO_Voltage : 3.3V
+drc_imd -> Core_Voltage : 1.8V
+drc_imd -> Full_Chip : Yes
+drc_imd -> BigSealringCorner : No
+drc_imd -> SmallSealringCorner : Yes
+drc_imd -> WITH_SEALRING : No
+custom_drc -> MINIASIC : No
+custom_drc -> metal_stack : 6M
+bnd -> metals : 6M
+bnd -> Pad_Structure : Single
+bnd -> Pad_Pitch : Pitch_55
+bnd -> Pad_Type : other
+dum_od_po -> WITH_SEALRING : No
+dum_od_po -> DMONCBM : No
+dum_od_po -> DMONCORNER : Yes
+dum_od_po -> MIXED_SCHEME : Yes
+dum_od_po -> ADD_DPO_ALSO : Yes
+dum_metal -> fill_m1 : Yes
+dum_metal -> fill_m2 : Yes
+dum_metal -> fill_m3 : Yes
+dum_metal -> fill_m4 : Yes
+dum_metal -> fill_m5 : Yes
+dum_metal -> fill_m6 : Yes
+dum_metal -> WITH_SEALRING : No
+dum_metal -> DMONCORNER : Yes
+dum_metal -> MIXED_SCHEME : Yes
+dum_metal -> CTM_OVER_M5 : Yes
+dum_metal -> THICK_M6 : 20KA
+
+
+*****************************************************************************************
+
+Gds-file : PLL-USP2020.gds
+Topcell  : PLL_USP2020
+Boundary : [0  82.35  ,  1378.65  1500]
+x-size   : 1378.65 um
+y-size   : 1417.65 um
+area     : 1.95 sqmm
+
+md5sum                     : 1552df2c925e7fd7fccc6e654b62ad54
+Gds-file modification date : 2020/12/05 0:2:6
+Uncompressed filesize      : 6424576
+
+*****************************************************************************************
+
+*** Gds-file history ***
+
+. Gds-file : PLL_USP2020.gds
+. Topcell : PLL_USP2020
+. md5sum : 41822a7a95e140fd9675ba44567d6f51
+. Gds-file modification date : 2020/11/17 16:40:25
+
+. Gds-file : PLL_USP2020.gds
+. Topcell : PLL_USP2020
+. md5sum : 41822a7a95e140fd9675ba44567d6f51
+. Gds-file modification date : 2020/11/17 16:40:25
+
+. Gds-file : PLL-USP2020.gds
+. Topcell : PLL_USP2020
+. md5sum : 1552df2c925e7fd7fccc6e654b62ad54
+. Gds-file modification date : 2020/12/05 0:2:6
+
+
+*****************************************************************************************
+
+Libraries used for replacement :
+/imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/macros/tpb018v.gds
+/imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/macros/tpa018nv.gds
+
+Gds-file : PLL-USP2020_merged_dummy.gds.gz
+Topcell  : PLL_USP2020_dummy
+Boundary : [0  0  ,  1461  1500]
+x-size   : 1461 um
+y-size   : 1500 um
+area     : 2.19 sqmm
+
+md5sum                 : 64d40a7f26986b03d3d673501799a0a6
+Gds-file creation date : 2020/12/07 12:18:2
+Uncompressed filesize : 36884508
+Uncompressed filename : PLL-USP2020_merged_dummy.gds
+
+Note: A dummy filling pattern has been generated on your design.
+        This dummy filling pattern covers the entire chip area except dummy block/exclude.
+        On request, the dummy filling pattern can be provided.
+
+*****************************************************************************************
+
+
+*** Gds-file layer listing ***
+
+{28 0} {31 0} {16 0} {18 0} {33 0} {40 0} {41 0} {43 0} {44 0} {90 0} {15 0} {3 0} {38 0} {7 0} {45 0} {16 1} {18 1} {28 1} {31 1} {33 1} {38 1} {32 0} {11 0} {56 0} {39 0} {63 63} {62 0} {8 0} {2 0} {12 0} {13 0} {13 1} {29 0} {17 0} {42 0} {69 0} {134 0} {48 0} {34 0} {54 0} {103 0} {54 1} {27 0} {160 1} {82 0} {24 0} {19 0} {183 0} {23 0} {67 5} {131 0} {131 20} {3 1} {150 20} {150 21} {150 1} {150 2} {150 3} {150 4} {150 6} {150 5} {4 0} {149 0}
+
+
+*****************************************************************************************
+
+-----------------------------------------------------
+ Program : CheckIPWM 
+ Version : 3.1 
+           (C) Imec 2011 
+ Purpose : This script checks for IP in a gds/oa-file  
+-----------------------------------------------------
+
+Gds/oa-file : /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/design/PLL-USP2020_merged_dummy.gds.gz
+
+-----------------------------------------------------
+
+IP:
+{& Vendor Taiwan Semiconductor Manufacturing Corp.}{& Product tpa018nv}{& Version 270a} 
+{& Vendor Taiwan Semiconductor Manufacturing Corp.}{& Product tpb018v}{& Version 180a} 
+
+*****************************************************************************************
+
+*** Warning ***
+    File 'PLL-USP2020_merged_dummy.gds.gz' contain empty cells! 
+ PVSS2AC_mod
+
+*****************************************************************************************
+
+
+*****************************************************************************************
+
+---------------------------------------------------------------------
+ Program  : CompareCells 
+ Version  : 5.2 
+            (C) Imec 2014 
+ Purpose  : This script compares cell names out of 2 gds/oa-files.   
+---------------------------------------------------------------------
+
+Gds/oa-file 1 : /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/design/PLL-USP2020.gds
+Gds/oa-file 2 : /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/macros/tpb018v.gds
+
+---------------------------------------------------------------------
+
+Identical cell names: 
+
+PAD50LA 
+PAD50LAR_TRL 
+
+*** WARNING *** Similar cell names:
+
+ ~~ HBJ701_V1_ 
+ ~~ HBJ701_V2_ 
+ ~~ HBJ701_V3_ 
+ ~~ HBJ701_V4_ 
+ ~~ HBJ701_V5_ 
+PAD50LA ~~ PAD50LA_OBV 
+PAD50LA ~~ PAD50LA_TRL 
+---------------------------------------------------------------------
+ Program  : CompareCells 
+ Version  : 5.2 
+            (C) Imec 2014 
+ Purpose  : This script compares cell names out of 2 gds/oa-files.   
+---------------------------------------------------------------------
+
+Gds/oa-file 1 : /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/design/PLL-USP2020.gds
+Gds/oa-file 2 : /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/macros/tpa018nv.gds
+
+---------------------------------------------------------------------
+
+Identical cell names: 
+
+PFILLER10A 
+PVDD3AC 
+PRCUTA 
+PVSS3AC 
+PFILLER20A 
+PDB1AC 
+PFILLER5A 
+PCORNERA 
+PDB2AC 
+
+*** WARNING *** Similar cell names:
+
+PVDD3AC ~~ Q974_NDRV_PVDD3AC 
+
+*****************************************************************************************
+
+==============================================
+Title:                     //  (DRC COMMAND FILE DOCUMENT: T-000-CL-DR-002-C1 Rev 1.9a )
+Execution Date/Time:       Mon Dec  7 12:19:57 2020
+Rule File Pathname:        /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/bnd/_C18_WIRE_BOND_6M.19a_
+Layout Path(s):            /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/design/PLL-USP2020_merged_dummy.gds.gz
+Layout Primary Cell:       PLL_USP2020_dummy
+Current Directory:         /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/bnd
+==============================================
+
+'#DEFINE PITCH_55_SINGLE'
+
+==============================================
+
+RULECHECK CB.W.1.P55.SI .......... TOTAL Result Count = 2   (34)
+CB width >= 48um
+----------------------------------------------------
+
+RULECHECK CB.R.2a.SI ............. TOTAL Result Count = 6   (84)
+Pad structure must be at least MT/VIAT/Mtop-1...VIA1/M1.
+If you want to use CUP struture , please make sure you draw WBDMY and turn on the right switch.
+----------------------------------------------------
+
+RULECHECK CBVIA1.R.1.OUTER.P55 ... TOTAL Result Count = 1   (14)
+ratio of outer VIA1 to CB >= 0.05
+----------------------------------------------------
+
+RULECHECK CBVIA2.R.1.OUTER.P55 ... TOTAL Result Count = 1   (14)
+ratio of outer VIA2 to CB >= 0.05
+----------------------------------------------------
+
+RULECHECK CBVIA3.R.1.OUTER.P55 ... TOTAL Result Count = 1   (14)
+ratio of outer VIA3 to CB >= 0.05
+----------------------------------------------------
+
+RULECHECK CBVIA4.R.1.OUTER.P55 ... TOTAL Result Count = 1   (14)
+ratio of outer VIA4 to CB >= 0.05
+----------------------------------------------------
+
+RULECHECK CBVIA5.R.1.OUTER.P55 ... TOTAL Result Count = 1   (14)
+ratio of outer VIA5 to CB >= 0.05
+----------------------------------------------------
+
+RULECHECK CUPCB.R.4 .............. TOTAL Result Count = 360 (7200)
+A specialized CUP pad structure must be applied to the top metal layers without top via
+----------------------------------------------------
+
+
+*****************************************************************************************
+==============================================
+Title:                     
+Execution Date/Time:       Mon Dec  7 12:19:57 2020
+Rule File Pathname:        /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/custom_drc/_CUSTOM.TSMC_180-250NM.DRC.11j_
+Layout Path(s):            /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/design/PLL-USP2020_merged_dummy.gds.gz
+Layout Primary Cell:       PLL_USP2020_dummy
+Current Directory:         /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/custom_drc
+==============================================
+
+'#DEFINE 6METALS'
+
+==============================================
+
+RULECHECK IM.LOGO.R.1 .......... TOTAL Result Count = 1  (1)
+IMEC rule - Missing Logo layer. Make sure chip has visible logo top metal. Logo recognition layer is not a must have.
+----------------------------------------------------
+
+RULECHECK IM.CSR.DOD.DM1.1 ..... TOTAL Result Count = 1  (1)
+IMEC warning - Chip corner does not contain DM1 or OD dummies. Check if the dummy-on-corner define is enabled in the metal filling deck. It can be ignored if the density is OK.
+----------------------------------------------------
+
+RULECHECK IM.PAD.SIZE .......... TOTAL Result Count = 26 (442)
+IMEC rule - Passivation opening < 60um x 60um - Please check with package subcontractor.
+----------------------------------------------------
+
+RULECHECK IM.FLOAT.MTOP ........ TOTAL Result Count = 15 (15)
+IMEC WARNING - No net connected between Mtop and contact. Possibly it`s a logo.
+----------------------------------------------------
+
+RULECHECK IM.LDEN.80.M3 ........ TOTAL Result Count = 1  (1)
+IMEC rule - The ME3 density is too low (below 10%) for optimal etching.
+----------------------------------------------------
+
+RULECHECK IM.LDEN.80.M4 ........ TOTAL Result Count = 1  (1)
+IMEC rule - The ME4 density is too low (below 10%) for optimal etching.
+----------------------------------------------------
+
+RULECHECK IM.NWELL.1 ........... TOTAL Result Count = 2  (14)
+IMEC rule - NWELL cannot overlap with OD2 and NP due to TSMC IO mask LOP.
+----------------------------------------------------
+
+
+*****************************************************************************************
+==============================================
+Title:                     // * (DRC COMMAND FILE DOCUMENT: T-018-CL-DR-009-C1 Rev 1.3_1a)                 * 
+Execution Date/Time:       Mon Dec  7 12:19:57 2020
+Rule File Pathname:        /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_imd/_CLM18S_IMD_6M.ANT.13_1a_
+Layout Path(s):            /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/design/PLL-USP2020_merged_dummy.gds.gz
+Layout Primary Cell:       PLL_USP2020_dummy
+Current Directory:         /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_imd
+==============================================
+
+
+*****************************************************************************************
+==============================================
+Title:                     // * (DRC COMMAND FILE DOCUMENT: T-018-CL-DR-009-C1 Rev 1.3_1a)                 * 
+Execution Date/Time:       Mon Dec  7 12:19:57 2020
+Rule File Pathname:        /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/drc_imd/_CLM18S_IMD_6M.13_1a_
+Layout Path(s):            /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/design/PLL-USP2020_merged_dummy.gds.gz
+Layout Primary Cell:       PLL_USP2020_dummy
+Current Directory:         /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/drc_imd
+==============================================
+
+'#UNDEFINE CHECK_SRAM_EXCL'
+'#UNDEFINE CHECK_ALRDL'
+'#DEFINE CHECK_DUMMY_ODPO'
+'#DEFINE MIX_MODE'
+'#DEFINE THICK_20K'
+'#DEFINE 3.3V'
+'#DEFINE 1.8V'
+'#DEFINE FULL_CHIP'
+'#UNDEFINE BigSealringCorner'
+'#DEFINE SmallSealringCorner'
+'#UNDEFINE WITH_SEALRING'
+
+==============================================
+
+RULECHECK VIA1.S.6_Array1_2_3_4_5_M ... TOTAL Result Count = 1   (14)
+Minimum space between two VIA1 region >= 0.49 um if the overlap area of 5-level 
+continuous stacking VIA arrays >= 500 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA2.S.6_Array1_2_3_4_5_M ... TOTAL Result Count = 1   (14)
+Minimum space between two VIA2 region >= 0.49 um if the overlap area of 5-level 
+continuous stacking VIA arrays >= 500 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA3.S.6_Array1_2_3_4_5_M ... TOTAL Result Count = 1   (14)
+Minimum space between two VIA3 region >= 0.49 um if the overlap area of 5-level 
+continuous stacking VIA arrays >= 500 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA4.S.6_Array1_2_3_4_5_M ... TOTAL Result Count = 1   (14)
+Minimum space between two VIA4 region >= 0.49 um if the overlap area of 5-level
+continuous stacking VIA arrays >= 500 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA5.S.6_Array1_2_3_4_5_M ... TOTAL Result Count = 1   (14)
+Minimum space between two VIA5 region >= 0.49 um if the overlap area of 5-level 
+continuous stacking VIA arrays >= 500 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA1.S.7_Array1_2_3_4_M ..... TOTAL Result Count = 1   (14)
+Minimum space between two VIA1 region >= 0.49 um if the overlap area of 4-level 
+continuous stacking VIA arrays >= 1000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA2.S.7_Array1_2_3_4_M ..... TOTAL Result Count = 1   (14)
+Minimum space between two VIA2 region >= 0.49 um if the overlap area of 4-level
+continuous stacking VIA arrays >= 1000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA3.S.7_Array1_2_3_4_M ..... TOTAL Result Count = 1   (14)
+Minimum space between two VIA3 region >= 0.49 um if the overlap area of 4-level
+continuous stacking VIA arrays >= 1000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA4.S.7_Array1_2_3_4_M ..... TOTAL Result Count = 1   (14)
+Minimum space between two VIA4 region >= 0.49 um if the overlap area of 4-level
+continuous stacking VIA arrays >= 1000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA2.S.7_Array2_3_4_5_M ..... TOTAL Result Count = 1   (14)
+Minimum space between two VIA2 region >= 0.49 um if the overlap area of 4-level
+continuous stacking VIA arrays >= 1000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA3.S.7_Array2_3_4_5_M ..... TOTAL Result Count = 1   (14)
+Minimum space between two VIA3 region >= 0.49 um if the overlap area of 4-level
+continuous stacking VIA arrays >= 1000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA4.S.7_Array2_3_4_5_M ..... TOTAL Result Count = 1   (14)
+Minimum space between two VIA4 region >= 0.49 um if the overlap area of 4-level
+continuous stacking VIA arrays >= 1000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA5.S.7_Array2_3_4_5_M ..... TOTAL Result Count = 1   (14)
+Minimum space between two VIA5 region >= 0.49 um if the overlap area of 4-level
+continuous stacking VIA arrays >= 1000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA2.S.8_Array2_3_4_M ....... TOTAL Result Count = 1   (14)
+Minimum space between two VIA2 region >= 0.49 um if the overlap area of 3-level
+continuous stacking VIA arrays >= 2000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA3.S.8_Array2_3_4_M ....... TOTAL Result Count = 1   (14)
+Minimum space between two VIA3 region >= 0.49 um if the overlap area of 3-level
+continuous stacking VIA arrays >= 2000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA4.S.8_Array2_3_4_M ....... TOTAL Result Count = 1   (14)
+Minimum space between two VIA4 region >= 0.49 um if the overlap area of 3-level
+continuous stacking VIA arrays >= 2000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA3.S.8_Array3_4_5_M ....... TOTAL Result Count = 1   (14)
+Minimum space between two VIA3 region >= 0.49 um if the overlap area of 3-level
+continuous stacking VIA arrays >= 2000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA4.S.8_Array3_4_5_M ....... TOTAL Result Count = 1   (14)
+Minimum space between two VIA4 region >= 0.49 um if the overlap area of 3-level
+continuous stacking VIA arrays >= 2000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA5.S.8_Array3_4_5_M ....... TOTAL Result Count = 1   (14)
+Minimum space between two VIA5 region >= 0.49 um if the overlap area of 3-level
+continuous stacking VIA arrays >= 2000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA3.S.9_Array3_4_M ......... TOTAL Result Count = 60  (94)
+Minimum space between two VIA3 region >= 0.49 um if the overlap area of 2-level
+continuous stacking VIA arrays >= 4000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA4.S.9_Array3_4_M ......... TOTAL Result Count = 60  (94)
+Minimum space between two VIA4 region >= 0.49 um if the overlap area of 2-level
+continuous stacking VIA arrays >= 4000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA4.S.10_Array4_M .......... TOTAL Result Count = 60  (94)
+Minimum space between two VIA4 region >= 0.49 um if the single layer VIA arrays area >= 4900 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK PO.R.4 ...................... TOTAL Result Count = 11  (116)
+It is prohibited for Floating Gate if the effective source/drain is not connected together 
+----------------------------------------------------
+
+RULECHECK M3.S.2 ...................... TOTAL Result Count = 1   (1)
+Min. space to wide M3 (>10um) < 0.6 um
+----------------------------------------------------
+
+RULECHECK ESD.10g ..................... TOTAL Result Count = 3   (3)
+Except the ESD device, either of the following two condition must be followed.
+1. The space of two same type ODs >= 2.4 um. 
+2. Two same type ODs should be separated by different type OD.    
+The same type ODs are N+OD and N+OD in the same PW, or P+OD and P+OD in the same NW, which connect to two different Pad.
+----------------------------------------------------
+
+RULECHECK FPAD.R.1 .................... TOTAL Result Count = 14  (14)
+Floating PAD is not allowed . please add protection diode to ground .
+Floating PAD in the DRC : {Mn INTERACT CB} don't connect OD or POLY
+----------------------------------------------------
+
+RULECHECK DOD.E.2 ..................... TOTAL Result Count = 481 (481)
+Minimum extension of chip edge beyond DOD >= 5
+----------------------------------------------------
+
+RULECHECK OD.R.1 ...................... TOTAL Result Count = 1   (1)
+{OD or DOD} local density (minimum) over window 500 um x 500 um stepping OD_R_Sum >= 0.2
+----------------------------------------------------
+
+RULECHECK DOD.R.2 ..................... TOTAL Result Count = 435 (435)
+DOD inside chip corner stress relief area is not allowed.
+----------------------------------------------------
+
+RULECHECK DPO.E.1 ..................... TOTAL Result Count = 930 (930)
+Minimum extension of chip edge beyond DPO >= 5
+----------------------------------------------------
+
+RULECHECK DPO.R.2 ..................... TOTAL Result Count = 841 (841)
+DPO inside chip corner stress relief area is not allowed.
+----------------------------------------------------
+
+RULECHECK DRM.R.1 ..................... TOTAL Result Count = 1   (1)
+DRM.R.1 is a warning message to remind the users to check the related DRMs. Please refer to DRM.R.1 in the DRM for details.
+----------------------------------------------------
+
+
+*****************************************************************************************
+==============================================
+Title:                     // * (DRC COMMAND FILE DOCUMENT: T-018-LO-DR-001-C1 Rev 2.15a)         	       *
+Execution Date/Time:       Mon Dec  7 12:19:57 2020
+Rule File Pathname:        /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/drc_logic/_CLM18_LM16_LM152_6M.215a_
+Layout Path(s):            /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/design/PLL-USP2020_merged_dummy.gds.gz
+Layout Primary Cell:       PLL_USP2020_dummy
+Current Directory:         /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/drc_logic
+==============================================
+
+'#UNDEFINE CHECK_SRAM_EXCL'
+'#UNDEFINE CHECK_ALRDL'
+'#DEFINE CHECK_DUMMY_ODPO'
+'#DEFINE MIX_MODE'
+'#DEFINE THICK_20K'
+'#DEFINE 3.3V'
+'#DEFINE 1.8V'
+'#DEFINE FULL_CHIP'
+'#UNDEFINE BigSealringCorner'
+'#DEFINE SmallSealringCorner'
+'#UNDEFINE WITH_SEALRING'
+
+==============================================
+
+RULECHECK OD.C.1 ...................... TOTAL Result Count = 2    (2)
+Min. NWEL olap NPOD tie down < 0.12
+----------------------------------------------------
+
+RULECHECK OD.C.4 ...................... TOTAL Result Count = 5    (5)
+NWEL overlap PPOD < 0.43
+----------------------------------------------------
+
+RULECHECK OD.C.5 ...................... TOTAL Result Count = 2    (2)
+NWEL space PPOD outside NW < 0.12
+----------------------------------------------------
+
+RULECHECK PO.R.4 ...................... TOTAL Result Count = 11   (116)
+It is prohibited for Floating Gate if the effective source/drain is not connected together 
+----------------------------------------------------
+
+RULECHECK PP.R.1_NP.R.1 ............... TOTAL Result Count = 2    (2)
+PP and NP not allowed to overlap
+----------------------------------------------------
+
+RULECHECK NP.C.2 ...................... TOTAL Result Count = 2    (2)
+NP space to non-butting ptap < 0.1 with NWEL space >= 0.43
+----------------------------------------------------
+
+RULECHECK NP.C.3 ...................... TOTAL Result Count = 6    (6)
+NP space to non-butting ptap < 0.18 with NWEL space < 0.43
+----------------------------------------------------
+
+RULECHECK NP.O.1 ...................... TOTAL Result Count = 4    (4)
+NP extends into n active < 0.230
+----------------------------------------------------
+
+RULECHECK CO.E.3 ...................... TOTAL Result Count = 20   (20)
+Minimum extension of a PP region beyond a OD CO region must >= 0.12 um except SBD region
+----------------------------------------------------
+
+RULECHECK M3.S.2 ...................... TOTAL Result Count = 1    (1)
+Min. space to wide M3 (>10um) < 0.6
+----------------------------------------------------
+
+RULECHECK VIA1.S.6_Array1_2_3_4_5_M ... TOTAL Result Count = 1    (14)
+Minimum space between two VIA1 region >= 0.49 um if the overlap area of 5-level 
+continuous stacking VIA arrays >= 500 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA2.S.6_Array1_2_3_4_5_M ... TOTAL Result Count = 1    (14)
+Minimum space between two VIA2 region >= 0.49 um if the overlap area of 5-level 
+continuous stacking VIA arrays >= 500 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA3.S.6_Array1_2_3_4_5_M ... TOTAL Result Count = 1    (14)
+Minimum space between two VIA3 region >= 0.49 um if the overlap area of 5-level 
+continuous stacking VIA arrays >= 500 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA4.S.6_Array1_2_3_4_5_M ... TOTAL Result Count = 1    (14)
+Minimum space between two VIA4 region >= 0.49 um if the overlap area of 5-level
+continuous stacking VIA arrays >= 500 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA5.S.6_Array1_2_3_4_5_M ... TOTAL Result Count = 1    (14)
+Minimum space between two VIA5 region >= 0.49 um if the overlap area of 5-level 
+continuous stacking VIA arrays >= 500 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA1.S.7_Array1_2_3_4_M ..... TOTAL Result Count = 1    (14)
+Minimum space between two VIA1 region >= 0.49 um if the overlap area of 4-level 
+continuous stacking VIA arrays >= 1000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA2.S.7_Array1_2_3_4_M ..... TOTAL Result Count = 1    (14)
+Minimum space between two VIA2 region >= 0.49 um if the overlap area of 4-level
+continuous stacking VIA arrays >= 1000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA3.S.7_Array1_2_3_4_M ..... TOTAL Result Count = 1    (14)
+Minimum space between two VIA3 region >= 0.49 um if the overlap area of 4-level
+continuous stacking VIA arrays >= 1000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA4.S.7_Array1_2_3_4_M ..... TOTAL Result Count = 1    (14)
+Minimum space between two VIA4 region >= 0.49 um if the overlap area of 4-level
+continuous stacking VIA arrays >= 1000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA2.S.7_Array2_3_4_5_M ..... TOTAL Result Count = 1    (14)
+Minimum space between two VIA2 region >= 0.49 um if the overlap area of 4-level
+continuous stacking VIA arrays >= 1000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA3.S.7_Array2_3_4_5_M ..... TOTAL Result Count = 1    (14)
+Minimum space between two VIA3 region >= 0.49 um if the overlap area of 4-level
+continuous stacking VIA arrays >= 1000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA4.S.7_Array2_3_4_5_M ..... TOTAL Result Count = 1    (14)
+Minimum space between two VIA4 region >= 0.49 um if the overlap area of 4-level
+continuous stacking VIA arrays >= 1000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA5.S.7_Array2_3_4_5_M ..... TOTAL Result Count = 1    (14)
+Minimum space between two VIA5 region >= 0.49 um if the overlap area of 4-level
+continuous stacking VIA arrays >= 1000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA2.S.8_Array2_3_4_M ....... TOTAL Result Count = 1    (14)
+Minimum space between two VIA2 region >= 0.49 um if the overlap area of 3-level
+continuous stacking VIA arrays >= 2000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA3.S.8_Array2_3_4_M ....... TOTAL Result Count = 1    (14)
+Minimum space between two VIA3 region >= 0.49 um if the overlap area of 3-level
+continuous stacking VIA arrays >= 2000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA4.S.8_Array2_3_4_M ....... TOTAL Result Count = 1    (14)
+Minimum space between two VIA4 region >= 0.49 um if the overlap area of 3-level
+continuous stacking VIA arrays >= 2000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA3.S.8_Array3_4_5_M ....... TOTAL Result Count = 1    (14)
+Minimum space between two VIA3 region >= 0.49 um if the overlap area of 3-level
+continuous stacking VIA arrays >= 2000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA4.S.8_Array3_4_5_M ....... TOTAL Result Count = 1    (14)
+Minimum space between two VIA4 region >= 0.49 um if the overlap area of 3-level
+continuous stacking VIA arrays >= 2000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA5.S.8_Array3_4_5_M ....... TOTAL Result Count = 1    (14)
+Minimum space between two VIA5 region >= 0.49 um if the overlap area of 3-level
+continuous stacking VIA arrays >= 2000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA3.S.9_Array3_4_M ......... TOTAL Result Count = 60   (94)
+Minimum space between two VIA3 region >= 0.49 um if the overlap area of 2-level
+continuous stacking VIA arrays >= 4000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA4.S.9_Array3_4_M ......... TOTAL Result Count = 60   (94)
+Minimum space between two VIA4 region >= 0.49 um if the overlap area of 2-level
+continuous stacking VIA arrays >= 4000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA4.S.10_Array4_M .......... TOTAL Result Count = 60   (94)
+Minimum space between two VIA4 region >= 0.49 um if the single layer VIA arrays area >= 4900 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK ESD.10g ..................... TOTAL Result Count = 3    (3)
+Except the ESD device, either of the following two condition must be followed.
+1. The space of two same type ODs >= 2.4 um. 
+2. Two same type ODs should be separated by different type OD.    
+The same type ODs are N+OD and N+OD in the same PW, or P+OD and P+OD in the same NW, which connect to two different Pad.
+----------------------------------------------------
+
+RULECHECK ESD.WARN.4 .................. TOTAL Result Count = 8    (8)
+SDI (122;0) needs to be found in each of power, ground, or I/O pad of CB, CB2, and UBM. Exception: SEALRING_ALL   
+----------------------------------------------------
+
+RULECHECK LUP.1g ...................... TOTAL Result Count = 8    (20)
+Any N+ OD injector or an N+ OD injector cluster connected to an I/O pad must be surrounded by a P+ guard-ring.
+Any P+ OD injector or a P+ OD injector cluster connected to an I/O pad must be surrounded by a N+ guard-ring.
+----------------------------------------------------
+
+RULECHECK LUP.2g ...................... TOTAL Result Count = 54   (110)
+Within 20 um space from the OD injector connected to an I/O pad, a P+ guard-ring is required to surround an NACT or an NACT cluster. And an N+ guard-ring is required to surround a PACT or a PACT cluster.
+----------------------------------------------------
+
+RULECHECK DOD.E.2 ..................... TOTAL Result Count = 1000 (1000)
+Minimum extension of chip edge beyond DOD >= 5
+----------------------------------------------------
+
+RULECHECK OD.R.1 ...................... TOTAL Result Count = 1    (1)
+{OD or DOD} local density (minimum) over window 500 um x 500 um stepping OD_R_Sum >= 0.2
+----------------------------------------------------
+
+RULECHECK DOD.R.2 ..................... TOTAL Result Count = 1000 (1000)
+DOD inside chip corner stress relief area is not allowed.
+----------------------------------------------------
+
+RULECHECK DPO.E.1 ..................... TOTAL Result Count = 1000 (1000)
+Minimum extension of chip edge beyond DPO >= 5
+----------------------------------------------------
+
+RULECHECK DPO.R.2 ..................... TOTAL Result Count = 1000 (1000)
+DPO inside chip corner stress relief area is not allowed.
+----------------------------------------------------
+
+RULECHECK FPAD.R.1 .................... TOTAL Result Count = 14   (14)
+Floating PAD is not allowed . please add protection diode to ground .
+Floating PAD in the DRC : {Mn INTERACT CB} don't connect OD or POLY
+----------------------------------------------------
+
+RULECHECK MOM.R.2 ..................... TOTAL Result Count = 1    (1)
+Each MOM cell must be covered by MOMDMY_n (n=145;1~6/100). DRC only flags no MOMDMY_n (n=145;1~6/100) in the chip. But if there is no MOM cell in your chip, the violation can be waived.
+----------------------------------------------------
+
+RULECHECK DRM.R.1 ..................... TOTAL Result Count = 1    (1)
+DRM.R.1 is a warning message to remind the users to check the related DRMs. Please refer to DRM.R.1 in the DRM for details.
+----------------------------------------------------
+
+
+*****************************************************************************************
+==============================================
+Title:                     // * (DRC COMMAND FILE DOCUMENT:  T-018-LO-DR-001-C1 Rev 2.15a)     
+Execution Date/Time:       Mon Dec  7 12:20:05 2020
+Rule File Pathname:        /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+Layout Path(s):            /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/design/PLL-USP2020_merged_dummy.gds.gz
+Layout Primary Cell:       PLL_USP2020_dummy
+Current Directory:         /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic
+==============================================
+
+'#DEFINE MIMCAP_2F'
+'#DEFINE THICK_20K'
+
+==============================================
+
+RULECHECK A.R.MIM.5.M5_CBM ...... TOTAL Result Count = 1 (1)
+Mx as MIM capacitor bottom metal directly connecting to OD
+through underneath VIA is not allowed
+----------------------------------------------------
+
+
+*****************************************************************************************
+
+I-padringcheck, starting check procedures
+--------------------------------------------------------------------------------
+--- RUNNING BONDPAD CHECKS
+---
+E-padringcheck, bond cell: PAD50LA is  not correctly abutting IO cell: PDB1AC
+  INFO: bondpad(0, 0) is on: (84000, 430500), IO cell (0, 0) is on: (85500, 430500)
+
+
+E-padringcheck, bond cell: PAD50LA is  not correctly abutting IO cell: PDB1AC
+  INFO: bondpad(0, 0) is on: (84000, 320500), IO cell (0, 0) is on: (85500, 320500)
+
+
+W-padringcheck, IO cell: PVDD3AC has no bond attached (85500, 210500)
+E-padringcheck, bond cell: PAD50LA is  not correctly abutting IO cell: PDB1AC
+  INFO: bondpad(0, 0) is on: (1377000, 210500), IO cell (0, 0) is on: (1375500, 210500)
+
+
+E-padringcheck, bond cell: PAD50LA is  not correctly abutting IO cell: PDB1AC
+  INFO: bondpad(0, 0) is on: (1377000, 320500), IO cell (0, 0) is on: (1375500, 320500)
+
+
+W-padringcheck, IO cell: PDB1AC has no bond attached (650500, 85500)
+W-padringcheck, IO cell: PVDD3AC has no bond attached (980500, 85500)
+W-padringcheck, IO cell: PVDD3AC has no bond attached (320500, 85500)
+W-padringcheck, IO cell: PVDD3AC has no bond attached (760500, 85500)
+W-padringcheck, IO cell: PVDD3AC has no bond attached (1200500, 85500)
+W-padringcheck, IO cell: PVDD3AC has no bond attached (540500, 85500)
+W-padringcheck, IO cell: PVSS3AC has no bond attached (870500, 85500)
+W-padringcheck, IO cell: PVSS3AC has no bond attached (430500, 85500)
+                  #   #         #####################
+                   # #          #                   #
+                    #           #     INCORRECT     #
+                   # #          #                   #
+                  #   #         #####################
+
+
+
+--------------------------------------------------------------------------------
+--- CHECKING PAD ORIENTATIONS
+---
+E-padringcheck, left pad: PVDD3AC has wrong orientation
+I-padringcheck, orientation is: MXR90 but should be: R270
+E-padringcheck, left pad: PFILLER20A has wrong orientation
+I-padringcheck, orientation is: MXR90 but should be: R270
+E-padringcheck, left pad: PFILLER20A has wrong orientation
+I-padringcheck, orientation is: MXR90 but should be: R270
+E-padringcheck, left pad: PFILLER20A has wrong orientation
+I-padringcheck, orientation is: MXR90 but should be: R270
+E-padringcheck, left pad: PDB1AC has wrong orientation
+I-padringcheck, orientation is: MXR90 but should be: R270
+E-padringcheck, left pad: PAD50LA has wrong orientation
+I-padringcheck, orientation is: MXR90 but should be: R270
+E-padringcheck, left pad: PFILLER20A has wrong orientation
+I-padringcheck, orientation is: MXR90 but should be: R270
+E-padringcheck, left pad: PFILLER20A has wrong orientation
+I-padringcheck, orientation is: MXR90 but should be: R270
+E-padringcheck, left pad: PFILLER20A has wrong orientation
+I-padringcheck, orientation is: MXR90 but should be: R270
+E-padringcheck, left pad: PDB1AC has wrong orientation
+I-padringcheck, orientation is: MXR90 but should be: R270
+E-padringcheck, left pad: PAD50LA has wrong orientation
+I-padringcheck, orientation is: MXR90 but should be: R270
+E-padringcheck, left pad: PFILLER10A has wrong orientation
+I-padringcheck, orientation is: R90 but should be: R270
+E-padringcheck, left pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: R90 but should be: R270
+E-padringcheck, left pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: R90 but should be: R270
+E-padringcheck, left pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: R0 but should be: R270
+E-padringcheck, left pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: R0 but should be: R270
+E-padringcheck, left pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: R0 but should be: R270
+E-padringcheck, top pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: R90 but should be: R180
+E-padringcheck, top pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: R90 but should be: R180
+E-padringcheck, top pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: R90 but should be: R180
+E-padringcheck, top pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: R0 but should be: R180
+E-padringcheck, top pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: R0 but should be: R180
+E-padringcheck, right pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: MYR90 but should be: R90
+E-padringcheck, right pad: PDB2AC has wrong orientation
+I-padringcheck, orientation is: MYR90 but should be: R90
+E-padringcheck, right pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: MYR90 but should be: R90
+E-padringcheck, right pad: PDB2AC has wrong orientation
+I-padringcheck, orientation is: MYR90 but should be: R90
+E-padringcheck, right pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: MYR90 but should be: R90
+E-padringcheck, right pad: PDB2AC has wrong orientation
+I-padringcheck, orientation is: MYR90 but should be: R90
+E-padringcheck, right pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: MYR90 but should be: R90
+E-padringcheck, right pad: PDB2AC has wrong orientation
+I-padringcheck, orientation is: MYR90 but should be: R90
+E-padringcheck, right pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: MYR90 but should be: R90
+E-padringcheck, right pad: PVDD3AC has wrong orientation
+I-padringcheck, orientation is: MYR90 but should be: R90
+E-padringcheck, right pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: R0 but should be: R90
+E-padringcheck, right pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: MYR90 but should be: R90
+E-padringcheck, right pad: PDB2AC has wrong orientation
+I-padringcheck, orientation is: MYR90 but should be: R90
+E-padringcheck, right pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: MYR90 but should be: R90
+E-padringcheck, right pad: PDB2AC has wrong orientation
+I-padringcheck, orientation is: MYR90 but should be: R90
+E-padringcheck, right pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: MYR90 but should be: R90
+E-padringcheck, right pad: PVSS3AC has wrong orientation
+I-padringcheck, orientation is: MYR90 but should be: R90
+E-padringcheck, right pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: MYR90 but should be: R90
+E-padringcheck, bottom pad: PAD50LA has wrong orientation
+I-padringcheck, orientation is: R180 but should be: R0
+E-padringcheck, bottom pad: PAD50LA has wrong orientation
+I-padringcheck, orientation is: R180 but should be: R0
+E-padringcheck, bottom pad: PAD50LA has wrong orientation
+I-padringcheck, orientation is: R180 but should be: R0
+E-padringcheck, bottom pad: PAD50LA has wrong orientation
+I-padringcheck, orientation is: R180 but should be: R0
+E-padringcheck, bottom pad: PAD50LA has wrong orientation
+I-padringcheck, orientation is: R180 but should be: R0
+E-padringcheck, bottom pad: PAD50LA has wrong orientation
+I-padringcheck, orientation is: R180 but should be: R0
+E-padringcheck, bottom pad: PAD50LA has wrong orientation
+I-padringcheck, orientation is: R180 but should be: R0
+E-padringcheck, bottom pad: PAD50LA has wrong orientation
+I-padringcheck, orientation is: R180 but should be: R0
+E-padringcheck, bottom pad: PAD50LA has wrong orientation
+I-padringcheck, orientation is: R180 but should be: R0
+E-padringcheck, bottom pad: PAD50LA has wrong orientation
+I-padringcheck, orientation is: R180 but should be: R0
+                  #   #         #####################
+                   # #          #                   #
+                    #           #     INCORRECT     #
+                   # #          #                   #
+                  #   #         #####################
+
+
+
+--------------------------------------------------------------------------------
+--- CHECKING ANALOG DOMAIN: 0
+---
+W-padringcheck, chip only contains analog power domains
+E-padringcheck, No PVSS2 pads in analog domain: 0
+                  #   #         #####################
+                   # #          #                   #
+                    #           #     INCORRECT     #
+                   # #          #                   #
+                  #   #         #####################
+
+
+
+--------------------------------------------------------------------------------
+--- CHECKING ANALOG DOMAIN: 1
+---
+W-padringcheck, chip only contains analog power domains
+E-padringcheck, missing VSS pads in analog domain: 1
+                  #   #         #####################
+                   # #          #                   #
+                    #           #     INCORRECT     #
+                   # #          #                   #
+                  #   #         #####################
+
+
+
+--------------------------------------------------------------------------------
+--- CHECKING ANALOG DOMAIN: 2
+---
+W-padringcheck, chip only contains analog power domains
+E-padringcheck, No PVSS2 pads in analog domain: 2
+                  #   #         #####################
+                   # #          #                   #
+                    #           #     INCORRECT     #
+                   # #          #                   #
+                  #   #         #####################
+
+
+
+--------------------------------------------------------------------------------
+--- CHECKING FOR CORRECT PRCUT CELLS
+---
+                         #       ###################       _   _  
+                        #        #                 #       *   *  
+                   #   #         #     CORRECT     #         |    
+                    # #          #                 #       \___/  
+                     #           ###################              
+
+
+
+--------------------------------------------------------------------------------
+--- SUMMARY INFO
+---
+PADRINGCHECK version: 0.30
+Check performed on  : 12/07/20 @12:19:54
+Check performed by  : eptsmc
+Design checked      : /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/design/PLL-USP2020_merged_dummy.gds.gz
+Debug file name     : PLL-USP2020_merged_dummy.gds_padringcheck_debug.gds
+Topcell name        : PLL_USP2020_dummy
+Nbr of power domains: 3
+  Domain: 0 is of type: ANALOG
+  Domain: 1 is of type: ANALOG
+  Domain: 2 is of type: ANALOG
+Total # of errors   : 57
+Total # of warnings : 12
+I-padringcheck, Ready!
+
+
+*****************************************************************************************
+

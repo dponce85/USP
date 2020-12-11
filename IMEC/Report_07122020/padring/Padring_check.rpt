@@ -1,0 +1,704 @@
+Reading setup file: ./Padring_check_setup.rcf
+I-padringcheck, reading lib: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/macros/tpb018v.gds
+                                                                              Collecting data...                                                         
+Analyzing data...
+Sorting data...
+
+
+-------------------------------------------------------------------------
+-----                  LAYOUT FILE OBJECT SUMMARY                   -----
+-------------------------------------------------------------------------
+
+Type                         Count
+----------------------------------
+LAYER                           15
+CELL                            70
+PLACEMENT                       79
+ARRAY                          465
+RECTANGLE                      691
+POLYGON                         19
+PATH                             0
+TEXT                           147
+PROPERTY                         0
+
+
+-------------------------------------------------------------------------
+-----                     LOAD LAYOUT SUMMARY                       -----
+-------------------------------------------------------------------------
+
+GDS FILE READ FROM '/imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/macros/tpb018v.gds'
+
+DATABASE PRECISION:  0.001 user units per database unit
+PHYSICAL PRECISION:  1e-09 meters per database unit
+
+MAXIMUM HIERARCHY DEPTH:  4
+
+LAYOUT FILE SIZE =              96 K  =            0 M
+LAYOUT MEMORY    =             341 K  =            0 M
+LAYOUT READ TIME = 0 sec REAL.  TOTAL TIME = 0 sec REAL.
+
+I-padringcheck, Cells in this library:
+  PAD60LA_TRL
+  PAD60L_OBV
+  PAD80L_TRL
+  PAD50LA_TRL
+  PAD60L
+  PAD70L_TRL
+  PAD50LA_OBV
+  PAD50LAR_OBV
+  PAD60LAR_TRL
+  PAD50LA
+  PAD60LAR_SM
+  PAD50LAR_TRL
+  PAD80L_OBV
+  PAD60LA_OBV
+  PAD70L_OBV
+  PAD80L
+  PAD60LA
+  PAD50LAR_SM
+  PAD60LAR_OBV
+  PAD70L
+  PAD60L_TRL
+I-padringcheck, reading lib: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/macros/tpa018nv.gds
+                                                                              Collecting data...                                                         
+Analyzing data...
+Sorting data...
+
+
+-------------------------------------------------------------------------
+-----                  LAYOUT FILE OBJECT SUMMARY                   -----
+-------------------------------------------------------------------------
+
+Type                         Count
+----------------------------------
+LAYER                           33
+CELL                            93
+PLACEMENT                      121
+ARRAY                         1244
+RECTANGLE                     1434
+POLYGON                        124
+PATH                             0
+TEXT                           638
+PROPERTY                         0
+
+
+-------------------------------------------------------------------------
+-----                     LOAD LAYOUT SUMMARY                       -----
+-------------------------------------------------------------------------
+
+GDS FILE READ FROM '/imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/macros/tpa018nv.gds'
+
+DATABASE PRECISION:  0.001 user units per database unit
+PHYSICAL PRECISION:  1e-09 meters per database unit
+
+MAXIMUM HIERARCHY DEPTH:  4
+
+LAYOUT FILE SIZE =             246 K  =            0 M
+LAYOUT MEMORY    =             437 K  =            0 M
+LAYOUT READ TIME = 0 sec REAL.  TOTAL TIME = 0 sec REAL.
+
+I-padringcheck, Cells in this library:
+  PVSS3A
+  PFILLER10A
+  PDB2A
+  PFILLER05A
+  PVDD3A
+  PDB1AC
+  PDB1A
+  PVDD3AC
+  PFILLER0005A
+  PRCUTA
+  PDB3A
+  PFILLER5A
+  PDB3AC
+  PDB2AC
+  PFILLER20A
+  PFILLER1A
+  PCORNERA
+  PCLAMP
+  PVSS3AC
+I-padringcheck, setting hier search depth to: 5
+I-padringcheck, reading design: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/design/PLL-USP2020_merged_dummy.gds.gz
+Read in 2 MB    Read in 4 MB    Read in 6 MB    Read in 8 MB                                                                                  Collecting data...                                                         
+Analyzing data...
+Sorting data...
+
+
+-------------------------------------------------------------------------
+-----                  LAYOUT FILE OBJECT SUMMARY                   -----
+-------------------------------------------------------------------------
+
+Type                         Count
+----------------------------------
+LAYER                           46
+CELL                           425
+PLACEMENT                     3065
+ARRAY                         1626
+RECTANGLE                   503475
+POLYGON                       4092
+PATH                             0
+TEXT                          1164
+PROPERTY                         0
+
+
+-------------------------------------------------------------------------
+-----                     LOAD LAYOUT SUMMARY                       -----
+-------------------------------------------------------------------------
+
+GDS FILE READ FROM '/imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/design/PLL-USP2020_merged_dummy.gds.gz'
+
+DATABASE PRECISION:  0.001 user units per database unit
+PHYSICAL PRECISION:  1e-09 meters per database unit
+
+MAXIMUM HIERARCHY DEPTH:  9
+
+LAYOUT FILE SIZE =            9143 K  =            8 M
+LAYOUT MEMORY    =           12645 K  =           12 M
+LAYOUT READ TIME = 0 sec REAL.  TOTAL TIME = 0 sec REAL.
+
+
+
+padringcheck V0.30
+  (C) Marc Dingenen
+
+
+I-padringcheck, finding all IO cells in design...(search depth is: 5)
+size design 0 0 1461000 1500000
+Left pads are:
+  PAD50LA
+  PAD50LA
+  PDB1AC
+  PDB1AC
+  PFILLER10A
+  PFILLER10A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PAD50LAR_TRL
+  PAD50LAR_TRL
+  PAD50LAR_TRL
+  PAD50LAR_TRL
+  PAD50LAR_TRL
+  PVDD3AC
+
+
+Top pads are:
+  PAD50LAR_TRL
+  PAD50LAR_TRL
+  PAD50LAR_TRL
+  PAD50LAR_TRL
+  PAD50LAR_TRL
+
+
+Right pads are:
+  PAD50LA
+  PAD50LA
+  PDB1AC
+  PDB1AC
+  PFILLER10A
+  PFILLER10A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER5A
+  PAD50LAR_TRL
+  PRCUTA
+  PAD50LAR_TRL
+  PAD50LAR_TRL
+  PAD50LAR_TRL
+  PAD50LAR_TRL
+  PAD50LAR_TRL
+  PAD50LAR_TRL
+  PAD50LAR_TRL
+  PAD50LAR_TRL
+  PAD50LAR_TRL
+  PDB2AC
+  PDB2AC
+  PDB2AC
+  PDB2AC
+  PDB2AC
+  PDB2AC
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PVDD3AC
+  PVSS3AC
+
+
+Bottom pads are:
+  PAD50LA
+  PAD50LA
+  PAD50LA
+  PAD50LA
+  PAD50LA
+  PAD50LA
+  PAD50LA
+  PAD50LA
+  PAD50LA
+  PAD50LA
+  PCORNERA
+  PCORNERA
+  PDB1AC
+  PFILLER10A
+  PFILLER10A
+  PFILLER10A
+  PFILLER10A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER5A
+  PFILLER5A
+  PRCUTA
+  PRCUTA
+  PVDD3AC
+  PVDD3AC
+  PVDD3AC
+  PVDD3AC
+  PVDD3AC
+  PVSS3AC
+  PVSS3AC
+
+
+Writing GDSII file: "PLL-USP2020_merged_dummy.gds_padringcheck_debug.gds"
+Left pads are:
+  PAD50LA
+  PAD50LA
+  PDB1AC
+  PDB1AC
+  PFILLER10A
+  PFILLER10A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PAD50LAR_TRL
+  PAD50LAR_TRL
+  PAD50LAR_TRL
+  PAD50LAR_TRL
+  PAD50LAR_TRL
+  PVDD3AC
+
+
+Top pads are:
+  PAD50LAR_TRL
+  PAD50LAR_TRL
+  PAD50LAR_TRL
+  PAD50LAR_TRL
+  PAD50LAR_TRL
+
+
+Right pads are:
+  PAD50LA
+  PAD50LA
+  PDB1AC
+  PDB1AC
+  PFILLER10A
+  PFILLER10A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER5A
+  PAD50LAR_TRL
+  PRCUTA
+  PAD50LAR_TRL
+  PAD50LAR_TRL
+  PAD50LAR_TRL
+  PAD50LAR_TRL
+  PAD50LAR_TRL
+  PAD50LAR_TRL
+  PAD50LAR_TRL
+  PAD50LAR_TRL
+  PAD50LAR_TRL
+  PDB2AC
+  PDB2AC
+  PDB2AC
+  PDB2AC
+  PDB2AC
+  PDB2AC
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PVDD3AC
+  PVSS3AC
+
+
+Bottom pads are:
+  PAD50LA
+  PAD50LA
+  PAD50LA
+  PAD50LA
+  PAD50LA
+  PAD50LA
+  PAD50LA
+  PAD50LA
+  PAD50LA
+  PAD50LA
+  PCORNERA
+  PCORNERA
+  PDB1AC
+  PFILLER10A
+  PFILLER10A
+  PFILLER10A
+  PFILLER10A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER20A
+  PFILLER5A
+  PFILLER5A
+  PRCUTA
+  PRCUTA
+  PVDD3AC
+  PVDD3AC
+  PVDD3AC
+  PVDD3AC
+  PVDD3AC
+  PVSS3AC
+  PVSS3AC
+
+
+I-padringcheck, found 3 power domains
+                                                                              Collecting data...                                                         
+Analyzing data...
+Sorting data...
+
+
+-------------------------------------------------------------------------
+-----                  LAYOUT FILE OBJECT SUMMARY                   -----
+-------------------------------------------------------------------------
+
+Type                         Count
+----------------------------------
+LAYER                            2
+CELL                             5
+PLACEMENT                        4
+ARRAY                            0
+RECTANGLE                      128
+POLYGON                          0
+PATH                             0
+TEXT                           128
+PROPERTY                         0
+
+
+-------------------------------------------------------------------------
+-----                     LOAD LAYOUT SUMMARY                       -----
+-------------------------------------------------------------------------
+
+GDS FILE READ FROM '/imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/padring/PLL-USP2020_merged_dummy.gds_padringcheck_debug.gds'
+
+DATABASE PRECISION:  0.001 user units per database unit
+PHYSICAL PRECISION:  1e-09 meters per database unit
+
+MAXIMUM HIERARCHY DEPTH:  1
+
+LAYOUT FILE SIZE =              18 K  =            0 M
+LAYOUT MEMORY    =             261 K  =            0 M
+LAYOUT READ TIME = 0 sec REAL.  TOTAL TIME = 0 sec REAL.
+
+Creating text: DOMAIN_0 on (830500, 85500) in layer: 20
+Creating text: DOMAIN_1 on (1375500, 390500) in layer: 21
+Creating text: DOMAIN_2 on (1050500, 85500) in layer: 22
+Writing GDSII file: "PLL-USP2020_merged_dummy.gds_padringcheck_debug.gds"
+I-padringcheck, starting check procedures
+--------------------------------------------------------------------------------
+--- RUNNING BONDPAD CHECKS
+---
+E-padringcheck, bond cell: PAD50LA is  not correctly abutting IO cell: PDB1AC
+  INFO: bondpad(0, 0) is on: (84000, 430500), IO cell (0, 0) is on: (85500, 430500)
+
+
+E-padringcheck, bond cell: PAD50LA is  not correctly abutting IO cell: PDB1AC
+  INFO: bondpad(0, 0) is on: (84000, 320500), IO cell (0, 0) is on: (85500, 320500)
+
+
+W-padringcheck, IO cell: PVDD3AC has no bond attached (85500, 210500)
+E-padringcheck, bond cell: PAD50LA is  not correctly abutting IO cell: PDB1AC
+  INFO: bondpad(0, 0) is on: (1377000, 210500), IO cell (0, 0) is on: (1375500, 210500)
+
+
+E-padringcheck, bond cell: PAD50LA is  not correctly abutting IO cell: PDB1AC
+  INFO: bondpad(0, 0) is on: (1377000, 320500), IO cell (0, 0) is on: (1375500, 320500)
+
+
+W-padringcheck, IO cell: PDB1AC has no bond attached (650500, 85500)
+W-padringcheck, IO cell: PVDD3AC has no bond attached (980500, 85500)
+W-padringcheck, IO cell: PVDD3AC has no bond attached (320500, 85500)
+W-padringcheck, IO cell: PVDD3AC has no bond attached (760500, 85500)
+W-padringcheck, IO cell: PVDD3AC has no bond attached (1200500, 85500)
+W-padringcheck, IO cell: PVDD3AC has no bond attached (540500, 85500)
+W-padringcheck, IO cell: PVSS3AC has no bond attached (870500, 85500)
+W-padringcheck, IO cell: PVSS3AC has no bond attached (430500, 85500)
+                  #   #         #####################
+                   # #          #                   #
+                    #           #     INCORRECT     #
+                   # #          #                   #
+                  #   #         #####################
+
+
+
+--------------------------------------------------------------------------------
+--- CHECKING PAD ORIENTATIONS
+---
+E-padringcheck, left pad: PVDD3AC has wrong orientation
+I-padringcheck, orientation is: MXR90 but should be: R270
+E-padringcheck, left pad: PFILLER20A has wrong orientation
+I-padringcheck, orientation is: MXR90 but should be: R270
+E-padringcheck, left pad: PFILLER20A has wrong orientation
+I-padringcheck, orientation is: MXR90 but should be: R270
+E-padringcheck, left pad: PFILLER20A has wrong orientation
+I-padringcheck, orientation is: MXR90 but should be: R270
+E-padringcheck, left pad: PDB1AC has wrong orientation
+I-padringcheck, orientation is: MXR90 but should be: R270
+E-padringcheck, left pad: PAD50LA has wrong orientation
+I-padringcheck, orientation is: MXR90 but should be: R270
+E-padringcheck, left pad: PFILLER20A has wrong orientation
+I-padringcheck, orientation is: MXR90 but should be: R270
+E-padringcheck, left pad: PFILLER20A has wrong orientation
+I-padringcheck, orientation is: MXR90 but should be: R270
+E-padringcheck, left pad: PFILLER20A has wrong orientation
+I-padringcheck, orientation is: MXR90 but should be: R270
+E-padringcheck, left pad: PDB1AC has wrong orientation
+I-padringcheck, orientation is: MXR90 but should be: R270
+E-padringcheck, left pad: PAD50LA has wrong orientation
+I-padringcheck, orientation is: MXR90 but should be: R270
+E-padringcheck, left pad: PFILLER10A has wrong orientation
+I-padringcheck, orientation is: R90 but should be: R270
+E-padringcheck, left pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: R90 but should be: R270
+E-padringcheck, left pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: R90 but should be: R270
+E-padringcheck, left pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: R0 but should be: R270
+E-padringcheck, left pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: R0 but should be: R270
+E-padringcheck, left pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: R0 but should be: R270
+E-padringcheck, top pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: R90 but should be: R180
+E-padringcheck, top pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: R90 but should be: R180
+E-padringcheck, top pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: R90 but should be: R180
+E-padringcheck, top pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: R0 but should be: R180
+E-padringcheck, top pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: R0 but should be: R180
+E-padringcheck, right pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: MYR90 but should be: R90
+E-padringcheck, right pad: PDB2AC has wrong orientation
+I-padringcheck, orientation is: MYR90 but should be: R90
+E-padringcheck, right pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: MYR90 but should be: R90
+E-padringcheck, right pad: PDB2AC has wrong orientation
+I-padringcheck, orientation is: MYR90 but should be: R90
+E-padringcheck, right pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: MYR90 but should be: R90
+E-padringcheck, right pad: PDB2AC has wrong orientation
+I-padringcheck, orientation is: MYR90 but should be: R90
+E-padringcheck, right pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: MYR90 but should be: R90
+E-padringcheck, right pad: PDB2AC has wrong orientation
+I-padringcheck, orientation is: MYR90 but should be: R90
+E-padringcheck, right pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: MYR90 but should be: R90
+E-padringcheck, right pad: PVDD3AC has wrong orientation
+I-padringcheck, orientation is: MYR90 but should be: R90
+E-padringcheck, right pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: R0 but should be: R90
+E-padringcheck, right pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: MYR90 but should be: R90
+E-padringcheck, right pad: PDB2AC has wrong orientation
+I-padringcheck, orientation is: MYR90 but should be: R90
+E-padringcheck, right pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: MYR90 but should be: R90
+E-padringcheck, right pad: PDB2AC has wrong orientation
+I-padringcheck, orientation is: MYR90 but should be: R90
+E-padringcheck, right pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: MYR90 but should be: R90
+E-padringcheck, right pad: PVSS3AC has wrong orientation
+I-padringcheck, orientation is: MYR90 but should be: R90
+E-padringcheck, right pad: PAD50LAR_TRL has wrong orientation
+I-padringcheck, orientation is: MYR90 but should be: R90
+E-padringcheck, bottom pad: PAD50LA has wrong orientation
+I-padringcheck, orientation is: R180 but should be: R0
+E-padringcheck, bottom pad: PAD50LA has wrong orientation
+I-padringcheck, orientation is: R180 but should be: R0
+E-padringcheck, bottom pad: PAD50LA has wrong orientation
+I-padringcheck, orientation is: R180 but should be: R0
+E-padringcheck, bottom pad: PAD50LA has wrong orientation
+I-padringcheck, orientation is: R180 but should be: R0
+E-padringcheck, bottom pad: PAD50LA has wrong orientation
+I-padringcheck, orientation is: R180 but should be: R0
+E-padringcheck, bottom pad: PAD50LA has wrong orientation
+I-padringcheck, orientation is: R180 but should be: R0
+E-padringcheck, bottom pad: PAD50LA has wrong orientation
+I-padringcheck, orientation is: R180 but should be: R0
+E-padringcheck, bottom pad: PAD50LA has wrong orientation
+I-padringcheck, orientation is: R180 but should be: R0
+E-padringcheck, bottom pad: PAD50LA has wrong orientation
+I-padringcheck, orientation is: R180 but should be: R0
+E-padringcheck, bottom pad: PAD50LA has wrong orientation
+I-padringcheck, orientation is: R180 but should be: R0
+                  #   #         #####################
+                   # #          #                   #
+                    #           #     INCORRECT     #
+                   # #          #                   #
+                  #   #         #####################
+
+
+
+--------------------------------------------------------------------------------
+--- CHECKING ANALOG DOMAIN: 0
+---
+W-padringcheck, chip only contains analog power domains
+E-padringcheck, No PVSS2 pads in analog domain: 0
+                  #   #         #####################
+                   # #          #                   #
+                    #           #     INCORRECT     #
+                   # #          #                   #
+                  #   #         #####################
+
+
+
+--------------------------------------------------------------------------------
+--- CHECKING ANALOG DOMAIN: 1
+---
+W-padringcheck, chip only contains analog power domains
+E-padringcheck, missing VSS pads in analog domain: 1
+                  #   #         #####################
+                   # #          #                   #
+                    #           #     INCORRECT     #
+                   # #          #                   #
+                  #   #         #####################
+
+
+
+--------------------------------------------------------------------------------
+--- CHECKING ANALOG DOMAIN: 2
+---
+W-padringcheck, chip only contains analog power domains
+E-padringcheck, No PVSS2 pads in analog domain: 2
+                  #   #         #####################
+                   # #          #                   #
+                    #           #     INCORRECT     #
+                   # #          #                   #
+                  #   #         #####################
+
+
+
+--------------------------------------------------------------------------------
+--- CHECKING FOR CORRECT PRCUT CELLS
+---
+                         #       ###################       _   _  
+                        #        #                 #       *   *  
+                   #   #         #     CORRECT     #         |    
+                    # #          #                 #       \___/  
+                     #           ###################              
+
+
+
+--------------------------------------------------------------------------------
+--- SUMMARY INFO
+---
+PADRINGCHECK version: 0.30
+Check performed on  : 12/07/20 @12:19:54
+Check performed by  : eptsmc
+Design checked      : /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/design/PLL-USP2020_merged_dummy.gds.gz
+Debug file name     : PLL-USP2020_merged_dummy.gds_padringcheck_debug.gds
+Topcell name        : PLL_USP2020_dummy
+Nbr of power domains: 3
+  Domain: 0 is of type: ANALOG
+  Domain: 1 is of type: ANALOG
+  Domain: 2 is of type: ANALOG
+Total # of errors   : 57
+Total # of warnings : 12
+I-padringcheck, Ready!
+

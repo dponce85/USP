@@ -1,0 +1,176 @@
+==============================================
+Title:                     // * (DRC COMMAND FILE DOCUMENT: T-018-CL-DR-009-C1 Rev 1.3_1a)                 * 
+Execution Date/Time:       Mon Dec  7 12:19:57 2020
+Rule File Pathname:        /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/drc_imd/_CLM18S_IMD_6M.13_1a_
+Layout Path(s):            /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/design/PLL-USP2020_merged_dummy.gds.gz
+Layout Primary Cell:       PLL_USP2020_dummy
+Current Directory:         /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/drc_imd
+==============================================
+
+'#UNDEFINE CHECK_SRAM_EXCL'
+'#UNDEFINE CHECK_ALRDL'
+'#DEFINE CHECK_DUMMY_ODPO'
+'#DEFINE MIX_MODE'
+'#DEFINE THICK_20K'
+'#DEFINE 3.3V'
+'#DEFINE 1.8V'
+'#DEFINE FULL_CHIP'
+'#UNDEFINE BigSealringCorner'
+'#DEFINE SmallSealringCorner'
+'#UNDEFINE WITH_SEALRING'
+
+==============================================
+
+RULECHECK VIA1.S.6_Array1_2_3_4_5_M ... TOTAL Result Count = 1   (14)
+Minimum space between two VIA1 region >= 0.49 um if the overlap area of 5-level 
+continuous stacking VIA arrays >= 500 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA2.S.6_Array1_2_3_4_5_M ... TOTAL Result Count = 1   (14)
+Minimum space between two VIA2 region >= 0.49 um if the overlap area of 5-level 
+continuous stacking VIA arrays >= 500 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA3.S.6_Array1_2_3_4_5_M ... TOTAL Result Count = 1   (14)
+Minimum space between two VIA3 region >= 0.49 um if the overlap area of 5-level 
+continuous stacking VIA arrays >= 500 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA4.S.6_Array1_2_3_4_5_M ... TOTAL Result Count = 1   (14)
+Minimum space between two VIA4 region >= 0.49 um if the overlap area of 5-level
+continuous stacking VIA arrays >= 500 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA5.S.6_Array1_2_3_4_5_M ... TOTAL Result Count = 1   (14)
+Minimum space between two VIA5 region >= 0.49 um if the overlap area of 5-level 
+continuous stacking VIA arrays >= 500 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA1.S.7_Array1_2_3_4_M ..... TOTAL Result Count = 1   (14)
+Minimum space between two VIA1 region >= 0.49 um if the overlap area of 4-level 
+continuous stacking VIA arrays >= 1000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA2.S.7_Array1_2_3_4_M ..... TOTAL Result Count = 1   (14)
+Minimum space between two VIA2 region >= 0.49 um if the overlap area of 4-level
+continuous stacking VIA arrays >= 1000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA3.S.7_Array1_2_3_4_M ..... TOTAL Result Count = 1   (14)
+Minimum space between two VIA3 region >= 0.49 um if the overlap area of 4-level
+continuous stacking VIA arrays >= 1000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA4.S.7_Array1_2_3_4_M ..... TOTAL Result Count = 1   (14)
+Minimum space between two VIA4 region >= 0.49 um if the overlap area of 4-level
+continuous stacking VIA arrays >= 1000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA2.S.7_Array2_3_4_5_M ..... TOTAL Result Count = 1   (14)
+Minimum space between two VIA2 region >= 0.49 um if the overlap area of 4-level
+continuous stacking VIA arrays >= 1000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA3.S.7_Array2_3_4_5_M ..... TOTAL Result Count = 1   (14)
+Minimum space between two VIA3 region >= 0.49 um if the overlap area of 4-level
+continuous stacking VIA arrays >= 1000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA4.S.7_Array2_3_4_5_M ..... TOTAL Result Count = 1   (14)
+Minimum space between two VIA4 region >= 0.49 um if the overlap area of 4-level
+continuous stacking VIA arrays >= 1000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA5.S.7_Array2_3_4_5_M ..... TOTAL Result Count = 1   (14)
+Minimum space between two VIA5 region >= 0.49 um if the overlap area of 4-level
+continuous stacking VIA arrays >= 1000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA2.S.8_Array2_3_4_M ....... TOTAL Result Count = 1   (14)
+Minimum space between two VIA2 region >= 0.49 um if the overlap area of 3-level
+continuous stacking VIA arrays >= 2000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA3.S.8_Array2_3_4_M ....... TOTAL Result Count = 1   (14)
+Minimum space between two VIA3 region >= 0.49 um if the overlap area of 3-level
+continuous stacking VIA arrays >= 2000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA4.S.8_Array2_3_4_M ....... TOTAL Result Count = 1   (14)
+Minimum space between two VIA4 region >= 0.49 um if the overlap area of 3-level
+continuous stacking VIA arrays >= 2000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA3.S.8_Array3_4_5_M ....... TOTAL Result Count = 1   (14)
+Minimum space between two VIA3 region >= 0.49 um if the overlap area of 3-level
+continuous stacking VIA arrays >= 2000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA4.S.8_Array3_4_5_M ....... TOTAL Result Count = 1   (14)
+Minimum space between two VIA4 region >= 0.49 um if the overlap area of 3-level
+continuous stacking VIA arrays >= 2000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA5.S.8_Array3_4_5_M ....... TOTAL Result Count = 1   (14)
+Minimum space between two VIA5 region >= 0.49 um if the overlap area of 3-level
+continuous stacking VIA arrays >= 2000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA3.S.9_Array3_4_M ......... TOTAL Result Count = 60  (94)
+Minimum space between two VIA3 region >= 0.49 um if the overlap area of 2-level
+continuous stacking VIA arrays >= 4000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA4.S.9_Array3_4_M ......... TOTAL Result Count = 60  (94)
+Minimum space between two VIA4 region >= 0.49 um if the overlap area of 2-level
+continuous stacking VIA arrays >= 4000 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK VIA4.S.10_Array4_M .......... TOTAL Result Count = 60  (94)
+Minimum space between two VIA4 region >= 0.49 um if the single layer VIA arrays area >= 4900 um2 (except sealring region)
+----------------------------------------------------
+
+RULECHECK PO.R.4 ...................... TOTAL Result Count = 11  (116)
+It is prohibited for Floating Gate if the effective source/drain is not connected together 
+----------------------------------------------------
+
+RULECHECK M3.S.2 ...................... TOTAL Result Count = 1   (1)
+Min. space to wide M3 (>10um) < 0.6 um
+----------------------------------------------------
+
+RULECHECK ESD.10g ..................... TOTAL Result Count = 3   (3)
+Except the ESD device, either of the following two condition must be followed.
+1. The space of two same type ODs >= 2.4 um. 
+2. Two same type ODs should be separated by different type OD.    
+The same type ODs are N+OD and N+OD in the same PW, or P+OD and P+OD in the same NW, which connect to two different Pad.
+----------------------------------------------------
+
+RULECHECK FPAD.R.1 .................... TOTAL Result Count = 14  (14)
+Floating PAD is not allowed . please add protection diode to ground .
+Floating PAD in the DRC : {Mn INTERACT CB} don't connect OD or POLY
+----------------------------------------------------
+
+RULECHECK DOD.E.2 ..................... TOTAL Result Count = 481 (481)
+Minimum extension of chip edge beyond DOD >= 5
+----------------------------------------------------
+
+RULECHECK OD.R.1 ...................... TOTAL Result Count = 1   (1)
+{OD or DOD} local density (minimum) over window 500 um x 500 um stepping OD_R_Sum >= 0.2
+----------------------------------------------------
+
+RULECHECK DOD.R.2 ..................... TOTAL Result Count = 435 (435)
+DOD inside chip corner stress relief area is not allowed.
+----------------------------------------------------
+
+RULECHECK DPO.E.1 ..................... TOTAL Result Count = 930 (930)
+Minimum extension of chip edge beyond DPO >= 5
+----------------------------------------------------
+
+RULECHECK DPO.R.2 ..................... TOTAL Result Count = 841 (841)
+DPO inside chip corner stress relief area is not allowed.
+----------------------------------------------------
+
+RULECHECK DRM.R.1 ..................... TOTAL Result Count = 1   (1)
+DRM.R.1 is a warning message to remind the users to check the related DRMs. Please refer to DRM.R.1 in the DRM for details.
+----------------------------------------------------
+

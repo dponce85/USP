@@ -1,0 +1,41 @@
+==============================================
+Title:                     
+Execution Date/Time:       Mon Dec  7 12:19:57 2020
+Rule File Pathname:        /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/custom_drc/_CUSTOM.TSMC_180-250NM.DRC.11j_
+Layout Path(s):            /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/design/PLL-USP2020_merged_dummy.gds.gz
+Layout Primary Cell:       PLL_USP2020_dummy
+Current Directory:         /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/custom_drc
+==============================================
+
+'#DEFINE 6METALS'
+
+==============================================
+
+RULECHECK IM.LOGO.R.1 .......... TOTAL Result Count = 1  (1)
+IMEC rule - Missing Logo layer. Make sure chip has visible logo top metal. Logo recognition layer is not a must have.
+----------------------------------------------------
+
+RULECHECK IM.CSR.DOD.DM1.1 ..... TOTAL Result Count = 1  (1)
+IMEC warning - Chip corner does not contain DM1 or OD dummies. Check if the dummy-on-corner define is enabled in the metal filling deck. It can be ignored if the density is OK.
+----------------------------------------------------
+
+RULECHECK IM.PAD.SIZE .......... TOTAL Result Count = 26 (442)
+IMEC rule - Passivation opening < 60um x 60um - Please check with package subcontractor.
+----------------------------------------------------
+
+RULECHECK IM.FLOAT.MTOP ........ TOTAL Result Count = 15 (15)
+IMEC WARNING - No net connected between Mtop and contact. Possibly it`s a logo.
+----------------------------------------------------
+
+RULECHECK IM.LDEN.80.M3 ........ TOTAL Result Count = 1  (1)
+IMEC rule - The ME3 density is too low (below 10%) for optimal etching.
+----------------------------------------------------
+
+RULECHECK IM.LDEN.80.M4 ........ TOTAL Result Count = 1  (1)
+IMEC rule - The ME4 density is too low (below 10%) for optimal etching.
+----------------------------------------------------
+
+RULECHECK IM.NWELL.1 ........... TOTAL Result Count = 2  (14)
+IMEC rule - NWELL cannot overlap with OD2 and NP due to TSMC IO mask LOP.
+----------------------------------------------------
+

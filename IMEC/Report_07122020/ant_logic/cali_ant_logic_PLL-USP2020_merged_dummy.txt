@@ -1,0 +1,278 @@
+PLL_USP2020_dummy 1000
+A.R.1.POLY
+0 0 2 Dec  7 12:20:08 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+(Poly perim*thickness / gate area) > 200 
+A.R.4.CO
+0 0 2 Dec  7 12:20:08 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+(contact area / gate area) > 10 
+A.R.2_A.R.3.M1
+0 0 3 Dec  7 12:20:09 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+(M1 perim*thickness / gate area) > 400 (without effective diode) 
+(M1 perim*thickness / gate area) > Ratio (with effective diode) 
+A.R.5_A.R.6.VIA1i
+0 0 3 Dec  7 12:20:10 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+(VIA1 area / gate area) > 20 (without effective diode)
+(VIA1 area / gate area) > Ratio (with effective diode)
+A.R.2_A.R.3.M2
+0 0 3 Dec  7 12:20:11 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+(M2 perim*thickness / gate area) > 400 (without effective diode) 
+(M2 perim*thickness / gate area) > Ratio (with effective diode) 
+A.R.5_A.R.6.VIA2i
+0 0 3 Dec  7 12:20:11 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+(VIA2 area / gate area) > 20 (without effective diode)
+(VIA2 area / gate area) > Ratio (with effective diode)
+A.R.2_A.R.3.M3
+0 0 3 Dec  7 12:20:12 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+(M3 perim*thickness / gate area) > 400 (without effective diode) 
+(M3 perim*thickness / gate area) > Ratio (with effective diode) 
+A.R.5_A.R.6.VIA3i
+0 0 3 Dec  7 12:20:12 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+(VIA3 area / gate area) > 20 (without effective diode)
+(VIA3 area / gate area) > Ratio (with effective diode)
+A.R.2_A.R.3.M4
+0 0 3 Dec  7 12:20:13 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+(M4 perim*thickness / gate area) > 400 (without effective diode) 
+(M4 perim*thickness / gate area) > Ratio (with effective diode) 
+A.R.5_A.R.6.VIA4i
+0 0 3 Dec  7 12:20:13 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+(VIA4 area / gate area) > 20 (without effective diode)
+(VIA4 area / gate area) > Ratio (with effective diode)
+A.R.2_A.R.3.M5
+0 0 3 Dec  7 12:20:14 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+(M5 perim*thickness / gate area) > 400 (without effective diode) 
+(M5 perim*thickness / gate area) > Ratio (with effective diode) 
+A.R.MIM.5.M5_CBM
+1 1 3 Dec  7 12:20:15 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+Mx as MIM capacitor bottom metal directly connecting to OD
+through underneath VIA is not allowed
+p 1 8
+803975 1128590
+828885 1128590
+828885 1130190
+827285 1130190
+827285 1153500
+828885 1153500
+828885 1155100
+803975 1155100
+A.R.5_A.R.6.VIAt
+0 0 3 Dec  7 12:20:15 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+(VIA5 area / gate area) > 20 (without effective diode)
+(VIA5 area / gate area) > Ratio (with effective diode)
+A.R.3DMIM.R.1_CBM
+0 0 2 Dec  7 12:20:15 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+CBM directly connecting to OD through underneath VIA is not allowed
+A.R.2_A.R.3.M6
+0 0 3 Dec  7 12:20:16 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+(M6 perim*thickness / gate area) > 400 (without effective diode) 
+(M6 perim*thickness / gate area) > Ratio (with effective diode) 
+A.R.MIM.1.M6.CBM
+0 0 4 Dec  7 12:20:16 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+Maximum ratio of M6 perimeter area to the MIM cap. when
+CTM is not connected to OD and
+Mx as MIM capacitor metal bottom metal is not connected to OD < 6000
+A.R.MIM.1.M6.CTM
+0 0 4 Dec  7 12:20:16 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+Maximum ratio of M6 perimeter area to the MIM cap. when
+CTM is not connected to OD and
+Mx as MIM capacitor metal bottom metal is not connected to OD < 6000
+A.R.MIM.2.M6.CTM.A
+0 0 4 Dec  7 12:20:16 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+Unbalanced MIM structure:
+CTM is connceted to OD with OD area < 0.203 and
+Mx as MIM capacitor metal bottom metal is not connected to OD
+A.R.MIM.2.M6.CTM.B
+0 0 4 Dec  7 12:20:16 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+Maximum ratio of the metal area to the MIM cap. when
+CTM is connceted to OD and
+Mx as MIM capacitor metal bottom metal is not connected to OD
+A.R.MIM.2.M6.CBM
+0 0 4 Dec  7 12:20:16 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+Maximum ratio of the metal area to the MIM cap. when
+CTM is connceted to OD and
+Mx as MIM capacitor metal bottom metal is not connected to OD < 100
+A.R.MIM.3.M6.CTM
+0 0 4 Dec  7 12:20:16 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+Maximum ratio of the metal area to the MIM cap. when
+CTM is not connceted to OD and
+Mx as MIM capacitor metal bottom metal is connected to OD < 100
+A.R.MIM.3.M6.CBM.A
+0 0 4 Dec  7 12:20:16 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+Unbalanced MIM structure:
+CTM is not connceted to OD and
+Mx as MIM capacitor metal bottom metal is connected to OD with OD area < 0.203
+A.R.MIM.3.M6.CBM.B
+0 0 4 Dec  7 12:20:16 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+Maximum ratio of the metal area to the MIM cap. when
+CTM is not connceted to OD and
+Mx as MIM capacitor metal bottom metal is connected to OD
+A.R.MIM.4.M6.CTM.A
+0 0 2 Dec  7 12:20:16 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+Balanced MIM structure but the OD area connected to CTM < 0.203
+A.R.MIM.4.M6.CTM.B
+0 0 3 Dec  7 12:20:16 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+Max. ratio of M6 metal side-wall area to CTM area.
+Both CTM and CBM associated M5 are connected to OD.
+A.R.MIM.4.M6.CBM.A
+0 0 2 Dec  7 12:20:16 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+Balanced MIM structure but the OD area connected to Mx as capacitor bottom metal < 0.203
+A.R.MIM.4.M6.CBM.B
+0 0 3 Dec  7 12:20:17 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+Max. ratio of M6 metal side-wall area to CBM area.
+Both CTM and CBM associated M5 are connected to OD.
+A.R.MIM.5.M6_CTM
+0 0 4 Dec  7 12:20:17 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+Below condition is not allowed for 2fF/um2 MIM capacitance
+CTM is not connected to OD and
+M6 as capacitor bottom metal is connected to OD
+A.R.MIM.5.M6_CBM
+0 0 4 Dec  7 12:20:17 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+Below condition is not allowed for 2fF/um2 MIM capacitance
+CTM is connected to OD and
+M6 as capacitor bottom metal is not connected to OD
+A.R.3DMIM.CTM.1
+0 0 3 Dec  7 12:20:17 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+Max. ratio of M6 perimeter area to CTM area.
+When neither CTM nor CMM is connected to OD.
+A.R.3DMIM.CMM.1
+0 0 3 Dec  7 12:20:17 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+Max. ratio of M6 perimeter area to CTM area.
+When neither CTM nor CMM is connected to OD.
+A.R.3DMIM.CMM.2
+0 0 3 Dec  7 12:20:17 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+Max. ratio of M6 perimeter area to CMM area.
+When neither CMM nor CBM is connected to OD.
+A.R.3DMIM.CBM.1
+0 0 3 Dec  7 12:20:17 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+Max. ratio of M6 perimeter area to CMM area.
+When neither CMM nor CBM is connected to OD.
+A.R.3DMIM.CTM.2
+0 0 3 Dec  7 12:20:17 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+Max. ratio of M6 perimeter area to CTM area.
+When both CTM and CMM are connected to OD.
+A.R.3DMIM.CMM.3
+0 0 3 Dec  7 12:20:17 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+Max. ratio of M6 perimeter area to CTM area.
+When both CTM and CMM are connected to OD.
+A.R.3DMIM.CMM.4
+0 0 3 Dec  7 12:20:17 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+Max. ratio of M6 perimeter area to CMM area.
+When both CMM and CBM are connected to OD.
+A.R.3DMIM.CBM.2
+0 0 3 Dec  7 12:20:17 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+Max. ratio of M6 perimeter area to CMM area.
+When both CMM and CBM are connected to OD.
+A.R.3DMIM.R.1_A_CTM
+0 0 3 Dec  7 12:20:17 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+Unbalance structure is not allowed 
+CTM is connected to OD and CMM is not connected to OD
+A.R.3DMIM.R.1_B_CTM
+0 0 3 Dec  7 12:20:17 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+Unbalance structure is not allowed 
+CTM is not connected to OD and CMM is connected to OD
+A.R.3DMIM.R.1_C_CTM
+0 0 3 Dec  7 12:20:17 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+Unbalance structure is not allowed 
+CTM or CMM is connected to GATE
+A.R.3DMIM.R.1_A_CMM
+0 0 3 Dec  7 12:20:17 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+Unbalance structure is not allowed 
+CMM is connected to OD and CBM is not connected to OD
+A.R.3DMIM.R.1_B_CMM
+0 0 3 Dec  7 12:20:17 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+Unbalance structure is not allowed 
+CMM is not connected to OD and CBM is connected to OD
+A.R.3DMIM.R.1_C_CMM
+0 0 3 Dec  7 12:20:17 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+Unbalance structure is not allowed 
+CMM or CBM is connected to GATE
+DNW.R.7
+0 0 4 Dec  7 12:20:24 2020                     
+Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/ant_logic/_CLM18_LM16_LM152_6M.ANT.215a_
+Max. cumulative area ratio of DNW to {(LV NMOS core gates) OUTSIDE DNW} [connects to 
+{((PP AND OD) AND NW) INSIDE (NW INTERACT DNW)} ] <= 500000
+This rule is checked by the ANTENNA DRC command file
+NET_AREA_RATIO_RDBS
+0 0 40 Dec  7 12:20:24 2020
+A.R.1.POLYi.rep 0
+A.R.4.CO.rep 0
+A.R.2.M1.rep 0
+A.R.5_A.R.6.VIA1.rep 0
+A.R.2.M2.rep 0
+A.R.5_A.R.6.VIA2.rep 0
+A.R.2.M3.rep 0
+A.R.5_A.R.6.VIA3.rep 0
+A.R.2.M4.rep 0
+A.R.5_A.R.6.VIA4.rep 0
+A.R.2.M5.rep 0
+A.R.MIM.5.M5.CBM.rep 437
+A.R.5_A.R.6.VIA5.rep 0
+A.R.3DMIM.R.1_CBM.rep 0
+A.R.2.M6.rep 0
+A.R.MIM.1.M6.CBM.rep 0
+A.R.MIM.1.M6.CTM.rep 0
+A.R.MIM.2.M6.CTM.WO_DIO.rep 0
+A.R.MIM.2.M6.CTM.WI_DIO.rep 0
+A.R.MIM.2.M6.CBM.rep 0
+A.R.MIM.3.M6.CTM.rep 0
+A.R.MIM.3.M6.CBM.WO_DIO.rep 0
+A.R.MIM.3.M6.CBM.WI_DIO.rep 0
+A.R.MIM.4.M6.CTM.WO_DIO.rep 0
+A.R.MIM.4.M6.CTM.WI_DIO.rep 0
+A.R.MIM.4.M6.CBM.WO_DIO.rep 0
+A.R.MIM.4.CBM.M6.WI_DIO.rep 0
+A.R.3DMIM.CTM.1.rep 0
+A.R.3DMIM.CMM.1.rep 0
+A.R.3DMIM.CMM.2.rep 0
+A.R.3DMIM.CBM.1.rep 0
+A.R.3DMIM.CTM.2.rep 0
+A.R.3DMIM.CMM.3.rep 0
+A.R.3DMIM.CMM.4.rep 0
+A.R.3DMIM.CBM.2.rep 0
+A.R.3DMIM.R.1_A_CTM.rep 0
+A.R.3DMIM.R.1_B_CTM.rep 0
+A.R.3DMIM.R.1_A_CMM.rep 0
+A.R.3DMIM.R.1_B_CMM.rep 0
+DNW.R.7.rep 0

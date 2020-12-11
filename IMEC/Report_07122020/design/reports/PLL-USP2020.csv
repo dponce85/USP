@@ -1,0 +1,14 @@
+#Tag Reader version: v1d3_2012Dec27
+scan_gds_file,vendor,instance,product,version,metric,instance_tag,       
+"tempfile.gds","Taiwan Semiconductor Manufacturing Corp.","PAD50LA","tpb018v","180a","4200.000","PAD50LA",
+"tempfile.gds","Taiwan Semiconductor Manufacturing Corp.","PAD50LAR_TRL","tpb018v","180a","4200.000","PAD50LAR_TRL",
+"tempfile.gds","Taiwan Semiconductor Manufacturing Corp.","PCORNERA","tpa018nv","270a","13225.000"," ",
+"tempfile.gds","Taiwan Semiconductor Manufacturing Corp.","PDB1AC","tpa018nv","270a","5750.000"," ",
+"tempfile.gds","Taiwan Semiconductor Manufacturing Corp.","PDB2AC","tpa018nv","270a","5750.000"," ",
+"tempfile.gds","Taiwan Semiconductor Manufacturing Corp.","PFILLER10A","tpa018nv","270a","1150.000"," ",
+"tempfile.gds","Taiwan Semiconductor Manufacturing Corp.","PFILLER20A","tpa018nv","270a","2300.000"," ",
+"tempfile.gds","Taiwan Semiconductor Manufacturing Corp.","PFILLER5A","tpa018nv","270a","575.000"," ",
+"tempfile.gds","Taiwan Semiconductor Manufacturing Corp.","PRCUTA","tpa018nv","270a","2875.000"," ",
+"tempfile.gds","Taiwan Semiconductor Manufacturing Corp.","PVDD3AC","tpa018nv","270a","5750.000"," ",
+"tempfile.gds","Taiwan Semiconductor Manufacturing Corp.","PVSS3AC","tpa018nv","270a","5750.000"," ",
+===== END of CSV =====
