@@ -1,4 +1,4 @@
-PLL_USP2020_dummy 1000
+PLL-USP2020 1000
 HRI.WARN
 0 0 2 Dec  7 12:20:12 2020                     
 Rule File Pathname: /imec/other/eptsmc/2_Project_Info/2020/1_cyb/TMMG23_Cxx_USP_run7554/2_des/drc_logic/_CLM18_LM16_LM152_6M.215a_
